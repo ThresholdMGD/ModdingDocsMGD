@@ -375,7 +375,7 @@ trigger in combatDialogue and translates the values from ``"theText:"`` into the
     "Overlay": "No",
     "setXalign": "0.0",
     "setYalign": "0.16",
-
+    "Player": "Yes",
     "Images":[
       {
       "Name":"Base",
@@ -419,6 +419,8 @@ There is a lot of keys to unpack for each object layer, so here is a brief overv
     - Changes the alignment of the layer on the x axis.
   * - ``"setYalign":``
     - Changes the alignment of the layer on the y axis.
+  * - ``"Player": "Yes"``
+    - Informs the game to recolor the target based on the player appearance set. You generally wont need to have this feild in the file at all, as it only needs to be there for the turning on of this feature.
 
 The ``"Images":`` key features an array where all the images for the layer go, each image being contained in an object. The objects work as follows:
 

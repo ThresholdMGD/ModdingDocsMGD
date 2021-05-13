@@ -20,10 +20,10 @@ Required so the game knows which location you wish to make an addition to.
 
 ::
 
-  "exploreTitle": "Addition",
+  "Addition": "Yes",
 
 
-Required so the game knows you wish to make an addition, via providing the string value of ``"Addition"``.
+Required so the game knows you wish to make an addition. Can be added into almost any part of the file.
 
 **Monsters & MonsterGroups**
 -----------------------------

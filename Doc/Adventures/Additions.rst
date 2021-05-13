@@ -27,9 +27,9 @@ Required so you can tell the game which Adventure you wish to make an addition t
 
 ::
 
-  "requires": ["Addition"],
+  "Addition": "Yes",
 
-Required so you can tell the game that you're wishing to make an addition. You cannot change the requirements for a location, only the ``"Addition"`` string will be interpreted.
+Required so you can tell the game that you're wishing to make an addition. Can be added into almost any part of the file.
 
 **Deck**
 ---------

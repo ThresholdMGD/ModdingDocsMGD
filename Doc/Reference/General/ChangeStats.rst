@@ -64,6 +64,10 @@ At level 25, the player is considered to have the fetish. Maximum of level 100, 
 ----------------------------
 Same as above but will permanently affect the player. This prevents the church from recovering the player stats. Take caution.
 
+**SetFetish**
+----------------------------
+Same as above but sets the fetish/addiction to the number given. This change is permanent and prevents the church from recovering the player stats. Take caution. It's primary intent is for event based addictions and fetishes to be managed easier.
+
 **RespecPlayer**
 -----------------
 Gives the player the ability to reinvest all of their stat points, perk points, and sensitivity points earned thus far.

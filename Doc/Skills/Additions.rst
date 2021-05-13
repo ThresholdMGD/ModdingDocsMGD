@@ -34,9 +34,9 @@ Required so you can tell the game which Skill you wish to make an addition to.
 
 ::
 
-  "skillType": "Addition",
+  "Addition": "Yes",
 
-Required so you can tell the game that you're wishing to make an addition. It cannot be used in any other way as an addition.
+Required so you can tell the game that you're wishing to make an addition. Can be added into almost any part of the file.
 
 **fetishTags**
 ---------------

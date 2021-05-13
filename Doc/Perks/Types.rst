@@ -190,7 +190,7 @@ Alter all shop prices by a percent, for both selling and buying. Positive values
   "PerkType": ["ExpBoost"],
   "EffectPower": ["120"],
 
-Alter all exp gains by a percent.
+Alter all exp gains by a percent. Effect is halved when applied to LossExp effects, see below.
 If wielded by a monster, alters their own exp drop amount. Positive values increase exp, negative values decrease.
 
 .. _LossExp:

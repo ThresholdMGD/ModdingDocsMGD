@@ -29,9 +29,9 @@ Required so you can tell the game which Event you wish to make an Addition to.
 
 ::
 
-  "CardType": "Addition",
+  "Addition": "Yes",
 
-Required so you can tell the game you wish to make an addition.
+Required so you can tell the game you wish to make an addition. Can be added into almost any part of the file.
 
 **Speakers**
 -------------
@@ -95,7 +95,7 @@ If the menu you are adding to doesn't have a "FinalOption" for what is supposed 
 
 ::
 
-  "EventText": [ 
+  "EventText": [
     {
     "NameOfScene": "The Scene Name",
     "theScene": [

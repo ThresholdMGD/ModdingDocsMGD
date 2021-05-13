@@ -26,9 +26,9 @@ Required so you can tell the game which Monster you wish to make an addition to.
 -----------
 ::
 
-  "gender": "Addition",
+  "Addition": "Yes",
 
-Required so you can tell the game that you're wishing to make an addition.
+Required so you can tell the game that you're wishing to make an addition. Can be added into almost any part of the file.
 
 **skillList**
 --------------

@@ -34,6 +34,6 @@ Using ``"PlaySoundBankOnce"`` plays through the selected sound bank one time. Us
 -------------------------------------------------
 ``"PlayLoopingSoundEffect"`` plays an audio file on loop, or a sound bank on loop.
 
-``"StopSOundEffectLoop:`` Stops the looping sound, looping sounds are separate from one off sounds.
+``"StopSoundEffectLoop:`` Stops the looping sound, looping sounds are separate from one off sounds.
 
 ``"PlayLoopingSoundEffect2"`` and ``"StopSoundEffectLoop2"`` exists for a secondary loop channel.
