@@ -31,12 +31,12 @@ Clears the current music and starts the given queue of music, playing in the ord
   "music/Battle/Shiva_Dance.mp3", "music/Battle/Comet_Highway.mp3", "music/Battle/Goodbye.mp3",
   "EndLoop"
 
-.. _ChangeBGM-OverideCombatMusic:
+.. _ChangeBGM-OverrideCombatMusic:
 
-**ChangeBGM-OverideCombatMusic**
+**ChangeBGM-OverrideCombatMusic**
 ---------------------------------
 
-``"ChangeBGM-OverideCombatMusic"`` functions the same as ``"ChangeBGM"``, but overrides and ignores music from :ref:`SetMusicTo`.
+``"ChangeBGM-OverrideCombatMusic"`` functions the same as ``"ChangeBGM"``, but overrides and ignores music from :ref:`SetMusicTo`.
 
 Note events called within the encounter can still change the BGM via any of the functions on this page.
 

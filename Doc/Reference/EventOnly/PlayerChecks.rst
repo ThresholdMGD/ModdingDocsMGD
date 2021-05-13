@@ -88,7 +88,7 @@ Checks if the given sensitivity for the player is equal to or greater than the g
 
 **IfHasFetish**
 ----------------
-Checks if the player has the following fetish (which requirs being level 25 or higher), if true, it jumps to the given scene, else it continues.
+Checks if the player has the following fetish (which requires being level 25 or higher), if true, it jumps to the given scene, else it continues.
 
 
 ::

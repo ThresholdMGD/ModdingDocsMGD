@@ -20,7 +20,7 @@ Checks for the specified monster in the encounter, will ignore focused monster i
 
 **EncounterSizeGreaterOrEqualTo & EncounterSizeLessOrEqualTo**
 ---------------------------------------------------------------
-Checks if the current combat encounter has an equal or greator, or equal or less than respectively, of the given number of enemies.
+Checks if the current combat encounter has an equal or greater, or equal or less than respectively, of the given number of enemies.
 
 ::
 

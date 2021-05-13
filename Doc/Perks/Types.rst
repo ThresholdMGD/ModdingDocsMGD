@@ -15,7 +15,7 @@ These types modify the behavior of the perk itself, rather than the wielder of t
 """""""""""""""
 ::
 
-  "PerkType": ["StausIcon"],
+  "PerkType": ["StatusIcon"],
   "EffectPower": ["../Mods/ModName/Folder/Icon.png"],
 
 Declares a status icon for the perk whenever the player or monster possesses it.
@@ -92,7 +92,7 @@ Set a value of 0, as ``"EffectPower":`` is not needed.
   "PerkType": ["RemovableEffect "],
   "EffectPower": ["0"],
 
-Declare the perk as a RemovableEffect , that allows the effect to be cleared on use of a pancea(currently just this), or on combat end like NonPersistentEffect.
+Declare the perk as a RemovableEffect , that allows the effect to be cleared on use of a panacea(currently just this), or on combat end like NonPersistentEffect.
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
 
@@ -449,9 +449,9 @@ Alters foreplay damage dealt by a flat amount. Positive values increase damage, 
   "PerkType": ["CritChanceBoost"],
   "EffectPower": ["20"],
 
-Alters chance for the wielder's skills to crit by a flat amount. Postive values increase chance, negative values decrease.
+Alters chance for the wielder's skills to crit by a flat amount. Positive values increase chance, negative values decrease.
 
-.. _CritDamageBooast:
+.. _CritDamageBoost:
 
 **CritDamageBoost**
 """"""""""""""""""""

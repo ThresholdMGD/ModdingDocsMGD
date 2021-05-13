@@ -25,7 +25,7 @@ Focuses on a random monster in the encounter.
 ----------------------------
 Shuffles the monster encounter and renumbers them. You must refocus the monster for other functions if you want to do anything else after calling it.
 
-**RefocusOnInitalMonster**
+**RefocusOnInitialMonster**
 ---------------------------
 Refocuses on the first monster you entered the function with. Will not work if you used ``"ShuffleMonsterEncounter"``.
 

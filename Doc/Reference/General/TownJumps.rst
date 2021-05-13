@@ -54,4 +54,4 @@ consisting of the following.
 * ``"GoToRandomBrothelWaiterScene"``
 * ``"GoToRandomBrothelBarScene"``
 * ``"GoToRandomBrothelHoleScene"``
-* ``"GoToRandomBrothelDayScen"``
+* ``"GoToRandomBrothelDayScene"``

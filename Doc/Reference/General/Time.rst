@@ -47,7 +47,7 @@ This is so ``"TimePassed"`` events can comply with the above functions, but stil
 
 ::
 
-  "IfDelayingNotications", "SilentScenes"
+  "IfDelayingNotifications", "SilentScenes"
 
 **TimeBecomesNight & TimeBecomesDay**
 --------------------------------------
