@@ -182,7 +182,7 @@ Display a barrage of images, values are for PulseSpeed and Opacity respectively.
 ``"PlayMotionEffect"`` will play a preset motion on screen (or moving the screen), using one of the selected motion effects below.
 ``"EndMotionEffect"`` can end the current motion effect if it's taking too long on the next line, or to end a PlayMotionEffectLoop as mentioned shortly below.
 
-Motion Effects on Characters: Bounce, BounceSlow, BounceFast, BounceOnce, Sway, SwaySlow, SwayFast, SwayOnce, Pump, PumpSlow, PumpFast, Ride, RideSlow, RideFast, and Vibrate. Realign can also be called to fix any transforms that can potentially jank out.
+Motion Effects on Characters: Bounce, BounceSlow, BounceFast, BounceOnce, Sway, SwaySlow, SwayFast, SwayOnce, Pump, PumpSlow, PumpFast, Ride, RideSlow, RideFast, and Vibrate.
 Motion Effects for entire Screen: ScreenBounce, SlowScreenBounce, ScreenSway, Explosion, LongExplosion, Crash, and Quake.
 
 The screen effecting ones will move everything, including the text box and other UI elements. The other one only effects on screen characters.
