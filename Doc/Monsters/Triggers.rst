@@ -171,31 +171,6 @@ These take place after an action or condition is performed or met by either the 
     ]
   },
 
-**UsesMovePre & HitWithPre**
-  """""""""""""""""""""""""
-These happen prior to UsesMove and HitWith respectively, allowing you to enforce expression changes or VFX or other functions in a neat bundle, while ignoring low health line calls.
-
-::
-
-  {
-  "lineTrigger": "UsesMovePre",
-  "move": ["Tighten"],
-  "theText":[
-    "This gets put before a tighten used by the monster.",
-    "You can use it for multiple random lines, but useally it will be a single line bundle as shown in the next example."
-    ]
-  },**
-
-::
-
-  {
-  "lineTrigger": "HitWithPre",
-  "move": ["Tighten"],
-  "theText":[
-    "|f|ChangeEnergyQuietly|/|15|n|" 
-    ]
-  },
-
 **Escape**
 """""""""""
 

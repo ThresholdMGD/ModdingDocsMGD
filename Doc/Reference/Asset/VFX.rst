@@ -46,8 +46,6 @@ To be placed after ``"PlayVisualEffect"`` so it knows how you want to manipulate
 
 * ``"RepeatingPulse"`` repeats low opacity pulse.
 
-* ``"Kiss"`` Similar to a single screen pulse, but holds the image for a few moments.
-
 * ``"ScreenFlash"`` quick image flash. Note that using bright images might be unpleasant to the eye.
 
 * ``"BlindingFlash"`` flash that lasts longer and fades slower. Still probably unpleasant to the eye.

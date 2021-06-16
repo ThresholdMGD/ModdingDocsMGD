@@ -25,8 +25,7 @@ In combat with ``"FocusOnMonster"``:
 **ChangeImageLayer**
 ---------------------
 Changes a specific layer of art for the specified character in the scene, works almost the same as above.
-If you set the image name to ``""`` or ``"None"``, it will stop displaying the layer. Excluding layers with ``"alwaysOn":`` enabled.
-When using |f|ChangeImageLayer|/| type function, to stop displaying the layer you need to use "None".
+If you set the image name to ``""``, it will stop displaying the layer. Excluding layers with ``"alwaysOn":`` enabled.
 
 ::
 
