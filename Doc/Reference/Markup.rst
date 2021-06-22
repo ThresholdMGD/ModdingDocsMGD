@@ -161,13 +161,14 @@ Accepts #rgb, #rgba, #rrggbb, or #rrggbbaa format.
 **Event Text Markup**
 ----------------------
 
-``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`
+``{DisplayPlayerChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`.
 
-``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`
+``{DisplayMonsterChoice}`` via the functions :ref:`ChoiceToDisplay` and :ref:`ChoiceToDisplayFromOtherEvent`.
+
+``{DisplayProgress}`` via :ref:`Progress` functions.
 
 ``{PlayerOrgasmLine}`` or ``{MonsterOrgasmLine}`` displays the orgasm line for the player or monster respectively.
 To be used with :ref:`onPlayerOrgasm` and :ref:`OnOrgasm` lineTriggers utilizing events respectively.
-
 .. _Damage Text Markup:
 
 **Damage Text Markup**
