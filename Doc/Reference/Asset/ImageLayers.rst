@@ -25,8 +25,7 @@ In combat with ``"FocusOnMonster"``:
 **ChangeImageLayer**
 ---------------------
 Changes a specific layer of art for the specified character in the scene, works almost the same as above.
-If you set the image name to ``""`` or ``"None"``, it will stop displaying the layer. Excluding layers with ``"alwaysOn":`` enabled.
-When using |f|ChangeImageLayer|/| type function, to stop displaying the layer you need to use "None".
+If you set the image name to ``""``, it will stop displaying the layer. Excluding layers with ``"alwaysOn":`` enabled.
 
 ::
 
@@ -73,29 +72,3 @@ Gives the ability to use Image Sets as alternate CGs without needing to be the e
   "ChangeImageLayer", "ImageSetDontCarryOver", "1", "Hypno"
 
 .. Not confidant in how I've described the functions here, will go over it again when I make the expanded pages on the pictures key.
-
-
-.. _AnimateImageLayer:
-
-**AnimateImageLayer**
----------------------
-Placed last in this section cause it's complex and kinda neiche.
-This functions allows you to ovveride a specific layer of a character to do frame by frame animation on a loop, primarily for CG usage.  It currently supports up to 3 seperate layers to be animated.
-Check Aiko's titfuck scene in BedMimic.json for an example of this in use.
-
-::
-
-  "AnimateImageLayer", "Animation/Animation2/Animation3", "LayerTarget", "CharacterTarget", "Frame Dealy, 1.5",
-               "Monsters/Aiko/Paizuri/AikoBoobs__AikoPaizuri_Titfuck.png",
-               "Monsters/Aiko/Paizuri/AikoBoobsSqueeze__AikoPaizuri_Titfuck.png",
-         "EndLoop",
-
-"Animation/Animation2/Animation3": Which of the three animation channels you're using.
-"LayerTarget": Which layer on the character you're targeting, eg: "Expression"
-"CharacterTarget": Which character in the scene you're targeting, eg: "Aiko"/"1", similar to an image layer change target.
-"Frame Dealy, 1.5": The amount of seconds passed before the animation moves to the next frame in the list.
-After this is a list of the images you want it to swap to which must be aquired manually and cant be called from the lists in the monster file.
-
-To end an animation you need to call:
-"AnimateImageLayer", "", "LayerTarget", "CharacterTarget", "0",  "EndLoop",
-Else the animation will continue to play.

@@ -54,12 +54,6 @@ Same as the above, but for the players current energy. Note negative values subt
 
 ``"ChangeEnergyQuietly"`` can be used to change the player's current energy without notifying the player.
 
-**PlayerCurrentEnergyCost**
----------------------------------------
-
-Removes energy from the player based on their currently used skill. This is for counter attack usage like the ghosts, where the skill technically still goes through despite skipping the attack itself.
-
-
 **ChangeArousalByPercent & ChangeEnergyByPercent**
 ---------------------------------------------------
 

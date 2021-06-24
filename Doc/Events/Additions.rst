@@ -92,7 +92,6 @@ for the Brothel. See the example below for details of the implementation.
 Be sure to add the new scenes for these options in the same file. Do not override the scene you're adding the menu to.
 
 If the menu you are adding to doesn't have a "FinalOption" for what is supposed to be the back-out choice you can safely add it to the choice in the scene under the presumption that other modders would do the same.
-"OverrideOption", can be used prior to a choice to override any existing duplicates of that option in the menu, this is generally also used in conjunction with FinalOption so you can properly clear out the existing exit in the menu.
 
 ::
 
@@ -104,7 +103,7 @@ If the menu you are adding to doesn't have a "FinalOption" for what is supposed 
         "New menu choice",
         "RequiresEnergy", "50",
         "The other new menu choice",
-        "OverrideOption", "FinalOption", "Leave",
+        "FinalOption", "Leave",
       "EndLoop"
       ]
     }

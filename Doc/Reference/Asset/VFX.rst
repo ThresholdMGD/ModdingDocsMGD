@@ -1,7 +1,7 @@
 **VFX**
 ========
 .. note::
-
+  
   Each of these have what is called a channel, specific to the function itself.
   Each channel represents a layer on the screen, and will be overridden if it is called again, even if you intend to use it multiple times at once.
   You can avoid replacing a visual effect by mistake through the mentioned channels for each function, or by smartly mixing
@@ -46,8 +46,6 @@ To be placed after ``"PlayVisualEffect"`` so it knows how you want to manipulate
 
 * ``"RepeatingPulse"`` repeats low opacity pulse.
 
-* ``"Kiss"`` Similar to a single screen pulse, but holds the image for a few moments.
-
 * ``"ScreenFlash"`` quick image flash. Note that using bright images might be unpleasant to the eye.
 
 * ``"BlindingFlash"`` flash that lasts longer and fades slower. Still probably unpleasant to the eye.
@@ -83,28 +81,6 @@ Pre-made and independent visual effect functions, with their own channel and ima
 ``"PlayHypnoSpiral"`` rotates an image by 360 degrees, meant for hypno spirals. End with ``"EndHypnoSpiral"``.
 
 It has multiple parameters it uses to determine its effect, in a specific order, as shown in the above.
-
-
-**PlayPendulum**
--------------------
-
-::
-
-  "PlayPendulum", "5", "60", "Image.png", "1"
-
-*Legend*:
-
-::
-
-  "PlayPendulum", "Speed, 0-Any, default 5", "Angle, 0-360, default 60", "Image.png",
-
-``"PlayPendulum"`` rotates an image 'back and forth' on screen like a pendulum. End with ``"EndPendulum"``.
-
-The image used itself needs to be set up a specific way if you want it to display properly, check 'pendulumTest.png' in the game files for an example.
--To be specific the image needs to be double the sceen height, and the rotation point needs to be centered on the image, as that's there the rotation will occur on screen.
-
-It has multiple parameters it uses to determine its effect, in a specific order, as shown in the above.
-
 
 **PlayImagePulseLoopingList**
 ------------------------------
@@ -217,8 +193,8 @@ Due to how it works, any non Global "Characters" custom effect, MUST be ended ma
 "PlayMotionEffectCustom", "", "Character", "Aiko", "0", "0"
 "PlayMotionEffectCustom", "", "Bodypart", "Aiko", "Expression", "0", "0"
 
-There can only be one custom effect on screen at a time atm.
+Explosion - LongExplosion – Crash – SlowBounce – Bounce - Sway
 
 **EndAllVisualEffects**
 ------------------------
-``"EndAllVisualEffects"`` will stop all VFX currently playing, regardless of what it is. With the exclusion of "PlayMotionEffectCustom" based effects, as that needs to be manually ended.
+``"EndAllVisualEffects"`` will stop all VFX currently playing, regardless of what it is.

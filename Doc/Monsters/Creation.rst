@@ -421,9 +421,6 @@ There is a lot of keys to unpack for each object layer, so here is a brief overv
     - Changes the alignment of the layer on the y axis.
   * - ``"Player": "Yes"``
     - Informs the game to recolor the target based on the player appearance set. You generally wont need to have this feild in the file at all, as it only needs to be there for the turning on of this feature.
-  * - ``"Player": "Silhouette"``
-    -  Additionally when using Player "Yes", you need to have another seperate image layer with "Player": "Silhouette" for the game to auto swap to if the player has set the appearance as a silhouette.
-
 
 The ``"Images":`` key features an array where all the images for the layer go, each image being contained in an object. The objects work as follows:
 
