@@ -12,7 +12,7 @@ Progress is typically used to track relationship progress with characters, but i
 
 .. tip::
 
-  You can display progress via the ``{DisplayProgress}`` :ref:`Text Markup`. Also see :ref:`Get Event Progress` for progress functions outside of the given file.
+  You can display progress via the ``{ProgressDisplay}`` :ref:`Text Markup`. Also see :ref:`Get Event Progress` for progress functions outside of the given file.
 
 **SetProgress**
 ----------------

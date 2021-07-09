@@ -5,7 +5,7 @@
 
 .. _ChangeImageFor:
 
-**ChangeImageFor**
+**ChangeImageFor - THIS FEATURE IS BECOMING DEPRECIATED, please use ChangeImageLayer instead**
 -------------------
 Changes the image of a displayed character. The number represents which of the characters that are currently being displayed will have their image changed.
 In combat, it will change the focused monster instead of a specific one. Typically for characters that don't make use of layers.

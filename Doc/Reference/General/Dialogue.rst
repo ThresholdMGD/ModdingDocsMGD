@@ -17,6 +17,16 @@ Puts the player name in the text box header for the next string.
   "PlayerSpeaks",
     "I don't get to talk very often."
 
+**PlayerSpeaksSkill - Combat Only**
+------------------------------------
+
+Generally for use in combat events where the skill name is called still, and quotation marks are needed to be removed.
+
+.. code-block:: javascript
+
+  "PlayerSpeaksSkill",
+    "I don't get to talk very often."
+
 .. _Speak:
 
 **Speak**

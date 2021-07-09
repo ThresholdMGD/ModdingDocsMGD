@@ -125,7 +125,7 @@ Note the comma between the objects, and how the last object doesn't have one, so
             "EndLoop",
             "Speaks2",
             "You will handle all my paperwork from here on!",
-            "ChangeImageFor", "1", "Panic",
+            "ChangeImageLayer", "Expression", "1", "Panic",
             "Speaks",
             "{b}Noooo{/b}, anything but {i}paperwork{/i}!"
             ]
