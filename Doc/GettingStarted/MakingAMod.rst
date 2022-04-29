@@ -308,7 +308,7 @@ The first scene listed towards the top of the file will play first by default wh
 
 ``"theScene":`` is where the actual content is written. 
 By default, any value you provide will be the narration that's displayed to the player in-game.
-Provide a value of ``"You walk the shops."``
+Provide a value of ``"You walk around the shops."``
 
 Of course, to make a new scene for every line of dialogue would be impractical.
 Thankfully, you won't need to.
@@ -322,7 +322,7 @@ To do this, put a comma at the end of the current value, and provide another str
 .. code-block:: javascript
 
     "theScene": [
-        "You walk the shops.", ""
+        "You walk around the shops.", ""
     ]
 
 For organization's sake, you can press enter in-between the two values to cause a linebreak and put them on seperate lines.
@@ -330,7 +330,7 @@ For organization's sake, you can press enter in-between the two values to cause 
 .. code-block:: javascript
 
     "theScene": [
-        "You walk the shops.", 
+        "You walk around the shops.", 
         ""
     ]
 
@@ -353,7 +353,7 @@ To tell the game it doesn't need to display any more characters, you end the Dis
 .. code-block:: javascript
 
             "theScene": [
-                "You walk the shops.",
+                "You walk around the shops.",
                 "DisplayCharacters",
                     "1",
                 "EndLoop"
@@ -367,7 +367,7 @@ This is known as :doc:`Markup </Doc/Reference/Markup>`, which changes {ThePlayer
 .. code-block:: javascript
 
             "theScene": [
-                "You walk the shops.",
+                "You walk around the shops.",
                 "DisplayCharacters",
                     "1",
                 "EndLoop",

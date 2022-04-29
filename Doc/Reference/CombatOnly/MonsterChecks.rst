@@ -85,7 +85,7 @@ Checks if the monster's arousal is greater than the given number.
 
 **IfMonsterOrgasm**
 --------------------
-Checks if the current monster’s arousal will make them cum.
+Checks if the current monster's arousal will make them cum.
 
 .. code-block:: javascript
 
@@ -94,8 +94,9 @@ Checks if the current monster’s arousal will make them cum.
 ----
 
 **IfMonsterEnergyGone**
---------------------
-Checks if the current monster’s energy is 0.
+-------------------------
+
+Checks if the current monster's energy is 0.
 
 .. code-block:: javascript
 

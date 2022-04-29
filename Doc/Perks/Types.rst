@@ -75,7 +75,7 @@ Declare the perk as a NonPersistentEffect, removing it whenever a Non-Persistent
 Set a value of 0, as ``"EffectPower":`` is not needed.
 
 **RemovablePersistantEffect**
-""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 
 .. code-block:: javascript
 
@@ -239,7 +239,7 @@ Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands) magic damage
 Alters breast/nipple damage by a percent. Positive values increase damage, negative values decrease.
 
 **NonPenSeductionBoost**
-"""""""""""""""""""
+"""""""""""""""""""""""""""
 
 .. code-block:: javascript
 
@@ -747,7 +747,7 @@ Increases the effectiveness of your own stances. Positive values improve effecti
 Alters run chance by a percent. Positive values increase chance, negative values reduce.
 
 **OpponentRunChance**
-""""""""""""""
+""""""""""""""""""""""""
 
 .. code-block:: javascript
 

@@ -82,7 +82,7 @@ The following sub-sub-functions can be checked for:
   "ChangeStatCheckDifficulty", "IfPlayerHasStatusEffect", "Charm", "10"
 
 **IfPlayerHasStatusEffectWithPotencyEqualOrGreater**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
 
