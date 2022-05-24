@@ -34,6 +34,18 @@ you give a negative or positive value respectively. You are free to remove as mu
 
 ----
 
+**GiveTreasure**
+-------------------------------
+
+Give Treasure requires the player to be in active explore or on an adventure to function properly.
+Give treasure takes either "Common", "Uncommon", or "Rare", and rewards the player drops from the respective treasure table rewards for that location/adventure.
+
+.. code-block:: javascript
+
+  "GiveTreasure", "Common"
+
+----
+
 **GiveSkill & RemoveSkillFromPlayer**
 --------------------------------------
 
