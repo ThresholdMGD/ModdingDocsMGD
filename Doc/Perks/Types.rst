@@ -870,6 +870,8 @@ Alters the given stat of the wielder by the given amount. Positive values increa
 * ``"RestraintsRes"``
 * ``"TranceRes"``
 * ``"ParalysisRes"``
+* ``"SleepRes"``
+* ``"DebuffRes"``
 * ``"SexSensitivity"``
 * ``"AssSensitivity"``
 * ``"BreastsSensitivity"``
