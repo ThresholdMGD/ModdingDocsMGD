@@ -89,11 +89,10 @@ The exception to this behavior is when using ``"MenuAddition"``.
 The :doc:`function </Doc/Reference/Functions>`  ``"MenuAddition"`` will append additional choices to a :ref:`MenuFunc` through a duplicate scene in the addition with the same ``"NameOfScene":`` value.
 
 This is for avoiding compatibility issues with other mods making additions to menus, notably those adding additional choices to say, the night life menu
-for the Brothel. See the example below for details of the implementation.
+for the Brothel. See the example below for details of the implementation, and the _MenuAdditionExample.json file in the game folders for a further example to experiment with if needed.
 
-If the menu you are adding to doesn't have a ``"FinalOption"`` for what is supposed to be the back-out choice,
-you can safely add it to the choice in the ``"MenuAddition"`` scene under the presumption that other modders would do the same.
-``"OverrideOption"`` must be used prior to a menu choice so it properly clears any duplicates of the original choice in the menu.
+If the menu you are adding to from the base doesn't have a ``"FinalOption"`` in use already, it is intended to be applied to back out or leave options so it's always at the bottom of the menu,
+``"OverrideOption"`` must be used prior to a menu choice such as ``"FinalOption"`` so it properly clears any duplicates of the original choice in the menu while ensuring no compatibility issues should arise with other mods.
 
 .. code-block:: javascript
 
