@@ -116,9 +116,15 @@ The following sub-sub-functions can be checked for:
 
   "ChangeStatCheckDifficulty", "IfVirilityEqualOrGreater", "65", "9"
 
-**IfEncounterSizeGreaterOrEqualTo & IfEncounterSizeLessOrEqualTo**
+**IfMonsterLevelGreaterThan**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. code-block:: javascript
+
+  "ChangeStatCheckDifficulty", "IfMonsterLevelGreaterThan", "50", "5", 
+
+**IfEncounterSizeGreaterOrEqualTo & IfEncounterSizeLessOrEqualTo**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: javascript
 

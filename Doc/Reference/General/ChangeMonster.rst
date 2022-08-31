@@ -41,6 +41,25 @@ This can take a number, 'MatchPlayer', 'GoUpByProgress' or 'GoUpByProgressFromOt
 
 ----
 
+**RecalculateMonsterExpDrop**
+----------------------------
+Recalculates the focused monsters exp drop based on the games progression curve of:
+(0.4*(lvl*lvl))+(2*lvl)+(15*sqrt(lvl)-8)
+
+
+.. code-block:: javascript
+
+  "RecalculateMonsterExpDrop"
+
+**RecalculateMonsterErosDrop**
+----------------------------
+Recalculates the focused monsters eros drop based on the games progression curve of:
+(lvl)^2+(lvl*10)+48)
+
+
+.. code-block:: javascript
+
+  "RecalculateMonsterErosDrop"
 
 **ChangeMonsterSensitivity**
 -----------------------------
