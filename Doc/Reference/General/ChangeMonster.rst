@@ -51,6 +51,8 @@ Recalculates the focused monsters exp drop based on the games progression curve 
 
   "RecalculateMonsterExpDrop"
 
+----
+
 **RecalculateMonsterErosDrop**
 ----------------------------
 Recalculates the focused monsters eros drop based on the games progression curve of:
@@ -60,6 +62,8 @@ Recalculates the focused monsters eros drop based on the games progression curve
 .. code-block:: javascript
 
   "RecalculateMonsterErosDrop"
+
+----
 
 **ChangeMonsterSensitivity**
 -----------------------------
