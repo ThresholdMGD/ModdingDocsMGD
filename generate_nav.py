@@ -179,7 +179,7 @@ def update_mkdocs_nav():
         config = yaml.safe_load(temp_content)
         print("✓ Loaded mkdocs.yml")
     except Exception as e:
-        print(f"❌ Error reading mkdocs.yml: {e}")
+        print(f"⚠ Error reading mkdocs.yml: {e}")
         return False
 
     # Generate new navigation
