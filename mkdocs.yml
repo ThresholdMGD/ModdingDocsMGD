@@ -1,0 +1,172 @@
+site_name: Monster Girl Dreams Modding Documentation
+site_author: Threshold
+site_description: Modding Documentation for the game Monster Girl Dreams
+site_url: https://venefi.ca/mysite
+copyright: Copyright &copy; 2017 - 2025 Threshold
+extra:
+  logo: img/banner.png
+  versionMGD: v27
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: mgd
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    - scheme: mgd-light
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+  logo: img/banner.png
+  favicon: img/favicon.png
+  features:
+  - toc.follow
+  - content.code.copy
+  - content.code.select
+  - search.highlight
+  - search.suggest
+  - navigation.instant: !ENV [OFFLINE, false]
+  - navigation.top
+  - navigation.footer
+extra_css:
+- stylesheets/neoteroi-mkdocs.css
+- stylesheets/extra.css
+extra_javascript:
+- js/custom.js
+plugins:
+- offline
+- tags
+- search:
+    lang: en
+    pipeline:
+    - stemmer
+    - stopWordFilter
+    - trimmer
+- redirects:
+    redirect_maps:
+      homepage.md: index.md
+- privacy
+- macros
+markdown_extensions:
+- admonition
+- codehilite
+- pymdownx.superfences
+- pymdownx.betterem
+- pymdownx.keys
+- pymdownx.snippets
+- attr_list
+- md_in_html
+- neoteroi.spantable
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.tabbed:
+    alternate_style: true
+- toc:
+    permalink: true
+nav:
+- Home: index.md
+- Getting Started:
+  - Editors: GettingStarted/Editors.md
+  - Making A Mod: GettingStarted/MakingAMod.md
+  - Music And Art: GettingStarted/MusicAndArt.md
+  - Meta Creation: GettingStarted/MetaCreation.md
+  - Publishing Mods: GettingStarted/PublishingMods.md
+- Tutorials:
+  - Tutorials Index: Tutorials/index.md
+  - File Hosting Your Mod: Tutorials/FileHostingYourMod.md
+  - Getting Image Position Coordinates: Tutorials/GetImagePos.md
+  - The JSON Format: Tutorials/TheJsonFormat.md
+- JSON Manual:
+  - Adventures:
+    - Adventures Index: Manual/Adventures/index.md
+    - Adventure Additions: Manual/Adventures/Additions.md
+    - Adventure Creation: Manual/Adventures/Adventures.md
+  - Events:
+    - Events Index: Manual/Events/index.md
+    - Event Additions: Manual/Events/Additions.md
+    - Event Creation: Manual/Events/Events.md
+  - Fetishes:
+    - Fetish & Addiction Creation: Manual/Fetishes/Fetishes.md
+  - Items:
+    - Item Creation: Manual/Items/Items.md
+  - Locations:
+    - Locations Index: Manual/Locations/index.md
+    - Location Additions: Manual/Locations/Additions.md
+    - Location Creation: Manual/Locations/Locations.md
+  - Monsters:
+    - Monsters Index: Manual/Monsters/index.md
+    - Monster Additions: Manual/Monsters/Additions.md
+    - Monster Creation: Manual/Monsters/Monsters.md
+    - lineTriggers: Manual/Monsters/Triggers.md
+  - Perks:
+    - Perks Index: Manual/Perks/index.md
+    - Perk Creation: Manual/Perks/Perks.md
+    - Perk Types: Manual/Perks/Types.md
+  - Skills:
+    - Skills Index: Manual/Skills/index.md
+    - Skill Additions: Manual/Skills/Additions.md
+    - Skill Creation: Manual/Skills/Skills.md
+- Reference:
+  - Markup: Reference/Markup.md
+  - Stance Reference: Reference/StanceRef.md
+  - Status Effect Reference: Reference/StatusEffectRef.md
+  - Stat Reference: Reference/StatRef.md
+  - FAQ: Reference/FAQ.md
+  - Breaking Changes: Reference/BreakingChanges.md
+  - Gridmap: Reference/Gridmap.md
+- Functions:
+  - Function Index: Functions/index.md
+  - Asset:
+    - BG & Chest: Functions/Asset/BGAndChest.md
+    - Image Layers: Functions/Asset/ImageLayers.md
+    - Music/BGM: Functions/Asset/Music.md
+    - SFX: Functions/Asset/SFX.md
+    - VFX: Functions/Asset/VFX.md
+  - Combat Only:
+    - Attacker: Functions/CombatOnly/Attacker.md
+    - Encounter: Functions/CombatOnly/Encounter.md
+    - End Combat or Monster: Functions/CombatOnly/EndCombat.md
+    - DenyTargetOrgasm and DenyAttackerOrgasm: Functions/CombatOnly/IgnoreOrgasm.md
+    - Monster Attacks: Functions/CombatOnly/MonsterAttack.md
+    - Monster Checks: Functions/CombatOnly/MonsterChecks.md
+    - Monster Combat Afflictions: Functions/CombatOnly/MonsterCombatAfflictions.md
+    - Monster Focus: Functions/CombatOnly/MonsterFocus.md
+    - Player Combat Afflictions: Functions/CombatOnly/PlayerCombatAfflictions.md
+    - Player Combat Checks: Functions/CombatOnly/PlayerCombatChecks.md
+    - Stances: Functions/CombatOnly/Stances.md
+  - Event Only:
+    - Choice: Functions/EventOnly/Choice.md
+    - Quest, Event, Adventure Complete: Functions/EventOnly/Complete.md
+    - Get Event Choice: Functions/EventOnly/GetEventChoice.md
+    - Get Event Progress: Functions/EventOnly/GetEventProgress.md
+    - Gridmap Functions: Functions/EventOnly/GridmapFunctions.md
+    - Input: Functions/EventOnly/Input.md
+    - Menu System: Functions/EventOnly/Menu.md
+    - Player Checks: Functions/EventOnly/PlayerChecks.md
+    - Pre-Combat: Functions/EventOnly/PreCombat.md
+    - Progress: Functions/EventOnly/Progress.md
+    - Scene Jumps: Functions/EventOnly/SceneJumps.md
+    - Speakers Specific: Functions/EventOnly/SpeakersSpecific.md
+    - Stat Checks: Functions/EventOnly/StatCheck.md
+    - Store Events: Functions/EventOnly/StoreEvent.md
+  - General:
+    - Change Monster: Functions/General/ChangeMonster.md
+    - Change Stats: Functions/General/ChangeStats.md
+    - Church: Functions/General/Church.md
+    - Dialogue: Functions/General/Dialogue.md
+    - Eros: Functions/General/Eros.md
+    - Event Jumps: Functions/General/EventJumps.md
+    - Inventory: Functions/General/Inventory.md
+    - Miscellaneous: Functions/General/Misc.md
+    - Player Afflictions: Functions/General/PlayerAfflictions.md
+    - Player Give & Take: Functions/General/PlayerGiveAndTake.md
+    - Shop: Functions/General/Shop.md
+    - SwapLineIf: Functions/General/SwapLineIf.md
+    - Time: Functions/General/Time.md
+    - Town Jumps & GameOver: Functions/General/TownJumps.md

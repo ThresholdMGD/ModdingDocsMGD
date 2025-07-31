@@ -1,7 +1,8 @@
 .DS_Store
 _build/
-.vscode/
 .mypy_cache/
-._lsp/
-.venv
-__pycache__
+.vscode
+.cache
+site
+mkenv
+site.zip
