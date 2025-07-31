@@ -14,7 +14,7 @@ if exist "%PYTHON_EXE%" (
     set EXIT_CODE=%ERRORLEVEL%
 ) else (
     echo ⚠ ERROR: Python venv not found at %PYTHON_EXE%
-    echo Run: python -m venv mkenv && mkenv\Scripts\activate
+    echo Copy/paste the following: python -m venv mkenv && call mkenv\Scripts\activate.bat
     pause
     exit /b 1
 )

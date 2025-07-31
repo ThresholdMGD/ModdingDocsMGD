@@ -4,12 +4,12 @@ Built using MkDocs Material.
 
 ## Building
 
-To get started, run one of the following:
+To get started, run one of the following via console in the directory:
 
 ```bash
-./build.bat       # Windows wrapper to build.py
+build.bat       # Windows wrapper to build.py
 ./build.sh        # Unix wrapper to build.py
-python ./build.py # The actual build script
+python build.py # The actual build script
 ```
 
 ## Manual Build
