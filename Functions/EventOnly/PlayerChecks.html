@@ -1,0 +1,5876 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Modding Documentation for the game Monster Girl Dreams">
+      
+      
+        <meta name="author" content="Threshold">
+      
+      
+        <link rel="canonical" href="https://venefi.ca/mysite/Functions/EventOnly/PlayerChecks.html">
+      
+      
+        <link rel="prev" href="Menu.html">
+      
+      
+        <link rel="next" href="PreCombat.html">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Player Checks - Monster Girl Dreams Modding Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="mgd" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#player-checks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!-- Determine classes -->
+
+
+  
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Monster Girl Dreams Modding Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Player Checks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="mgd" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="mgd-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+
+    <!-- User preference: color palette -->
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      
+
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+
+        <!-- Search interface -->
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<!-- Determine classes -->
+  
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+    <!-- Site title -->
+    <a
+        href="../../index.html"
+        title="Monster Girl Dreams Modding Documentation"
+        class="md-nav__button md-logo"
+        aria-label="Monster Girl Dreams Modding Documentation"
+        data-md-component="logo"
+    >
+        
+  <img src="../../img/banner.png" alt="logo">
+
+    </a>
+    <!-- Repository information -->
+    
+
+    <!-- Navigation list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+          
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Home
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_2"
+            id="__nav_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Getting Started
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/Editors.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Editors
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MakingAMod.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Making A Mod
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MusicAndArt.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Music And Art
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MetaCreation.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Meta Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/PublishingMods.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Publishing Mods
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_3"
+            id="__nav_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Tutorials
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Tutorials Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/FileHostingYourMod.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    File Hosting Your Mod
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/GetImagePos.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Getting Image Position Coordinates
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/TheJsonFormat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    The JSON Format
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4"
+            id="__nav_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    JSON Manual
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_4_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            JSON Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_1"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_1"
+            id="__nav_4_1_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventures
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_1_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Adventures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Adventures/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventures Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Adventures/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventure Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Adventures/Adventures.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventure Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_2"
+            id="__nav_4_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Events
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Events
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Events/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Events Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Events/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Events/Events.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_3"
+            id="__nav_4_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Fetishes
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fetishes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Fetishes/Fetishes.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Fetish & Addiction Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_4"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_4"
+            id="__nav_4_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Items
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_4_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Items
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Items/Items.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Item Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_5"
+            id="__nav_4_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Locations
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Locations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Locations/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Locations Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Locations/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Location Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Locations/Locations.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Location Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_6"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_6"
+            id="__nav_4_6_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monsters
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_6_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Monsters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Monsters/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monsters Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Monsters/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Monsters/Monsters.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Monsters/Triggers.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    lineTriggers
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_7"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_7"
+            id="__nav_4_7_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_7_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Perks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Perks/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perks Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Perks/Perks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perk Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Perks/Types.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perk Types
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_8"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_8"
+            id="__nav_4_8_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skills
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_8_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Skills/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skills Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Skills/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skill Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Manual/Skills/Skills.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skill Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_5"
+            id="__nav_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/Markup.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Markup
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StanceRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stance Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StatusEffectRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Status Effect Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StatRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stat Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/FAQ.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    FAQ
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/BreakingChanges.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Breaking Changes
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/Gridmap.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Gridmap
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6"
+            id="__nav_6_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Functions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_6_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Function Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_2"
+            id="__nav_6_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Asset
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Asset
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Asset/BGAndChest.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    BG & Chest
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Asset/ImageLayers.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Image Layers
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Asset/Music.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Music/BGM
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Asset/SFX.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    SFX
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Asset/VFX.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    VFX
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_3"
+            id="__nav_6_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Combat Only
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Combat Only
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/Attacker.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Attacker
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/Encounter.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Encounter
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/EndCombat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    End Combat or Monster
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/IgnoreOrgasm.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    DenyTargetOrgasm and DenyAttackerOrgasm
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/MonsterAttack.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Attacks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/MonsterChecks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/MonsterCombatAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Combat Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/MonsterFocus.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Focus
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/PlayerCombatAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Combat Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/PlayerCombatChecks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Combat Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../CombatOnly/Stances.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stances
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_4"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_4"
+            id="__nav_6_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Only
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_4_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Event Only
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Choice.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Choice
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Complete.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Quest, Event, Adventure Complete
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="GetEventChoice.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Get Event Choice
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="GetEventProgress.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Get Event Progress
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="GridmapFunctions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Gridmap Functions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Input.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Input
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Menu.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Menu System
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Navigation link to table of contents -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="PlayerChecks.html"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+
+      <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statequalsormore" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatEqualsOrMore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haseroslessthan" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasErosLessThan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virilityequalsorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirilityEqualsOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerorgasm" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerOrgasm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerarousaloverpercentofmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerArousalOverPercentOfMax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerspiritgone" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerSpiritGone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerenergygone" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerEnergyGone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerenergylessthanpercent" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerEnergyLessThanPercent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifsensitivityequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfSensitivityEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasfetish" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasFetish
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iffetishlevelequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfFetishLevelEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasskill" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasSkill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasskills" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasSkills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitem-ifdoesnthaveitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItem &amp; IfDoesntHaveItem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitems-ifdoesnthaveitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItems &amp; IfDoesntHaveItems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitemequipped-ifdoesnthaveitemequipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItemEquipped &amp; IfDoesntHaveItemEquipped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasrunesequipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasRunesEquipped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitemininventory-ifdoesnthaveitemininventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItemInInventory &amp; IfDoesntHaveItemInInventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasperk" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasPerk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerlevelgreaterthan" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerLevelGreaterThan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifinexploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfInExploration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifranaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfRanAway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerhasstatuseffect-ifplayerdoesnthavestatuseffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerHasStatusEffect &amp; IfPlayerDoesntHaveStatusEffect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerhasstatuseffectwithpotencyequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerHasStatusEffectWithPotencyEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifdifficultyis" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfDifficultyIs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Navigation item -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="PreCombat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Pre-Combat
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Progress.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Progress
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="SceneJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Scene Jumps
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="SpeakersSpecific.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Speakers Specific
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="StatCheck.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stat Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="StoreEvent.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Store Events
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_5"
+            id="__nav_6_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    General
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/ChangeMonster.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Change Monster
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/ChangeStats.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Change Stats
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Church.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Church
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Dialogue.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Dialogue
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Eros.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Eros
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/EventJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Jumps
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Inventory.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Inventory
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Misc.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Miscellaneous
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/PlayerAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/PlayerGiveAndTake.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Give & Take
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Shop.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Shop
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/SwapLineIf.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    SwapLineIf
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/Time.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Time
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../General/TownJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Town Jumps & GameOver
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+ 
+    </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#statequalsormore" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatEqualsOrMore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haseroslessthan" class="md-nav__link">
+    <span class="md-ellipsis">
+      HasErosLessThan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virilityequalsorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirilityEqualsOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerorgasm" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerOrgasm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerarousaloverpercentofmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerArousalOverPercentOfMax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerspiritgone" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerSpiritGone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerenergygone" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerEnergyGone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerenergylessthanpercent" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerEnergyLessThanPercent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifsensitivityequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfSensitivityEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasfetish" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasFetish
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iffetishlevelequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfFetishLevelEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasskill" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasSkill
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasskills" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasSkills
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitem-ifdoesnthaveitem" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItem &amp; IfDoesntHaveItem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitems-ifdoesnthaveitems" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItems &amp; IfDoesntHaveItems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitemequipped-ifdoesnthaveitemequipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItemEquipped &amp; IfDoesntHaveItemEquipped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasrunesequipped" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasRunesEquipped
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasitemininventory-ifdoesnthaveitemininventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasItemInInventory &amp; IfDoesntHaveItemInInventory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifhasperk" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfHasPerk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerlevelgreaterthan" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerLevelGreaterThan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifinexploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfInExploration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifranaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfRanAway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerhasstatuseffect-ifplayerdoesnthavestatuseffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerHasStatusEffect &amp; IfPlayerDoesntHaveStatusEffect
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifplayerhasstatuseffectwithpotencyequalorgreater" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfPlayerHasStatusEffectWithPotencyEqualOrGreater
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifdifficultyis" class="md-nav__link">
+    <span class="md-ellipsis">
+      IfDifficultyIs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <span class="md-tag">ifhas</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">ifstatus</span>
+      
+    
+      
+      
+      
+        <span class="md-tag">ifstatuseffect</span>
+      
+    
+  </nav>
+
+
+
+<h1 id="player-checks">Player Checks<a class="headerlink" href="#player-checks" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">See also</p>
+<p>For checks exclusive to combat, see
+Player Combat Checks.</p>
+</div>
+<h2 id="statequalsormore">StatEqualsOrMore<a class="headerlink" href="#statequalsormore" title="Permanent link">&para;</a></h2>
+<p>Checks the following stat against the given number, if the stat is equal
+or higher, it jumps to the scene, else it continues. See
+Stats.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;StatEqualsOrMore&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Power&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="haseroslessthan">HasErosLessThan<a class="headerlink" href="#haseroslessthan" title="Permanent link">&para;</a></h2>
+<p>If player has less eros than the given amount, it jumps to the scene,
+else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;HasErosLessThan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="virilityequalsorgreater">VirilityEqualsOrGreater<a class="headerlink" href="#virilityequalsorgreater" title="Permanent link">&para;</a></h2>
+<p>If the player virility is greater than the given number, it jumps to the
+scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;VirilityEqualsOrGreater&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerorgasm">IfPlayerOrgasm<a class="headerlink" href="#ifplayerorgasm" title="Permanent link">&para;</a></h2>
+<p>Checks if the players current arousal is over their maximum arousal. If
+true, it then goes to the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerOrgasm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerarousaloverpercentofmax">IfPlayerArousalOverPercentOfMax<a class="headerlink" href="#ifplayerarousaloverpercentofmax" title="Permanent link">&para;</a></h2>
+<p>Checks if the players current arousal is over a certain percent of their
+maximum arousal. If true, it jump to the given scene, else it continues.</p>
+<p>Note you can go over 100%, though it might be superseded by an orgasm
+call when used while in combat if it isn't per-preemptive.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerArousalOverPercentOfMax&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerspiritgone">IfPlayerSpiritGone<a class="headerlink" href="#ifplayerspiritgone" title="Permanent link">&para;</a></h2>
+<p>Check if the player is out of spirit, if true, it jumps to the given
+scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerSpiritGone&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerenergygone">IfPlayerEnergyGone<a class="headerlink" href="#ifplayerenergygone" title="Permanent link">&para;</a></h2>
+<p>Same as above, but for the player's energy.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerEnergyGone&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerenergylessthanpercent">IfPlayerEnergyLessThanPercent<a class="headerlink" href="#ifplayerenergylessthanpercent" title="Permanent link">&para;</a></h2>
+<p>Checks if the player energy is less than the given percentage of their
+maximum, if true, it jumps to the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerEnergyLessThanPercent&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifsensitivityequalorgreater">IfSensitivityEqualOrGreater<a class="headerlink" href="#ifsensitivityequalorgreater" title="Permanent link">&para;</a></h2>
+<p>Checks if the given sensitivity for the player is equal to or greater
+than the given value. If true, it jumps to the given scene, else it
+continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfSensitivityEqualOrGreater&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;120&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasfetish">IfHasFetish<a class="headerlink" href="#ifhasfetish" title="Permanent link">&para;</a></h2>
+<p>Checks if the player has the following fetish (which requires being
+level 25 or higher), if true, it jumps to the given scene, else it
+continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasFetish&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Oral&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="iffetishlevelequalorgreater">IfFetishLevelEqualOrGreater<a class="headerlink" href="#iffetishlevelequalorgreater" title="Permanent link">&para;</a></h2>
+<p>Checks if the player has an equal or greater level of the given fetish,
+if true, it jumps to the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfFetishLevelEqualOrGreater&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;60&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasskill">IfHasSkill<a class="headerlink" href="#ifhasskill" title="Permanent link">&para;</a></h2>
+<p>Checks if the player has the following skill. If true, it jumps to the
+given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasSkill&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Arousara&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasskills">IfHasSkills<a class="headerlink" href="#ifhasskills" title="Permanent link">&para;</a></h2>
+<p>Takes a list of skills the play can have, and if all is true it jumps to
+the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasSkills&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Dildo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bondage Net&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span><span class="p">,</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasitem-ifdoesnthaveitem">IfHasItem &amp; IfDoesntHaveItem<a class="headerlink" href="#ifhasitem-ifdoesnthaveitem" title="Permanent link">&para;</a></h2>
+<p>Checks if the player does or doesn't respectively have an item in their
+inventory or equipped. 
+<strong>Supports checking for Item Tags instead of specific items.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasItem&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Vandal&#39;s Note&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfDoesntHaveItem&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tags&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Collar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Venefica&#39;s Confectioneries&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasitems-ifdoesnthaveitems">IfHasItems &amp; IfDoesntHaveItems<a class="headerlink" href="#ifhasitems-ifdoesnthaveitems" title="Permanent link">&para;</a></h2>
+<p>Takes a list of items that the player has equipped or in their
+inventory, and if all are found or not found respectively, it jumps to
+the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasItems&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Anaph Herb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ardor Potion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span><span class="p">,</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfDoesntHaveItems&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Anaph Herb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ardor Potion&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span><span class="p">,</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasitemequipped-ifdoesnthaveitemequipped">IfHasItemEquipped &amp; IfDoesntHaveItemEquipped<a class="headerlink" href="#ifhasitemequipped-ifdoesnthaveitemequipped" title="Permanent link">&para;</a></h2>
+<p>Checks if the player does or does not respectively have the specified
+item equipped. If true, it jumps to the given scene, else it continues.
+<strong>Supports checking for Item Tags instead of specific items.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasItemEquipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hero&#39;s Cape&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfDoesntHaveItemEquipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tags&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sofia&#39;s Rewards&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Camilla&#39;s Secret&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasrunesequipped">IfHasRunesEquipped<a class="headerlink" href="#ifhasrunesequipped" title="Permanent link">&para;</a></h2>
+<p>Checks if the player does or does not respectively have equal to or more
+of the specified amount of the given rune equipped. If true, it jumps to
+the given scene, else it continues. 
+<strong>Supports checking for Item Tags instead of specific items.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasRunesEquipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Heart Rune&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span><span class="p">,</span>
+<span class="s2">&quot;IfHasRunesEquipped&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tags&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Graffiti Queen&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasitemininventory-ifdoesnthaveitemininventory">IfHasItemInInventory &amp; IfDoesntHaveItemInInventory<a class="headerlink" href="#ifhasitemininventory-ifdoesnthaveitemininventory" title="Permanent link">&para;</a></h2>
+<p>Checks if the player does or does not respectively have equal to or more
+of the specified amount of the given item in their inventory, ignoring
+their equipment slots. If true, it jumps to the given scene, else it
+continues. 
+<strong>Supports checking for Item Tags instead of specific items.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasItemInInventory&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Anaph Herb&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfDoesntHaveItemInInventory&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tags&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Healing&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Combat&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifhasperk">IfHasPerk<a class="headerlink" href="#ifhasperk" title="Permanent link">&para;</a></h2>
+<p>Checks if the player has the following perk. If true, it jumps to the
+given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfHasPerk&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Sadist&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerlevelgreaterthan">IfPlayerLevelGreaterThan<a class="headerlink" href="#ifplayerlevelgreaterthan" title="Permanent link">&para;</a></h2>
+<p>Checks if the player level is equal or greater than the specified
+amount. If true, it jumps to the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerLevelGreaterThan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifinexploration">IfInExploration<a class="headerlink" href="#ifinexploration" title="Permanent link">&para;</a></h2>
+<p>If the player is in Exploration via the Grimoire, rather than an
+Adventure. If true, it jumps to the given scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfInExploration&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifranaway">IfRanAway<a class="headerlink" href="#ifranaway" title="Permanent link">&para;</a></h2>
+<p>If the player has just run away from combat, if true, jump to the given
+scene, else it continues.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfRanAway&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerhasstatuseffect-ifplayerdoesnthavestatuseffect">IfPlayerHasStatusEffect &amp; IfPlayerDoesntHaveStatusEffect<a class="headerlink" href="#ifplayerhasstatuseffect-ifplayerdoesnthavestatuseffect" title="Permanent link">&para;</a></h2>
+<p>If the player does or doesn't respectively have <em>any</em> of the specified
+status effects, jumps to the given scene.</p>
+<p>Providing <code>"RequireAll"</code> prior to listing any status effects will make
+it only match if the player does or doesn't respectively have <em>all</em>
+given status effects.</p>
+<p>Please keep in mind Time will eliminate
+non-persistent status effects. See Status Effect.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerHasStatusEffect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;RequireAll&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Restraint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Charm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span><span class="p">,</span>
+<span class="s2">&quot;IfPlayerHasStatusEffect&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Restraint&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Charm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;AnotherSceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifplayerhasstatuseffectwithpotencyequalorgreater">IfPlayerHasStatusEffectWithPotencyEqualOrGreater<a class="headerlink" href="#ifplayerhasstatuseffectwithpotencyequalorgreater" title="Permanent link">&para;</a></h2>
+<p>Checks the player for a single status effect with the given amount of
+potency. Note not all status effects use potency, see
+Status Effect.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfPlayerHasStatusEffectWithPotencyEqualOrGreater&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Trance&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="ifdifficultyis">IfDifficultyIs<a class="headerlink" href="#ifdifficultyis" title="Permanent link">&para;</a></h2>
+<p>Checks the current difficulty of the playthrough, of the three possible
+<code>"Easy"</code>, <code>"Normal"</code>, and <code>"Hard"</code> difficulties you can give. If true,
+jumps to the given scene.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;IfDifficultyIs&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hard&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SceneNameHere&quot;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="Menu.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Menu System">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Menu System
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="PreCombat.html" class="md-footer__link md-footer__link--next" aria-label="Next: Pre-Combat">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Pre-Combat
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017 - 2025 Threshold
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "content.code.copy", "content.code.select", "search.highlight", "search.suggest", {"navigation.instant": false}, "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+    
+  </body>
+</html>

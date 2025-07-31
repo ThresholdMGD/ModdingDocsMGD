@@ -1,0 +1,1578 @@
+{
+  "Asset": [
+    {
+      "title": "BG & Chest",
+      "path": "Functions/Asset/BGAndChest.md",
+      "headers": [
+        {
+          "title": "ChangeBG",
+          "children": []
+        },
+        {
+          "title": "StoreCurrentBG & UseHeldBG",
+          "children": []
+        },
+        {
+          "title": "ShowTreasureChest & HideTreasureChest",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Image Layers",
+      "path": "Functions/Asset/ImageLayers.md",
+      "headers": [
+        {
+          "title": "ChangeImageFor - DEPRECATED.",
+          "children": []
+        },
+        {
+          "title": "ChangeImageLayer",
+          "children": [
+            {
+              "title": "ActiveOverlay & DeactivateOverlay",
+              "children": []
+            },
+            {
+              "title": "ImageSet & ImageSetPersist",
+              "children": []
+            },
+            {
+              "title": "ImageSetDontCarryOver",
+              "children": []
+            },
+            {
+              "title": "ImageSetRoleStart",
+              "children": []
+            },
+            {
+              "title": "ForEvery",
+              "children": []
+            },
+            {
+              "title": "ForSpecific",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "RoledCGEnd",
+          "children": []
+        },
+        {
+          "title": "AnimateImageLayer",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Music/BGM",
+      "path": "Functions/Asset/Music.md",
+      "headers": [
+        {
+          "title": "StopBGM",
+          "children": []
+        },
+        {
+          "title": "StopBGMHard",
+          "children": []
+        },
+        {
+          "title": "ChangeBGM",
+          "children": []
+        },
+        {
+          "title": "ChangeBGM-List",
+          "children": []
+        },
+        {
+          "title": "ChangeBGM-OverrideCombatMusic",
+          "children": []
+        },
+        {
+          "title": "ChangeBGM-NoFade",
+          "children": []
+        },
+        {
+          "title": "PlayThisSongAfterCombat",
+          "children": []
+        },
+        {
+          "title": "StoreCurrentBGM & PlayStoredBGM",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "SFX",
+      "path": "Functions/Asset/SFX.md",
+      "headers": [
+        {
+          "title": "PlaySoundEffect",
+          "children": []
+        },
+        {
+          "title": "PlaySoundBankOnce",
+          "children": []
+        },
+        {
+          "title": "PlayLoopingSoundEffect & StopSoundEffectLoop",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "VFX",
+      "path": "Functions/Asset/VFX.md",
+      "headers": [
+        {
+          "title": "PlayVisualEffect",
+          "children": [
+            {
+              "title": "VFX Types",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Channel-Independent VFX",
+          "children": []
+        },
+        {
+          "title": "PlayHypnoSpiral",
+          "children": []
+        },
+        {
+          "title": "PlayPendulum",
+          "children": []
+        },
+        {
+          "title": "PlayImagePulseLoopingList",
+          "children": []
+        },
+        {
+          "title": "PlayImagePulseLoopingRandom",
+          "children": []
+        },
+        {
+          "title": "PlayCustomBarrage",
+          "children": []
+        },
+        {
+          "title": "PlayMotionEffect",
+          "children": []
+        },
+        {
+          "title": "PlayMotionEffectLoop",
+          "children": []
+        },
+        {
+          "title": "PlayMotionEffectCustom",
+          "children": []
+        },
+        {
+          "title": "EndAllVisualEffects",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Combat Only": [
+    {
+      "title": "Attacker",
+      "path": "Functions/CombatOnly/Attacker.md",
+      "headers": [
+        {
+          "title": "IfAttackCrits",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Encounter",
+      "path": "Functions/CombatOnly/Encounter.md",
+      "headers": [
+        {
+          "title": "HideMonsterEncounter & ShowMonsterEncounter",
+          "children": []
+        },
+        {
+          "title": "AddMonsterToEncounter",
+          "children": [
+            {
+              "title": "ChangeForm",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "AllowRunning",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "End Combat or Monster",
+      "path": "Functions/CombatOnly/EndCombat.md",
+      "headers": [
+        {
+          "title": "PlayerLosesCombat",
+          "children": []
+        },
+        {
+          "title": "EndCombat",
+          "children": []
+        },
+        {
+          "title": "ClearFightForVictory",
+          "children": []
+        },
+        {
+          "title": "ClearMonsterEncounter",
+          "children": []
+        },
+        {
+          "title": "ClearMonsterEncounterBossFight",
+          "children": []
+        },
+        {
+          "title": "RemoveMonster",
+          "children": []
+        },
+        {
+          "title": "DefeatMonster",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "DenyTargetOrgasm and DenyAttackerOrgasm",
+      "path": "Functions/CombatOnly/IgnoreOrgasm.md",
+      "headers": []
+    },
+    {
+      "title": "Monster Attacks",
+      "path": "Functions/CombatOnly/MonsterAttack.md",
+      "headers": [
+        {
+          "title": "SemenHeal",
+          "children": []
+        },
+        {
+          "title": "EnergyDrain",
+          "children": []
+        },
+        {
+          "title": "SetSkipMonsterAttack",
+          "children": []
+        },
+        {
+          "title": "SetResumeMonsterAttack",
+          "children": []
+        },
+        {
+          "title": "SkipAllMonsterAttacks",
+          "children": []
+        },
+        {
+          "title": "ResumeAllMonsterAttacks",
+          "children": []
+        },
+        {
+          "title": "CallMonsterAttack",
+          "children": []
+        },
+        {
+          "title": "EndCounterChecks",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Monster Checks",
+      "path": "Functions/CombatOnly/MonsterChecks.md",
+      "headers": [
+        {
+          "title": "IfThisMonsterIsInEncounter",
+          "children": []
+        },
+        {
+          "title": "EncounterSizeGreaterOrEqualTo & EncounterSizeLessOrEqualTo",
+          "children": []
+        },
+        {
+          "title": "IfMonsterLevelGreaterThan",
+          "children": []
+        },
+        {
+          "title": "IfMonsterHasStatusEffect & IfMonsterDoesntHaveStatusEffect",
+          "children": []
+        },
+        {
+          "title": "IfOtherMonsterHasStatusEffect & IfOtherMonsterDoesntHaveStatusEffect",
+          "children": []
+        },
+        {
+          "title": "IfMonsterHasStatusEffectWithPotencyEqualOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfMonsterArousalGreaterThan",
+          "children": []
+        },
+        {
+          "title": "IfMonsterOrgasm",
+          "children": []
+        },
+        {
+          "title": "IfMonsterEnergyGone",
+          "children": []
+        },
+        {
+          "title": "CallMonsterEncounterOrgasmCheck",
+          "children": []
+        },
+        {
+          "title": "IfMonsterSpiritGone",
+          "children": []
+        },
+        {
+          "title": "IfMonsterHasSkill & IfMonsterHasPerk",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Monster Combat Afflictions",
+      "path": "Functions/CombatOnly/MonsterCombatAfflictions.md",
+      "headers": [
+        {
+          "title": "ChangeMonsterArousal, ChangeMonsterEnergy, & ChangeMonsterSpirit",
+          "children": []
+        },
+        {
+          "title": "MonsterOrgasm",
+          "children": []
+        },
+        {
+          "title": "DenyMonsterOrgasm",
+          "children": []
+        },
+        {
+          "title": "RefreshMonster",
+          "children": []
+        },
+        {
+          "title": "ApplyStatusEffectToMonster & RemoveStatusEffectFromMonster",
+          "children": []
+        },
+        {
+          "title": "HitMonsterWith",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Monster Focus",
+      "path": "Functions/CombatOnly/MonsterFocus.md",
+      "headers": [
+        {
+          "title": "FocusOnMonster",
+          "children": []
+        },
+        {
+          "title": "FocusOnRandomMonster",
+          "children": []
+        },
+        {
+          "title": "ShuffleMonsterEncounter",
+          "children": []
+        },
+        {
+          "title": "RefocusOnInitialMonster",
+          "children": []
+        },
+        {
+          "title": "FocusedSpeaks",
+          "children": []
+        },
+        {
+          "title": "FocusedSpeaksSkill",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Player Combat Afflictions",
+      "path": "Functions/CombatOnly/PlayerCombatAfflictions.md",
+      "headers": [
+        {
+          "title": "DenyPlayerOrgasm",
+          "children": []
+        },
+        {
+          "title": "HitPlayerWith",
+          "children": []
+        },
+        {
+          "title": "SkipPlayerAttack",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Player Combat Checks",
+      "path": "Functions/CombatOnly/PlayerCombatChecks.md",
+      "headers": [
+        {
+          "title": "IfPlayerStunnedByParalysis",
+          "children": []
+        },
+        {
+          "title": "IfPlayerIsUsingThisSkill",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Stances",
+      "path": "Functions/CombatOnly/Stances.md",
+      "headers": [
+        {
+          "title": "ApplyStance",
+          "children": []
+        },
+        {
+          "title": "ApplyStanceToOtherMonster",
+          "children": []
+        },
+        {
+          "title": "ClearStanceFromMonsterAndPlayer",
+          "children": []
+        },
+        {
+          "title": "IfPlayerHasStance & IfPlayerDoesntHaveStance",
+          "children": []
+        },
+        {
+          "title": "IfPlayerHasStances",
+          "children": []
+        },
+        {
+          "title": "IfMonsterHasStance & IfMonsterDoesntHaveStance",
+          "children": []
+        },
+        {
+          "title": "IfOtherMonsterHasStance and IfOtherMonsterDoesntHaveStance",
+          "children": []
+        },
+        {
+          "title": "ClearStances",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "Event Only": [
+    {
+      "title": "Choice",
+      "path": "Functions/EventOnly/Choice.md",
+      "headers": [
+        {
+          "title": "SetChoice",
+          "children": []
+        },
+        {
+          "title": "IfChoice",
+          "children": []
+        },
+        {
+          "title": "ChoiceToDisplayPlayer and ChoiceToDisplayMonster",
+          "children": []
+        },
+        {
+          "title": "SetChoiceToPlayerName",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Quest, Event, Adventure Complete",
+      "path": "Functions/EventOnly/Complete.md",
+      "headers": [
+        {
+          "title": "QuestComplete",
+          "children": []
+        },
+        {
+          "title": "AdventureComplete",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Get Event Choice",
+      "path": "Functions/EventOnly/GetEventChoice.md",
+      "headers": [
+        {
+          "title": "GetEventAndIfChoice",
+          "children": []
+        },
+        {
+          "title": "GetEventAndSetChoice",
+          "children": []
+        },
+        {
+          "title": "ChoiceToDisplayPlayerFromOtherEvent & ChoiceToDisplayMonsterFromOtherEvent",
+          "children": []
+        },
+        {
+          "title": "SetChoiceToPlayerNameFromOtherEvent",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Get Event Progress",
+      "path": "Functions/EventOnly/GetEventProgress.md",
+      "headers": [
+        {
+          "title": "GetEventAndChangeProgress",
+          "children": []
+        },
+        {
+          "title": "GetEventAndSetProgress",
+          "children": []
+        },
+        {
+          "title": "GetAnEventsProgressThenIfEquals",
+          "children": []
+        },
+        {
+          "title": "GetAnEventsProgressThenIfEqualsOrGreater",
+          "children": []
+        },
+        {
+          "title": "GetAnEventsProgressThenIfEqualsOrLess",
+          "children": []
+        },
+        {
+          "title": "Event Comparing Functions",
+          "children": [
+            {
+              "title": "EventsProgressEqualsOtherEventsProgress",
+              "children": []
+            },
+            {
+              "title": "IfEventsProgressEqualsOrLessThanOtherEventsProgress",
+              "children": []
+            },
+            {
+              "title": "**EventsProgressEqualsOrGreaterThanOtherEventsProgress**,",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Gridmap Functions",
+      "path": "Functions/EventOnly/GridmapFunctions.md",
+      "headers": [
+        {
+          "title": "ExitGridmap",
+          "children": []
+        },
+        {
+          "title": "StunGridPlayer",
+          "children": []
+        },
+        {
+          "title": "IfGridPlayerStunned",
+          "children": []
+        },
+        {
+          "title": "SetPlayerGridPosition",
+          "children": []
+        },
+        {
+          "title": "IfGridNPCSeesPlayer",
+          "children": []
+        },
+        {
+          "title": "ChangeGridVision",
+          "children": []
+        },
+        {
+          "title": "IfGridVisonOn",
+          "children": []
+        },
+        {
+          "title": "ChangeGridNPCMovement",
+          "children": []
+        },
+        {
+          "title": "IfGridNPCThere",
+          "children": []
+        },
+        {
+          "title": "SetActiveGridNPC",
+          "children": []
+        },
+        {
+          "title": "SpawnGridNPC",
+          "children": []
+        },
+        {
+          "title": "RemoveGridNPC",
+          "children": []
+        },
+        {
+          "title": "ChangeMapTile",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Input",
+      "path": "Functions/EventOnly/Input.md",
+      "headers": [
+        {
+          "title": "InputProgress",
+          "children": []
+        },
+        {
+          "title": "HasErosLessThanInput",
+          "children": []
+        },
+        {
+          "title": "IfInputEquals",
+          "children": []
+        },
+        {
+          "title": "IfInputEqualsOrLessThan",
+          "children": []
+        },
+        {
+          "title": "RemoveInputFromPlayerEros",
+          "children": []
+        },
+        {
+          "title": "AddInputToProgress & RemoveInputFromProgress",
+          "children": []
+        },
+        {
+          "title": "RemoveProgressFromEros",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Menu System",
+      "path": "Functions/EventOnly/Menu.md",
+      "headers": [
+        {
+          "title": "Menu",
+          "children": []
+        },
+        {
+          "title": "Meta Functions",
+          "children": [
+            {
+              "title": "MaxMenuSlots",
+              "children": []
+            },
+            {
+              "title": "ShuffleMenu",
+              "children": []
+            },
+            {
+              "title": "FinalOption",
+              "children": []
+            },
+            {
+              "title": "EventJump & ThenJumpToScene",
+              "children": []
+            },
+            {
+              "title": "HideOptionOnRequirementFail",
+              "children": []
+            },
+            {
+              "title": "InverseRequirement",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Displayed Requirement Sub-Functions",
+          "children": [
+            {
+              "title": "RequiresStat",
+              "children": []
+            },
+            {
+              "title": "RequiresItem",
+              "children": []
+            },
+            {
+              "title": "RequiresSkill",
+              "children": []
+            },
+            {
+              "title": "RequiresPerk",
+              "children": []
+            },
+            {
+              "title": "RequiresEnergy",
+              "children": []
+            },
+            {
+              "title": "RequiresVirility",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Requirement Sub-Functions",
+          "children": [
+            {
+              "title": "RequiresItemEquipped",
+              "children": []
+            },
+            {
+              "title": "RequiresTime",
+              "children": []
+            },
+            {
+              "title": "RequiresFetishLevelEqualOrGreater & RequiresFetishLevelEqualOrLess",
+              "children": []
+            },
+            {
+              "title": "RequiresMinimumProgress & RequiresMinimumProgressFromEvent",
+              "children": []
+            },
+            {
+              "title": "RequiresLessProgress & RequiresLessProgressFromEvent",
+              "children": []
+            },
+            {
+              "title": "RequiresChoice & RequiresChoiceFromEvent",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Player Checks",
+      "path": "Functions/EventOnly/PlayerChecks.md",
+      "headers": [
+        {
+          "title": "StatEqualsOrMore",
+          "children": []
+        },
+        {
+          "title": "HasErosLessThan",
+          "children": []
+        },
+        {
+          "title": "VirilityEqualsOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfPlayerOrgasm",
+          "children": []
+        },
+        {
+          "title": "IfPlayerArousalOverPercentOfMax",
+          "children": []
+        },
+        {
+          "title": "IfPlayerSpiritGone",
+          "children": []
+        },
+        {
+          "title": "IfPlayerEnergyGone",
+          "children": []
+        },
+        {
+          "title": "IfPlayerEnergyLessThanPercent",
+          "children": []
+        },
+        {
+          "title": "IfSensitivityEqualOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfHasFetish",
+          "children": []
+        },
+        {
+          "title": "IfFetishLevelEqualOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfHasSkill",
+          "children": []
+        },
+        {
+          "title": "IfHasSkills",
+          "children": []
+        },
+        {
+          "title": "IfHasItem & IfDoesntHaveItem",
+          "children": []
+        },
+        {
+          "title": "IfHasItems & IfDoesntHaveItems",
+          "children": []
+        },
+        {
+          "title": "IfHasItemEquipped & IfDoesntHaveItemEquipped",
+          "children": []
+        },
+        {
+          "title": "IfHasRunesEquipped",
+          "children": []
+        },
+        {
+          "title": "IfHasItemInInventory & IfDoesntHaveItemInInventory",
+          "children": []
+        },
+        {
+          "title": "IfHasPerk",
+          "children": []
+        },
+        {
+          "title": "IfPlayerLevelGreaterThan",
+          "children": []
+        },
+        {
+          "title": "IfInExploration",
+          "children": []
+        },
+        {
+          "title": "IfRanAway",
+          "children": []
+        },
+        {
+          "title": "IfPlayerHasStatusEffect & IfPlayerDoesntHaveStatusEffect",
+          "children": []
+        },
+        {
+          "title": "IfPlayerHasStatusEffectWithPotencyEqualOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfDifficultyIs",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Pre-Combat",
+      "path": "Functions/EventOnly/PreCombat.md",
+      "headers": [
+        {
+          "title": "CombatEncounter",
+          "children": [
+            {
+              "title": "NoRunning",
+              "children": []
+            },
+            {
+              "title": "SetBGOnRun",
+              "children": []
+            },
+            {
+              "title": "RunningWontSkipEvent",
+              "children": []
+            },
+            {
+              "title": "ApplyStance",
+              "children": []
+            },
+            {
+              "title": "Restrainer",
+              "children": []
+            },
+            {
+              "title": "DenyInventory",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Progress",
+      "path": "Functions/EventOnly/Progress.md",
+      "headers": [
+        {
+          "title": "SetProgress",
+          "children": []
+        },
+        {
+          "title": "ChangeProgress",
+          "children": []
+        },
+        {
+          "title": "ChangeProgressBasedOnVirility",
+          "children": []
+        },
+        {
+          "title": "IfProgressEquals",
+          "children": []
+        },
+        {
+          "title": "IfProgressEqualsOrGreater",
+          "children": []
+        },
+        {
+          "title": "IfProgressEqualsOrLess",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Scene Jumps",
+      "path": "Functions/EventOnly/SceneJumps.md",
+      "headers": [
+        {
+          "title": "JumpToScene",
+          "children": []
+        },
+        {
+          "title": "JumpToRandomScene",
+          "children": []
+        },
+        {
+          "title": "IfEventExists",
+          "children": []
+        },
+        {
+          "title": "CallSceneThenReturn",
+          "children": []
+        },
+        {
+          "title": "CallNextSceneJumpThenReturn",
+          "children": []
+        },
+        {
+          "title": "Bonus - FishingMiniGame",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Speakers Specific",
+      "path": "Functions/EventOnly/SpeakersSpecific.md",
+      "headers": [
+        {
+          "title": "DisplayCharacters",
+          "children": []
+        },
+        {
+          "title": "Speaks",
+          "children": []
+        },
+        {
+          "title": "SetPostName",
+          "children": []
+        },
+        {
+          "title": "SetFlexibleSpeaker & FlexibleSpeaks",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Stat Checks",
+      "path": "Functions/EventOnly/StatCheck.md",
+      "headers": [
+        {
+          "title": "StatCheck & StatCheckRollUnder",
+          "children": [
+            {
+              "title": "ChangeStatCheckDifficulty",
+              "children": [
+                {
+                  "title": "IfPlayerHasStatusEffect",
+                  "children": []
+                },
+                {
+                  "title": "IfPlayerHasStatusEffectWithPotencyEqualOrGreater",
+                  "children": []
+                },
+                {
+                  "title": "IfHasPerk",
+                  "children": []
+                },
+                {
+                  "title": "IfHasFetish",
+                  "children": []
+                },
+                {
+                  "title": "IfFetishLevelEqualOrGreater",
+                  "children": []
+                },
+                {
+                  "title": "IfVirilityEqualsOrGreater",
+                  "children": []
+                },
+                {
+                  "title": "IfMonsterLevelGreaterThan",
+                  "children": []
+                },
+                {
+                  "title": "IfEncounterSizeGreaterOrEqualTo & IfEncounterSizeLessOrEqualTo",
+                  "children": []
+                },
+                {
+                  "title": "IfProgressEqualsOrGreater & GetAnEventsProgressThenIfEqualsOrGreater",
+                  "children": []
+                },
+                {
+                  "title": "IfChoice & GetEventAndIfChoice",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ChangeNextStatCheckDifficulty",
+          "children": []
+        },
+        {
+          "title": "ResetStatCheckDifficultyModifer",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Store Events",
+      "path": "Functions/EventOnly/StoreEvent.md",
+      "headers": [
+        {
+          "title": "StoreCurrentEventSpotSkippingLines",
+          "children": []
+        },
+        {
+          "title": "GoBackToStoredEvent",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "General": [
+    {
+      "title": "Change Monster",
+      "path": "Functions/General/ChangeMonster.md",
+      "headers": [
+        {
+          "title": "ChangeMonster Functions",
+          "children": []
+        },
+        {
+          "title": "LevelUpMonster",
+          "children": []
+        },
+        {
+          "title": "RecalculateMonsterExpDrop",
+          "children": []
+        },
+        {
+          "title": "RecalculateMonsterErosDrop",
+          "children": []
+        },
+        {
+          "title": "ChangeMonsterSensitivity",
+          "children": []
+        },
+        {
+          "title": "ChangeMonsterStatusEffectResistances",
+          "children": []
+        },
+        {
+          "title": "ChangeMonsterFetish",
+          "children": []
+        },
+        {
+          "title": "GivePerkToMonster & RemovePerkFromMonster",
+          "children": []
+        },
+        {
+          "title": "GiveSkillToMonster & RemoveSkillFromMonster",
+          "children": []
+        },
+        {
+          "title": "ClearMonsterPerks & ClearMonsterSkillList",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Change Stats",
+      "path": "Functions/General/ChangeStats.md",
+      "headers": [
+        {
+          "title": "Change Stat Functions",
+          "children": []
+        },
+        {
+          "title": "ChangeSensitivity",
+          "children": []
+        },
+        {
+          "title": "PermanentlyChangeSensitivity",
+          "children": []
+        },
+        {
+          "title": "PermanentChangeStatusEffectResistances",
+          "children": []
+        },
+        {
+          "title": "ChangeFetish",
+          "children": []
+        },
+        {
+          "title": "PermanentlyChangeFetish",
+          "children": []
+        },
+        {
+          "title": "SetFetish",
+          "children": []
+        },
+        {
+          "title": "RespecPlayer",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Church",
+      "path": "Functions/General/Church.md",
+      "headers": [
+        {
+          "title": "DonateToGoddess",
+          "children": []
+        },
+        {
+          "title": "SensitivityRestore",
+          "children": []
+        },
+        {
+          "title": "PurgeFetishes",
+          "children": []
+        },
+        {
+          "title": "AddTributeToProgress",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Dialogue",
+      "path": "Functions/General/Dialogue.md",
+      "headers": [
+        {
+          "title": "PlayerSpeaks",
+          "children": []
+        },
+        {
+          "title": "PlayerSpeaksSkill - Combat Only",
+          "children": []
+        },
+        {
+          "title": "Speak",
+          "children": []
+        },
+        {
+          "title": "SetStoredColor",
+          "children": []
+        },
+        {
+          "title": "SaveNextLine, UseSavedLineInMenu, & DisplaySavedLine",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Eros",
+      "path": "Functions/General/Eros.md",
+      "headers": [
+        {
+          "title": "ChangeEros",
+          "children": []
+        },
+        {
+          "title": "ChangeErosByPercent",
+          "children": []
+        },
+        {
+          "title": "SetEros",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Event Jumps",
+      "path": "Functions/General/EventJumps.md",
+      "headers": [
+        {
+          "title": "JumpToEvent",
+          "children": [
+            {
+              "title": "JumpToNPCEvent",
+              "children": []
+            },
+            {
+              "title": "JumpToLossEvent",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "JumpToEventThenScene",
+          "children": [
+            {
+              "title": "CallCombatEventAndScene",
+              "children": []
+            },
+            {
+              "title": "JumpToNPCEventThenScene",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "CallEventAndSceneThenReturn",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Inventory",
+      "path": "Functions/General/Inventory.md",
+      "headers": [
+        {
+          "title": "AllowInventory",
+          "children": []
+        },
+        {
+          "title": "DenyInventory",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Miscellaneous",
+      "path": "Functions/General/Misc.md",
+      "headers": [
+        {
+          "title": "ForceAutoSave",
+          "children": []
+        },
+        {
+          "title": "HideHealth",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Player Afflictions",
+      "path": "Functions/General/PlayerAfflictions.md",
+      "headers": [
+        {
+          "title": "SetArousalToXUnlessHigherThanX",
+          "children": []
+        },
+        {
+          "title": "SetArousalToXUnlessHigherThanXThenAddY",
+          "children": []
+        },
+        {
+          "title": "SetArousalToMax",
+          "children": []
+        },
+        {
+          "title": "ChangeArousal & ChangeArousalQuietly",
+          "children": []
+        },
+        {
+          "title": "ChangeEnergy & ChangeEnergyQuietly",
+          "children": []
+        },
+        {
+          "title": "PlayerCurrentEnergyCost",
+          "children": []
+        },
+        {
+          "title": "ChangeArousalByPercent & ChangeEnergyByPercent",
+          "children": []
+        },
+        {
+          "title": "SetSpirit",
+          "children": []
+        },
+        {
+          "title": "ChangeSpirit & ChangeSpiritQuietly",
+          "children": []
+        },
+        {
+          "title": "DamagePlayerFromMonster",
+          "children": []
+        },
+        {
+          "title": "DamageMonsterFromMonster",
+          "children": []
+        },
+        {
+          "title": "ChangePerkDuration",
+          "children": []
+        },
+        {
+          "title": "ApplyStatusEffect",
+          "children": []
+        },
+        {
+          "title": "RemoveStatusEffect",
+          "children": []
+        },
+        {
+          "title": "ClearNonPersistentStatusEffects",
+          "children": []
+        },
+        {
+          "title": "ClearPlayerStatusEffects",
+          "children": []
+        },
+        {
+          "title": "RefreshPlayer",
+          "children": []
+        },
+        {
+          "title": "HoldCurrentVirility",
+          "children": []
+        },
+        {
+          "title": "PlayerOrgasm",
+          "children": []
+        },
+        {
+          "title": "PlayerOrgasmNoSpiritLoss",
+          "children": []
+        },
+        {
+          "title": "EmptySpiritCounter",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Player Give & Take",
+      "path": "Functions/General/PlayerGiveAndTake.md",
+      "headers": [
+        {
+          "title": "GiveExp",
+          "children": []
+        },
+        {
+          "title": "GiveItem & GiveItemQuietly",
+          "children": []
+        },
+        {
+          "title": "GiveTreasure",
+          "children": []
+        },
+        {
+          "title": "GiveSkill & RemoveSkillFromPlayer",
+          "children": []
+        },
+        {
+          "title": "GiveSkillQuietly & RemoveSkillFromPlayerQuietly",
+          "children": []
+        },
+        {
+          "title": "RemoveSkillFromPlayerTemporarily & GiveSkillThatWasTemporarilyRemoved",
+          "children": []
+        },
+        {
+          "title": "GivePerk & RemovePerk",
+          "children": []
+        },
+        {
+          "title": "GivePerkQuietly & RemovePerkQuietly",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Shop",
+      "path": "Functions/General/Shop.md",
+      "headers": [
+        {
+          "title": "ShoppingMenu",
+          "children": []
+        },
+        {
+          "title": "SkillShoppingMenu <a id=\"skill-shopping\"></a>",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "SwapLineIf",
+      "path": "Functions/General/SwapLineIf.md",
+      "headers": [
+        {
+          "title": "SwapLineIf Options",
+          "children": [
+            {
+              "title": "Random",
+              "children": []
+            },
+            {
+              "title": "Stat",
+              "children": []
+            },
+            {
+              "title": "Level",
+              "children": []
+            },
+            {
+              "title": "Arousal & ArousalByPercent & MaxArousal",
+              "children": []
+            },
+            {
+              "title": "Energy & EnergyByPercent & MaxEnergy",
+              "children": []
+            },
+            {
+              "title": "Virility",
+              "children": []
+            },
+            {
+              "title": "HasFetish",
+              "children": []
+            },
+            {
+              "title": "HasFetishLevelEqualOrGreater",
+              "children": []
+            },
+            {
+              "title": "Perk",
+              "children": []
+            },
+            {
+              "title": "EncounterSize",
+              "children": []
+            },
+            {
+              "title": "Item",
+              "children": []
+            },
+            {
+              "title": "Eros",
+              "children": []
+            },
+            {
+              "title": "IfTimeIs",
+              "children": []
+            },
+            {
+              "title": "Progress & OtherEventsProgress",
+              "children": []
+            },
+            {
+              "title": "Choice & OtherEventsChoice",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Time",
+      "path": "Functions/General/Time.md",
+      "headers": [
+        {
+          "title": "PlayerStep",
+          "children": []
+        },
+        {
+          "title": "AdvanceTime",
+          "children": []
+        },
+        {
+          "title": "RestPlayer",
+          "children": []
+        },
+        {
+          "title": "SleepPlayer <a id=\"sleep-functions\"></a>",
+          "children": []
+        },
+        {
+          "title": "IfDelayingNotifications",
+          "children": []
+        },
+        {
+          "title": "TimeBecomesNight & TimeBecomesDay",
+          "children": []
+        },
+        {
+          "title": "TimeBecomesNormal",
+          "children": []
+        },
+        {
+          "title": "IfTimeIs",
+          "children": []
+        },
+        {
+          "title": "HealingSickness",
+          "children": []
+        },
+        {
+          "title": "IfHealingSickness",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Town Jumps & GameOver",
+      "path": "Functions/General/TownJumps.md",
+      "headers": [
+        {
+          "title": "CallLossLevelUp",
+          "children": []
+        },
+        {
+          "title": "GameOver",
+          "children": []
+        },
+        {
+          "title": "TrueGameOver",
+          "children": []
+        },
+        {
+          "title": "GoToTown",
+          "children": []
+        },
+        {
+          "title": "BumpToTown",
+          "children": []
+        },
+        {
+          "title": "GoToChurch",
+          "children": []
+        },
+        {
+          "title": "GoToRandomBrothel Scene Functions",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

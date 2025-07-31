@@ -1,0 +1,159 @@
+/* Neoteroi MkDocs Spantables CSS - Custom Material Theme Compatible */
+
+/* Base table styling for spantables */
+.md-typeset table.span-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0.5rem 0;
+    font-size: 0.7rem;
+    line-height: 1.34;
+}
+
+.md-typeset table.span-table th,
+.md-typeset table.span-table td {
+    border: 1px solid var(--md-default-bg-color--light);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+    font-weight: 700;
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset table.span-table td {
+    background-color: var(--md-default-bg-color);
+}
+
+/* Alternating row colors for better readability */
+.md-typeset table.span-table tbody tr:nth-child(even) td {
+    background-color: var(--md-default-fg-color--table);
+}
+
+/* Section header styling - make them stand out */
+.md-typeset table.span-table td strong,
+.md-typeset table.span-table th strong {
+    color: var(--md-default-fg-color);
+    font-weight: 700;
+}
+
+/* Code styling within tables */
+.md-typeset table.span-table code {
+    background-color: var(--md-code-bg-color);
+    color: var(--md-code-fg-color);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    font-size: 0.85em;
+    font-family: var(--md-code-font);
+}
+
+/* Responsive table wrapper */
+.md-typeset .span-table-wrapper {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+/* Ensure proper spacing for nested content */
+.md-typeset table.span-table td p {
+    margin: 0;
+}
+
+.md-typeset table.span-table td p:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+/* Style for table captions if used */
+.md-typeset table.span-table caption {
+    caption-side: top;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--md-default-fg-color);
+    text-align: left;
+}
+
+/* Specific styling for CardType tables */
+.md-typeset table.span-table td:first-child {
+    font-weight: 500;
+    min-width: 8rem;
+}
+
+/* Ensure code blocks in tables don't break layout */
+.md-typeset table.span-table pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .md-typeset table.span-table {
+        font-size: 0.7rem;
+    }
+
+    .md-typeset table.span-table th,
+    .md-typeset table.span-table td {
+        padding: 0.5rem;
+    }
+}
+
+
+/* Dark theme adjustments */
+[data-md-color-scheme="mgd"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="mgd"] .md-typeset table.span-table td {
+    border-color: var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="mgd"]
+    .md-typeset
+    table.span-table
+    tbody
+    tr:nth-child(even)
+    td {
+    background-color: var(--md-default-fg-color--table);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td strong {
+    color: var(--md-default-fg-color);
+}
+
+/* Light theme adjustments */
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td {
+    border-color: var(--md-default-bg-color--light);
+}
+
+[data-md-color-scheme="mgd-light"]
+    .md-typeset
+    table.span-table
+    tbody
+    tr:nth-child(even)
+    td {
+    background-color: var(--md-default-fg-color--table);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table th {
+    background-color: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="mgd-light"] .md-typeset table.span-table td strong {
+    color: var(--md-default-fg-color);
+}
+
+.md-typeset .tabbed-labels {
+    box-shadow: 0 -.05rem var(--md-default-fg-color) inset;
+}

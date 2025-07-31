@@ -1,0 +1,6920 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Modding Documentation for the game Monster Girl Dreams">
+      
+      
+        <meta name="author" content="Threshold">
+      
+      
+        <link rel="canonical" href="https://venefi.ca/mysite/Manual/Perks/Types.html">
+      
+      
+        <link rel="prev" href="Perks.html">
+      
+      
+        <link rel="next" href="../Skills/index.html">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Perk Types - Monster Girl Dreams Modding Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="../../assets/external/unpkg.com/iframe-worker/shim.js"></script>
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="mgd" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#perk-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <!-- Determine classes -->
+
+
+  
+
+
+<!-- Header -->
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Monster Girl Dreams Modding Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Perk Types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="mgd" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="mgd-light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+
+    <!-- User preference: color palette -->
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+      
+
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+
+        <!-- Search interface -->
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+
+    <!-- Repository information -->
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<!-- Determine classes -->
+  
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+    <!-- Site title -->
+    <a
+        href="../../index.html"
+        title="Monster Girl Dreams Modding Documentation"
+        class="md-nav__button md-logo"
+        aria-label="Monster Girl Dreams Modding Documentation"
+        data-md-component="logo"
+    >
+        
+  <img src="../../img/banner.png" alt="logo">
+
+    </a>
+    <!-- Repository information -->
+    
+
+    <!-- Navigation list -->
+    <ul class="md-nav__list" data-md-scrollfix>
+          
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Home
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_2"
+            id="__nav_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Getting Started
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/Editors.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Editors
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MakingAMod.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Making A Mod
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MusicAndArt.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Music And Art
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/MetaCreation.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Meta Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../GettingStarted/PublishingMods.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Publishing Mods
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_3"
+            id="__nav_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Tutorials
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Tutorials Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/FileHostingYourMod.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    File Hosting Your Mod
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/GetImagePos.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Getting Image Position Coordinates
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Tutorials/TheJsonFormat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    The JSON Format
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4"
+            id="__nav_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    JSON Manual
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_4_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            JSON Manual
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_1"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_1"
+            id="__nav_4_1_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventures
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_1_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Adventures
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Adventures/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventures Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Adventures/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventure Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Adventures/Adventures.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Adventure Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_2"
+            id="__nav_4_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Events
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Events
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Events/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Events Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Events/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Events/Events.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_3"
+            id="__nav_4_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Fetishes
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fetishes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Fetishes/Fetishes.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Fetish & Addiction Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_4"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_4"
+            id="__nav_4_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Items
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_4_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Items
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Items/Items.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Item Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_5"
+            id="__nav_4_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Locations
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Locations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Locations/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Locations Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Locations/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Location Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Locations/Locations.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Location Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_6"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_6"
+            id="__nav_4_6_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monsters
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_6_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Monsters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Monsters/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monsters Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Monsters/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Monsters/Monsters.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Monsters/Triggers.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    lineTriggers
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_7"
+          checked
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_7"
+            id="__nav_4_7_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_7_label"
+          aria-expanded="true"
+        >
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Perks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perks Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="Perks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perk Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+    
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Navigation link to table of contents -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perk Types
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="Types.html"
+        class="md-nav__link md-nav__link--active"
+      >
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Perk Types
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+
+      <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perk-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perk Modifiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perk Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statusicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatusIcon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turnduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      TurnDuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      TimeDuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removedonorgasm" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovedOnOrgasm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      EndMessage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpersistenteffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPersistentEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removablepersistanteffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovablePersistantEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removableeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovableEffect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reward
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eroboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      EroBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itemdropchance" class="md-nav__link">
+    <span class="md-ellipsis">
+      ItemDropChance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treasurefindchance" class="md-nav__link">
+    <span class="md-ellipsis">
+      TreasureFindChance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#betterprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      BetterPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buyprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuyPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sellprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      SellPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      LossExp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoExp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Damage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damageboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magicboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      MagicBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenmagicboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenMagicBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breastboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      BreastBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenseductionboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenSeductionBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seductionboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SeductionBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kissboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      KissBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sexboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SexBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpensexboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenSexBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      AssBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenassboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenAssBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penetrationboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      PenetrationBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oralboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      OralBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indulgentboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      IndulgentBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sextoyboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SexToyBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselineallureflatbuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaselineAllureFlatBuff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselineallureflatpercentboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaselineAllureFlatPercentBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayflatdamage" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayFlatDamage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critchanceboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      CritChanceBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critdamageboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      CritDamageBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recoilboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      RecoilBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allurerecoilboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      AllureRecoilBoost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defense
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damagereduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageReduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayenergyregen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayEnergyRegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayarousalregen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayArousalRegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenmaxarousal" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegenMaxArousal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenmaxenergy" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegenMaxEnergy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virilityboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirilityBoost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Navigation item -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_4_8"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_4_8"
+            id="__nav_4_8_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skills
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_4_8_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Skills
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Skills/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skills Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Skills/Additions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skill Additions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../Skills/Skills.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Skill Creation
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_5"
+            id="__nav_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/Markup.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Markup
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StanceRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stance Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StatusEffectRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Status Effect Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/StatRef.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stat Reference
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/FAQ.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    FAQ
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/BreakingChanges.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Breaking Changes
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Reference/Gridmap.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Gridmap
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+   
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6"
+            id="__nav_6_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Functions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="1"
+          aria-labelledby="__nav_6_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Functions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/index.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Function Index
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_2"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_2"
+            id="__nav_6_2_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Asset
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_2_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Asset
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/Asset/BGAndChest.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    BG & Chest
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/Asset/ImageLayers.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Image Layers
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/Asset/Music.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Music/BGM
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/Asset/SFX.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    SFX
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/Asset/VFX.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    VFX
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_3"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_3"
+            id="__nav_6_3_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Combat Only
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_3_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Combat Only
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/Attacker.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Attacker
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/Encounter.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Encounter
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/EndCombat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    End Combat or Monster
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/IgnoreOrgasm.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    DenyTargetOrgasm and DenyAttackerOrgasm
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/MonsterAttack.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Attacks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/MonsterChecks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/MonsterCombatAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Combat Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/MonsterFocus.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Monster Focus
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/PlayerCombatAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Combat Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/PlayerCombatChecks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Combat Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/CombatOnly/Stances.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stances
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_4"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_4"
+            id="__nav_6_4_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Only
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_4_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Event Only
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/Choice.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Choice
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/Complete.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Quest, Event, Adventure Complete
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/GetEventChoice.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Get Event Choice
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/GetEventProgress.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Get Event Progress
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/GridmapFunctions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Gridmap Functions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/Input.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Input
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/Menu.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Menu System
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/PlayerChecks.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/PreCombat.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Pre-Combat
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/Progress.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Progress
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/SceneJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Scene Jumps
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/SpeakersSpecific.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Speakers Specific
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/StatCheck.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Stat Checks
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/EventOnly/StoreEvent.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Store Events
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_6_5"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_6_5"
+            id="__nav_6_5_label"
+            tabindex="0"
+          >
+            
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    General
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="2"
+          aria-labelledby="__nav_6_5_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/ChangeMonster.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Change Monster
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/ChangeStats.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Change Stats
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Church.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Church
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Dialogue.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Dialogue
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Eros.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Eros
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/EventJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Event Jumps
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Inventory.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Inventory
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Misc.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Miscellaneous
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/PlayerAfflictions.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Afflictions
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/PlayerGiveAndTake.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Player Give & Take
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Shop.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Shop
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/SwapLineIf.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    SwapLineIf
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/Time.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Time
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../Functions/General/TownJumps.html" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Town Jumps & GameOver
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
+  
+ 
+    </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perk-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perk Modifiers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perk Modifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statusicon" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatusIcon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turnduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      TurnDuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeduration" class="md-nav__link">
+    <span class="md-ellipsis">
+      TimeDuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removedonorgasm" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovedOnOrgasm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endmessage" class="md-nav__link">
+    <span class="md-ellipsis">
+      EndMessage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpersistenteffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPersistentEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removablepersistanteffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovablePersistantEffect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removableeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      RemovableEffect
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reward
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eroboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      EroBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itemdropchance" class="md-nav__link">
+    <span class="md-ellipsis">
+      ItemDropChance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#treasurefindchance" class="md-nav__link">
+    <span class="md-ellipsis">
+      TreasureFindChance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#betterprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      BetterPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buyprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuyPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sellprices" class="md-nav__link">
+    <span class="md-ellipsis">
+      SellPrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExpBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      LossExp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noexp" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoExp
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Damage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Damage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damageboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magicboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      MagicBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenmagicboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenMagicBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breastboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      BreastBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenseductionboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenSeductionBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seductionboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SeductionBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kissboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      KissBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sexboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SexBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpensexboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenSexBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      AssBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nonpenassboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      NonPenAssBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#penetrationboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      PenetrationBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oralboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      OralBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indulgentboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      IndulgentBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sextoyboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      SexToyBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselineallureflatbuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaselineAllureFlatBuff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baselineallureflatpercentboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      BaselineAllureFlatPercentBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayflatdamage" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayFlatDamage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critchanceboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      CritChanceBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critdamageboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      CritDamageBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recoilboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      RecoilBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allurerecoilboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      AllureRecoilBoost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Defense
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defense">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#damagereduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      DamageReduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayenergyregen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayEnergyRegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foreplayarousalregen" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForeplayArousalRegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenmaxarousal" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegenMaxArousal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regenmaxenergy" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegenMaxEnergy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virilityboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      VirilityBoost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="perk-types">Perk Types<a class="headerlink" href="#perk-types" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the navigation column on the left to navigate and review the page
+headers quickly.</p>
+</div>
+<h2 id="perk-modifiers">Perk Modifiers<a class="headerlink" href="#perk-modifiers" title="Permanent link">&para;</a></h2>
+<p>These types modify the behavior of the perk itself, rather than the
+wielder of the perk.</p>
+<h3 id="statusicon">StatusIcon<a class="headerlink" href="#statusicon" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StatusIcon&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;../Mods/ModName/Folder/Icon.png&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Declares a status icon for the perk whenever the player or monster
+possesses it. The provided file path to your image will be displayed as
+an icon in the status bar.</p>
+<h3 id="turnduration">TurnDuration<a class="headerlink" href="#turnduration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TurnDuration&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Removes the perk from the wielder once the set duration has depleted to
+0. Ticks down for every step or combat turn.</p>
+<h3 id="timeduration">TimeDuration<a class="headerlink" href="#timeduration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TimeDuration&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;18&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Removes the perk from the wielder once the set duration has depleted to
+0. Ticks down for every time jump (e.g. Morning -&gt; Noon), note sleeping
+till morning will take a variable number of ticks depending on the
+current time. <code>"6"</code> would be a full day.</p>
+<h3 id="removedonorgasm">RemovedOnOrgasm<a class="headerlink" href="#removedonorgasm" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RemovedOnOrgasm&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Perk is removed when the wielder orgasms. Set a
+<em>value</em> of 0, as <code>"EffectPower":</code> is not
+needed.</p>
+<h3 id="endmessage">EndMessage<a class="headerlink" href="#endmessage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;EndMessage&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PerkName&#39;s effects have faded away!&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Displays the given text via its correlating <code>"EffectPower":</code>
+<em>string</em> when the perk ends via
+<a href="#turnduration">TurnDuration</a> or <a href="#timeduration">TimeDuration</a>. This can
+use <a href="../../Reference/Markup.html">text markup</a>,
+and thus in extension,
+<a href="../../Functions/index.html">functions</a>.</p>
+<h3 id="nonpersistenteffect">NonPersistentEffect<a class="headerlink" href="#nonpersistenteffect" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NonPersistentEffect&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Declare the perk as a NonPersistentEffect, removing it whenever a
+Non-Persistent Status Effect (e.g. Charm) would be removed by the game.
+Set a <em>value</em> of 0, as <code>"EffectPower":</code>
+is not needed.</p>
+<h3 id="removablepersistanteffect">RemovablePersistantEffect<a class="headerlink" href="#removablepersistanteffect" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RemovablePersistantEffect&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Declare the perk as a RemovablePersistantEffect, removing it whenever a
+RemovablePersistantEffect Status Effect (e.g. Aphrodisiac) would be
+removed by the game. Aka sleep or church wake up. Set a
+<em>value</em> of 0, as <code>"EffectPower":</code> is not
+needed.</p>
+<h3 id="removableeffect">RemovableEffect<a class="headerlink" href="#removableeffect" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RemovableEffect &quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Declare the perk as a RemovableEffect , that allows the effect to be
+cleared on use of a panacea(currently just this), or on combat end like
+NonPersistentEffect. Set a <em>value</em> of 0,
+as <code>"EffectPower":</code> is not needed.</p>
+<h2 id="reward">Reward<a class="headerlink" href="#reward" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are primarily written from the perspective of it being a perk type
+for the player, however, it will be disclaimed if the type is available
+for monsters as well.</p>
+</div>
+<h3 id="eroboost">EroBoost<a class="headerlink" href="#eroboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ErosBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters eros found by a percent. If wielded by a monster, alters their
+own eros dropped. Positive <em>values</em>
+increase eros, negative <em>values</em>
+decrease.</p>
+<h3 id="itemdropchance">ItemDropChance<a class="headerlink" href="#itemdropchance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ItemDropChance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters item drop chance from monsters by a percent. If wielded by a
+monster, alters their own item drop chance. Positive
+<em>values</em> increase the chance, negative
+<em>values</em> decrease.</p>
+<h3 id="treasurefindchance">TreasureFindChance<a class="headerlink" href="#treasurefindchance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TreasureFindChance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters percent chance of finding treasure during exploration, and by
+extension, higher chance of rare treasure. Positive
+<em>values</em> increase the chance, negative
+<em>values</em> decrease.</p>
+<h3 id="betterprices">BetterPrices<a class="headerlink" href="#betterprices" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BetterPrices&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter all shop prices by a percent, for both selling and buying.
+Positive <em>values</em> lower purchase cost and
+increases sale price, negative <em>values</em>
+increase cost and lowers sale price.</p>
+<h3 id="buyprices">BuyPrices<a class="headerlink" href="#buyprices" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BuyPrices&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter all shop prices by a percent, for both selling and buying.
+Positive <em>values</em> lower cost, negative
+<em>values</em> increase cost.</p>
+<h3 id="sellprices">SellPrices<a class="headerlink" href="#sellprices" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SellPrices&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter all shop prices by a percent, for both selling and buying.
+Positive <em>values</em> increase sale price,
+negative <em>values</em> lower sell price.</p>
+<h3 id="expboost">ExpBoost<a class="headerlink" href="#expboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ExpBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;120&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter all exp gains by a percent. Effect is halved when applied to
+LossExp effects, see below. If wielded by a monster, alters their own
+exp drop amount. Positive <em>values</em>
+increase exp, negative <em>values</em> decrease.</p>
+<h3 id="lossexp">LossExp<a class="headerlink" href="#lossexp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;LossExp&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter exp gains from monster exp on loss by a percent. Positive
+<em>values</em> increase exp, negative
+<em>values</em> decrease.</p>
+<h3 id="noexp">NoExp<a class="headerlink" href="#noexp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NoExp&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Prevents the player from gaining any amount of exp from encounters,
+regardless of other perks. Please remember to remove this perk if
+applying it through something other than a item.</p>
+<h2 id="damage">Damage<a class="headerlink" href="#damage" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All perk types under the Damage category can be used by monsters.</p>
+</div>
+<h3 id="damageboost">DamageBoost<a class="headerlink" href="#damageboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DamageBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters all types of damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="magicboost">MagicBoost<a class="headerlink" href="#magicboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;MagicBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-30&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters magic damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="nonpenmagicboost">NonPenMagicBoost<a class="headerlink" href="#nonpenmagicboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NonPenMagicBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;19&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters non-penetrative (e.g. fire dildo, pole beam, ethereal hands)
+magic damage dealt by a percent. Positive <em>values</em> increase damage, negative <em>values</em> decrease.</p>
+<h3 id="breastboost">BreastBoost<a class="headerlink" href="#breastboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BreastBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;40&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters breast/nipple damage by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="nonpenseductionboost">NonPenSeductionBoost<a class="headerlink" href="#nonpenseductionboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NonPenSeductionBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-30&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters non-penetrative seduction damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="seductionboost">SeductionBoost<a class="headerlink" href="#seductionboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SeductionBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-30&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters seduction damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="kissboost">KissBoost<a class="headerlink" href="#kissboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;KissBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;69&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters kiss damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="sexboost">SexBoost<a class="headerlink" href="#sexboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SexBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters sex damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="nonpensexboost">NonPenSexBoost<a class="headerlink" href="#nonpensexboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NonPenSexBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters non-penetrative sex (e.g. dildo, fingering, stroking, etc.)
+damage dealt by a percent. Positive <em>values</em> increase damage, negative <em>values</em> decrease.</p>
+<h3 id="assboost">AssBoost<a class="headerlink" href="#assboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AssBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters ass damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="nonpenassboost">NonPenAssBoost<a class="headerlink" href="#nonpenassboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NonPenAssBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters non-penetrative ass (e.g. dildo, fingering, etc.) damage dealt by
+a percent. Positive <em>values</em> increase
+damage, negative <em>values</em> decrease.</p>
+<h3 id="painboost">PainBoost<a class="headerlink" href="#painboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PainBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters pain damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="penetrationboost">PenetrationBoost<a class="headerlink" href="#penetrationboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PenetrationBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters penetration damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="oralboost">OralBoost<a class="headerlink" href="#oralboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OralBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-35&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters oral damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="foreplayboost">ForeplayBoost<a class="headerlink" href="#foreplayboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ForeplayBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;8&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters foreplay damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="indulgentboost">IndulgentBoost<a class="headerlink" href="#indulgentboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;IndulgentBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-1&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters indulgent damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="sextoyboost">SexToyBoost<a class="headerlink" href="#sextoyboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SexToyBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters sex toy damage dealt by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="baselineallureflatbuff">BaselineAllureFlatBuff<a class="headerlink" href="#baselineallureflatbuff" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BaselineAllureFlatBuff&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters Allure's natural flat damage buff scaling to everything by a flat
+amount. Positive <em>values</em> increase
+damage, negative <em>values</em> decrease.</p>
+<h3 id="baselineallureflatpercentboost">BaselineAllureFlatPercentBoost<a class="headerlink" href="#baselineallureflatpercentboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BaselineAllureFlatPercentBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters Allure's natural flat damage buff scaling to everything by a
+percent. Positive <em>values</em> increase
+damage, negative <em>values</em> decrease.</p>
+<h3 id="foreplayflatdamage">ForeplayFlatDamage<a class="headerlink" href="#foreplayflatdamage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ForeplayFlatDamage&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters foreplay damage dealt by a flat amount. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="critchanceboost">CritChanceBoost<a class="headerlink" href="#critchanceboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CritChanceBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters chance for the wielder's skills to crit by a flat amount.
+Positive <em>values</em> increase chance,
+negative <em>values</em> decrease.</p>
+<h3 id="critdamageboost">CritDamageBoost<a class="headerlink" href="#critdamageboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CritDamageBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-100&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters critical damage dealt by a percent amount on top of the original
+calculation. Positive <em>values</em> increase
+damage, negative <em>values</em> decrease.</p>
+<h3 id="recoilboost">RecoilBoost<a class="headerlink" href="#recoilboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RecoilBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters overall recoil damage dealt to opponents. Positive
+<em>values</em> increase damage, negative
+<em>values</em> decrease.</p>
+<h3 id="allurerecoilboost">AllureRecoilBoost<a class="headerlink" href="#allurerecoilboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AllureRecoilBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;33&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the percent of allure based recoil damage dealt to opponents.
+Positive <em>values</em> increase damage,
+negative <em>values</em> decrease.</p>
+<h2 id="defense">Defense<a class="headerlink" href="#defense" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Features the same behavior when used for either the player or monsters,
+unless stated otherwise.</p>
+</div>
+<h3 id="damagereduction">DamageReduction<a class="headerlink" href="#damagereduction" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DamageReduction&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters all damage taken by a percent, take caution. Positive
+<em>values</em> increase mitigation, negative
+<em>values</em> decrease.</p>
+<h3 id="foreplayenergyregen">ForeplayEnergyRegen<a class="headerlink" href="#foreplayenergyregen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ForeplayEnergyRegen&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;40&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters energy regeneration through foreplay skills by a percent of the
+wielders max. Positive <em>values</em> recover
+energy, negative <em>values</em> remove energy.</p>
+<h3 id="foreplayarousalregen">ForeplayArousalRegen<a class="headerlink" href="#foreplayarousalregen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ForeplayArousalRegen&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters arousal regeneration through foreplay skills by a percent of the
+wielders max. Positive <em>values</em> recover
+arousal, negative <em>values</em> remove
+arousal.</p>
+<h3 id="regenmaxarousal">RegenMaxArousal<a class="headerlink" href="#regenmaxarousal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RegenMaxArousal&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Restores a percent of the max arousal of the wielder. Take caution.
+Positive <em>values</em> recover arousal,
+negative <em>values</em> remove arousal.</p>
+<h3 id="regenmaxenergy">RegenMaxEnergy<a class="headerlink" href="#regenmaxenergy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RegenMaxEnergy&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Restores a percent of the max arousal of the wielder. Take caution.
+Positive <em>values</em> recover energy,
+negative <em>values</em> remove energy.</p>
+<h3 id="virilityboost">VirilityBoost<a class="headerlink" href="#virilityboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;VirilityBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;40&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the players Virility by a percent. Positive
+<em>values</em> increase virility, negative
+<em>values</em> reduce. <strong>Player only</strong>.</p>
+<h1 id="recoildamagetaken">RecoilDamageTaken<a class="headerlink" href="#recoildamagetaken" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RecoilDamageTaken&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-66&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters recoil damage taken by a percent. Positive
+<em>values</em> increase recoil damage taken,
+negative <em>values</em> reduce.</p>
+<h3 id="critdamageboostself">CritDamageBoostSelf<a class="headerlink" href="#critdamageboostself" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CritDamageBoostSelf&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters critical damage the wielder receives prior to the final
+calculation. Positive <em>values</em> increase
+damage received, negative <em>values</em>
+reduce.</p>
+<h3 id="edging">Edging<a class="headerlink" href="#edging" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Edging&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Experimental perk type that gives percent chance to resist orgasm,
+stacks with other sources. Positive <em>values</em> increase the base percent chance, negative
+<em>values</em> reduce.</p>
+<h3 id="multiplyspiritloss">MultiplySpiritLoss<a class="headerlink" href="#multiplyspiritloss" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;MultiplySpiritLoss&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Multiply the spirit lost by the given number. Caution going above 2, for
+a base amount of 3 spirit, it's practically an instant loss.</p>
+<p><a href="#removedonorgasm">RemovedOnOrgasm</a> plays well with the perk type.</p>
+<h2 id="status-effects">Status Effects<a class="headerlink" href="#status-effects" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Features the same behavior when used for either the player or monsters,
+unless stated otherwise.</p>
+</div>
+<h3 id="statuseffectduration">StatusEffectDuration<a class="headerlink" href="#statuseffectduration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StatusEffectDuration&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the duration of the users status effects, take caution. Positive
+<em>values</em> increase duration, negative
+<em>values</em> reduce.</p>
+<h3 id="statuschanceboost">StatusChanceBoost<a class="headerlink" href="#statuschanceboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StatusChanceBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alter status effect application chances from skills. Positive
+<em>values</em> increase chance, negative
+<em>values</em> reduce.</p>
+<h3 id="startdeeperintrance">StartDeeperInTrance<a class="headerlink" href="#startdeeperintrance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StartDeeperInTrance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Player starts this many steps deeper in trance when hit with a trance
+related move. Anything below 1-10 will trigger instant trance.</p>
+<h3 id="cantbreakfreeoftrancewithoutitems">CantBreakFreeOfTranceWithoutItems<a class="headerlink" href="#cantbreakfreeoftrancewithoutitems" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;CantBreakFreeOfTranceWithoutItems&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Can no longer automatically start to break free of trance after 3
+consecutive turns without getting stunned. Set a
+<em>value</em> of 0, as <code>"EffectPower":</code> is not
+needed.</p>
+<h3 id="trancestunchance">TranceStunChance<a class="headerlink" href="#trancestunchance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TranceStunChance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the chance for the player to be stunned each turn while fully
+tranced by a percent. Positive <em>values</em>
+increase chance, negative <em>values</em>
+reduce.</p>
+<h3 id="foreplaydefdown">ForeplayDefDown<a class="headerlink" href="#foreplaydefdown" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ForeplayDefDown&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-40&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Applies a status effect that reduces the defense to the enemy targeted
+with a foreplay skill for 3 turns. Positive <em>values</em> reduce defense, negative <em>values</em> increase.</p>
+<h3 id="stundelay">StunDelay<a class="headerlink" href="#stundelay" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StunDelay&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the delay between stun status effects. Positive
+<em>values</em> increase the delay, negative
+<em>values</em> reduce.</p>
+<h3 id="sleepamp">SleepAmp<a class="headerlink" href="#sleepamp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SleepAmp&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the flat amount of energy lost per turn upon being afflicted by
+Sleep. Positive <em>values</em> increase drain
+energy, negative <em>values</em> reduce drained
+energy.</p>
+<h3 id="paralysisamp">ParalysisAmp<a class="headerlink" href="#paralysisamp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ParalysisAmp&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the chance to be stunned by paralysis. Positive
+<em>values</em> increase chance, negative
+<em>values</em> reduce.</p>
+<h3 id="aphrodisiacamp">AphrodisiacAmp<a class="headerlink" href="#aphrodisiacamp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AphrodisiacAmp&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters the damage taken from aphrodisiacs by a percent. Positive
+<em>values</em> increase damage, negative
+<em>values</em> reduce.</p>
+<h3 id="aphrodisiacturncure">AphrodisiacTurnCure<a class="headerlink" href="#aphrodisiacturncure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AphrodisiacTurnCure&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Removes set amount from aphrodisiac potency every turn. Positive
+<em>values</em> reduce set potency, negative
+<em>values</em> increase set potency.</p>
+<h3 id="disablerun">DisableRun<a class="headerlink" href="#disablerun" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;DisableRun&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Can disable the players ability to run from all fights. Set a
+<em>value</em> of 0, as <code>"EffectPower":</code> is not
+needed.</p>
+<h2 id="stances-evasion">Stances &amp; Evasion<a class="headerlink" href="#stances-evasion" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Features the same behavior when used for either the player or monsters,
+unless stated otherwise.</p>
+</div>
+<h3 id="getoutofstance">GetOutOfStance<a class="headerlink" href="#getoutofstance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GetOutOfStance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters chance to get out of stance by a percent. Positive
+<em>values</em> increase chance, negative
+<em>values</em> reduce.</p>
+<h3 id="outofstanceevade">OutOfStanceEvade<a class="headerlink" href="#outofstanceevade" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OutOfStanceEvade&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters evade chance when out of stances by a percent. Positive
+<em>values</em> increase chance, negative
+<em>values</em> reduce.</p>
+<h3 id="removerestraints">RemoveRestraints<a class="headerlink" href="#removerestraints" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RemoveRestraints&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters restraint escape chance by a percent. Positive
+<em>values</em> increase chance, negative
+<em>values</em> reduce.</p>
+<h3 id="restraintboost">RestraintBoost<a class="headerlink" href="#restraintboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RestraintBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;30&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Increases the effectiveness of your own restraints. Positive
+<em>values</em> improve effectiveness, negative
+<em>values</em> reduce.</p>
+<h3 id="stanceboost">StanceBoost<a class="headerlink" href="#stanceboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StanceBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Increases the effectiveness of your own stances. Positive
+<em>values</em> improve effectiveness, negative
+<em>values</em> reduce.</p>
+<h3 id="runchance">RunChance<a class="headerlink" href="#runchance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RunChance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters run chance by a percent. Positive <em>values</em> increase chance, negative <em>values</em> reduce.</p>
+<h3 id="opponentrunchance">OpponentRunChance<a class="headerlink" href="#opponentrunchance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OpponentRunChance&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Monsters with this perk type alters the players run chance by a percent.
+Positive <em>values</em> increase chance,
+negative <em>values</em> reduce.</p>
+<h3 id="unbounded">Unbounded<a class="headerlink" href="#unbounded" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Unbounded&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>If your action is interrupted by a restraint, you will struggle instead
+of doing nothing by default. Set a <em>value</em> of 0, as <code>"EffectPower":</code> is not needed.</p>
+<h3 id="unshackled">Unshackled<a class="headerlink" href="#unshackled" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Unshackled&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>If you break a restraint with struggle, you get to act immediately. Set
+a <em>value</em> of 0, as <code>"EffectPower":</code> is
+not needed.</p>
+<h3 id="orgasmenergydrain">OrgasmEnergyDrain<a class="headerlink" href="#orgasmenergydrain" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OrgasmEnergyDrain&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Drains flat amount of energy upon the target orgasming. Has no stance
+restrictions. Positive <em>values</em> drain
+energy.</p>
+<h3 id="stancestuck">StanceStuck<a class="headerlink" href="#stancestuck" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;StanceStuck&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Alters chance of stance escape by a percent. Positive
+<em>values</em> reduce chance, negative
+<em>values</em> increase.</p>
+<h3 id="initiativebonus">InitiativeBonus<a class="headerlink" href="#initiativebonus" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;InitiativeBonus&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Flatly alters perk type owners initiative, influencing turn order.
+Positive <em>values</em> increase initiative,
+negative <em>values</em> reduce.</p>
+<h3 id="minstatcheckdie">MinStatCheckDie<a class="headerlink" href="#minstatcheckdie" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;MinStatCheckDie&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Flatly alters the minimum dice your d20 can roll in a stat check, take
+caution. Positive <em>values</em> increases base
+number, negative <em>values</em> reduce.</p>
+<h3 id="restspiritrestored">RestSpiritRestored<a class="headerlink" href="#restspiritrestored" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RestSpiritRestored&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Recovers flat amount of spirit when resting at rest points, take
+caution. Positive <em>values</em> increase,
+negative <em>values</em> reduce.</p>
+<h3 id="restenergyrestored">RestEnergyRestored<a class="headerlink" href="#restenergyrestored" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RestEnergyRestored&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Recovers percent amount of max energy when resting at rest points, take
+caution. Positive <em>values</em> increase,
+negative <em>values</em> reduce.</p>
+<h3 id="restarousalrestored">RestArousalRestored<a class="headerlink" href="#restarousalrestored" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;RestArousalRestored&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Recovers percent amount of max arousal when resting at rest points, take
+caution. Positive <em>values</em> increase,
+negative <em>values</em> reduce.</p>
+<h2 id="stat-perk-types">Stat Perk Types<a class="headerlink" href="#stat-perk-types" title="Permanent link">&para;</a></h2>
+<p>Alters the given stat of the wielder by the given amount. Positive
+<em>values</em> increase, negative
+<em>values</em> reduce. See
+Stats.</p>
+<ul>
+<li><code>"GainEnergy"</code></li>
+<li><code>"GainArousal"</code></li>
+<li><code>"Power"</code></li>
+<li><code>"Technique"</code></li>
+<li><code>"Intelligence"</code></li>
+<li><code>"Willpower"</code></li>
+<li><code>"Allure"</code></li>
+<li><code>"Luck"</code></li>
+<li><code>"StunRes"</code></li>
+<li><code>"CharmRes"</code></li>
+<li><code>"AphrodisiacRes"</code></li>
+<li><code>"RestraintsRes"</code></li>
+<li><code>"TranceRes"</code></li>
+<li><code>"ParalysisRes"</code></li>
+<li><code>"SleepRes"</code></li>
+<li><code>"DebuffRes"</code></li>
+<li><code>"SexSensitivity"</code></li>
+<li><code>"AssSensitivity"</code></li>
+<li><code>"BreastsSensitivity"</code></li>
+<li><code>"MouthSensitivity"</code></li>
+<li><code>"SeductionSensitivity"</code></li>
+<li><code>"MagicSensitivity"</code></li>
+<li><code>"PainSensitivity"</code></li>
+<li><code>"HolySensitivity"</code></li>
+<li><code>"UnholySensitivity"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GainArousal&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">],</span>
+</code></pre></div>
+<h2 id="fetish-perk-types">Fetish Perk Types<a class="headerlink" href="#fetish-perk-types" title="Permanent link">&para;</a></h2>
+<p>Alters fetish level by # of times added.</p>
+<ul>
+<li><code>"IncreaseFetish"</code></li>
+<li><code>"DecreaseFetish"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;IncreaseFetish&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;DecreaseFetish&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Ass&quot;</span><span class="p">,</span><span class="w">              </span><span class="s2">&quot;Sex&quot;</span><span class="p">],</span>
+</code></pre></div>
+<h2 id="player-specific">Player Specific<a class="headerlink" href="#player-specific" title="Permanent link">&para;</a></h2>
+<h3 id="givesensitivitypoints">GiveSensitivityPoints<a class="headerlink" href="#givesensitivitypoints" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GiveSensitivityPoints&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Give player points to reduce sensitivity. Only works if acquired at
+level up. Take caution.</p>
+<h3 id="gainspirit">GainSpirit<a class="headerlink" href="#gainspirit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;GainSpirit&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Give the player spirit. Only works if acquired at level up. Take
+caution.</p>
+<h3 id="resistfinalorgasm">ResistFinalOrgasm<a class="headerlink" href="#resistfinalorgasm" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ResistFinalOrgasm&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;4&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Gives a luck chance plus a base amount to resist their last orgasm.
+Monsters have more interactive methods to implement this kind of feature
+in combat events. Refer to <em>Json/Perks/LevelUp/Will/HeroicCumback.json</em>
+for how it works.</p>
+<h2 id="monster-specific">Monster Specific<a class="headerlink" href="#monster-specific" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following three perk types are multiplied in effect by the player's
+Virility * 0.01 + 1.</p>
+</div>
+<h3 id="semenenergydrain">SemenEnergyDrain<a class="headerlink" href="#semenenergydrain" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SemenEnergyDrain&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Player loses given amount of energy on orgasm with monster if in sex,
+anal, blowjob, tailfuck, or titfuck stance. Positive
+<em>values</em> increase base flat drain,
+negative <em>values</em> reduce.</p>
+<h3 id="semenheal">SemenHeal<a class="headerlink" href="#semenheal" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SemenHeal&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-10&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Monster recovers given amount of arousal on player orgasm if in sex,
+anal, blowjob, tailfuck, or titfuck stance. Positive
+<em>values</em> increase base flat drain,
+negative <em>values</em> reduce.</p>
+<h3 id="semenattackboost">SemenAttackBoost<a class="headerlink" href="#semenattackboost" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SemenAttackBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">],</span>
+</code></pre></div>
+<p>Percent damage alteration if player orgasms in sex, anal, blowjob,
+tailfuck, or titfuck stance. Positive <em>values</em> increase, negative <em>values</em>
+reduce.</p>
+<h3 id="adverse-perk-types">Adverse Perk Types<a class="headerlink" href="#adverse-perk-types" title="Permanent link">&para;</a></h3>
+<p>The following perk types tell the monster to try to get out of the
+related stance even if they have a skill for it, unless they're
+charmed. Set a <em>value</em> of 0, as
+<code>"EffectPower":</code> is not needed.</p>
+<ul>
+<li><code>"KissingAdverse"</code></li>
+<li><code>"AnalAdverse"</code></li>
+<li><code>"SexAdverse"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;KissingAdverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;AnalAdverse&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="w">                 </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<h3 id="no-part-perk-types">No Part Perk Types<a class="headerlink" href="#no-part-perk-types" title="Permanent link">&para;</a></h3>
+<p>The following perk types make it impossible for the player to initiate
+or attack the given stances, excluding grope attacks on chests. It's
+highly recommend you use combat events instead of them, but they do
+still work. Set a <em>value</em> of 0, as
+<code>"EffectPower":</code> is not needed.</p>
+<ul>
+<li><code>"NoAnus"</code></li>
+<li><code>"NoChest"</code></li>
+<li><code>"NoMouth"</code></li>
+<li><code>"NoPussy"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NoAnus&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;NoMouth&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w">      </span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+</code></pre></div>
+<h3 id="monster-damage-boost-perk-types">Monster Damage Boost Perk Types<a class="headerlink" href="#monster-damage-boost-perk-types" title="Permanent link">&para;</a></h3>
+<p>Damage boosts by a percent for the related fetish. Positive
+<em>values</em> increase, negative
+<em>values</em> reduce.</p>
+<ul>
+<li><code>"MonstrousBoost"</code></li>
+<li><code>"FeetUseBoost"</code></li>
+<li><code>"BreastUseBoost"</code></li>
+<li><code>"AssUseBoost"</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;PerkType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;MonstrousBoost&quot;</span><span class="p">],</span>
+<span class="nt">&quot;EffectPower&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;66&quot;</span><span class="p">],</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="Perks.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Perk Creation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Perk Creation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Skills/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Skills Index">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Skills Index
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017 - 2025 Threshold
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.follow", "content.code.copy", "content.code.select", "search.highlight", "search.suggest", {"navigation.instant": false}, "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+    
+  </body>
+</html>
