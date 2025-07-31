@@ -159,12 +159,12 @@ def update_mkdocs_nav():
     print("Updating navigation structure...")
 
     if not mkdocs_path.exists():
-        print("⚠ Error: mkdocs.yml not found")
+        print("Error: mkdocs.yml not found")
         print("   Please run this script from the mkDocsMGD root directory")
         return False
 
     if not docs_dir.exists():
-        print("⚠ Error: docs directory not found")
+        print("Error: docs directory not found")
         return False
 
     try:
@@ -177,9 +177,9 @@ def update_mkdocs_nav():
         temp_content = re.sub(r'!ENV\s+\[([^\]]+)\]', r'false', temp_content)
         temp_content = re.sub(r'!!python/name:[^\s\n]+', r'"python_placeholder"', temp_content)
         config = yaml.safe_load(temp_content)
-        print("✓ Loaded mkdocs.yml")
+        print("Loaded mkdocs.yml")
     except Exception as e:
-        print(f"⚠ Error reading mkdocs.yml: {e}")
+        print(f"Error reading mkdocs.yml: {e}")
         return False
 
     # Generate new navigation
@@ -243,9 +243,9 @@ def update_mkdocs_nav():
     function_nav = generate_function_nav(docs_dir)
     if function_nav:
         new_nav.append({"Functions": function_nav})
-        print(f"✓ Found {len(function_nav)} function categories")
+        print(f"Found {len(function_nav)} function categories")
     else:
-        print("⚠ No function files found")
+        print("No function files found")
 
     # Update the config
     config['nav'] = new_nav
@@ -264,7 +264,7 @@ def update_mkdocs_nav():
         with open(mkdocs_path, 'w', encoding='utf-8') as f:
             f.write(new_yaml)
 
-        print("✓ Navigation updated")
+        print("Navigation updated")
 
         # Count total function files for summary
         total_files = 0
@@ -274,11 +274,11 @@ def update_mkdocs_nav():
                     if isinstance(files, list):
                         total_files += len(files)
 
-        print(f"✓ Generated navigation for {total_files} function files")
+        print(f"Generated navigation for {total_files} function files")
         return True
 
     except Exception as e:
-        print(f"⚠ Error writing mkdocs.yml: {e}")
+        print(f"Error writing mkdocs.yml: {e}")
         return False
 
 if __name__ == '__main__':
