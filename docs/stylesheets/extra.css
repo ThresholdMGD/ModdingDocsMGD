@@ -327,7 +327,7 @@ pre:hover .md-clipboard .md-icon {
 }
 
 a[href^="http://"]:not(.md-search-result__link),
-a[href^="https://"]:not(.md-search-result__link) 
+a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"])
 {
     background-position: top right;
     background-repeat: no-repeat;

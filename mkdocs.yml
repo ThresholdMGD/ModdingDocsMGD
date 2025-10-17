@@ -2,6 +2,7 @@ site_name: Monster Girl Dreams Modding Documentation
 site_author: Threshold
 site_description: Modding Documentation for the game Monster Girl Dreams
 site_url: https://venefi.ca/mysite
+repo_url: https://github.com/ThresholdMGD/ModdingDocsMGD
 copyright: Copyright &copy; 2017 - 2025 Threshold
 extra:
   logo: img/banner.png
@@ -10,15 +11,14 @@ theme:
   name: material
   custom_dir: overrides
   palette:
-    - scheme: mgd
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
-    - scheme: mgd-light
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
+  - scheme: mgd
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  - scheme: mgd-light
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
   icon:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
