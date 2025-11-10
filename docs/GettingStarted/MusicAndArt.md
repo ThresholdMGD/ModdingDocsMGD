@@ -66,3 +66,5 @@ following file types will be extracted as well:
     Markdown markup standard.)
 -   **Avif**: .avif (A recently standardized image format, though it
     can't yet be used by the game.)
+-   **TTF**: .ttf (A font file [Text Markup](../../Reference/Markup.md) can call to change the text style.)
+-   **OTF**: .otf (A font file [Text Markup](../../Reference/Markup.md) can call to change the text style.)

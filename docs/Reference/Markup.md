@@ -189,6 +189,8 @@ respectively. If using it in a loop, use the
 EmptySpiritCounterFunc function in the
 next line to reset how much spirit is counted.
 
+`[PostOrgasmLine]` can be used after an orgasm line markup to ensure post-orgasm calls such as energy draining, semen healing, and other related enemy abilities fire, for the edge cases where the game fails to trigger them.
+
 ## Damage Text Markup
 
 `[DamageToPlayer]`, `[DamageToEnemy]`, and `[FinalDamage]` provide

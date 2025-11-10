@@ -59,6 +59,7 @@ This page will break down the following example:
   "Event", "Auto", "CerisGridAI", "Caught",
   "Movement", "Chase", "Player",
   "TurnEvent", "CerisGridAI", "Timer",
+  "CanShareTile", "False",
 "EndLoop",
 "NPC",
   "Name", "RecallPoint",
@@ -273,6 +274,7 @@ Invenotry Functions functions.
   "Event", "Auto", "CerisGridAI", "Caught",
   "Movement", "Chase", "Player",
   "TurnEvent", "CerisGridAI", "Timer",
+  "CanShareTile", "False",
 "EndLoop",
 "NPC",
   "Name", "RecallPoint",
@@ -304,6 +306,7 @@ provide it before closing the loop:
 | Obstacle        | Skips the NPC in movement calls, and sets it to be displayed under all other NPCs.                |
 | Timer           | Sets an internal timer for the NPC to count down then call an event and reset at 0.               |
 | TimerMax        | Changes the max timer count that the timer is reset to. Must be called after "Timer".             |
+| CanShareTile    | By default on. If off, NPCs won't move onto the same target tile of NPCs who also have it turned off.  |
 
 ::end-spantable::
 

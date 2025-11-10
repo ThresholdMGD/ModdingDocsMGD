@@ -650,6 +650,7 @@ this system till a proper tutorial can be made in the future.
   "Name": "Sex",
   "Set": [
     {
+      "TextBoxXAdjust": "55",
       "Role": "FaceRider",
       "StanceRequired": "Face Sit",
       "MonsterRequired": "Imp",
@@ -700,7 +701,7 @@ This means you can declare as many roles as you want, but only up to 12
 will ever be used at a time, as that is the maximum number of monsters
 in an encounter.
 
-All *keys* are required, but all *values* can be blank `""` or empty `[]` unless stated otherwise:
+All *keys* are required unless stated otherwise, but all *values* can be blank `""` or empty `[]` unless stated otherwise:
 
 ::spantable::
 
@@ -709,6 +710,7 @@ All *keys* are required, but all *values* can be blank `""` or empty `[]` unless
 | `"Role"`              | The name of the role's 'slot'. This must not be blank. |
 | `"StanceRequired"`    | The required stance in order to allocate the role. |
 | `"MonsterRequired"`   | Looks for the given `"nameID"` of the monster that is required to consider the role active and fulfilled. |
+| `"TextBoxXAdjust"`    | Optional, adjust position of the dialogue box for CG visibility. |
 
 ::end-spantable::
 

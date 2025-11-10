@@ -410,6 +410,18 @@ Alters chance for the wielder's skills to crit by a flat amount.
 Positive *values* increase chance,
 negative *values* decrease.
 
+### CritChanceBoostSelf
+``` json
+"PerkType": ["CritChanceBoostSelf"],
+"EffectPower": ["20"],
+```
+
+Alters chance of crit skills used on the wielder by a flat amount.
+Positive *values* increase chance,
+negative *values* decrease.
+
+CritChanceBoostSelf
+
 ### CritDamageBoost
 ``` json
 "PerkType": ["CritDamageBoost"],
@@ -666,6 +678,16 @@ Removes set amount from aphrodisiac potency every turn. Positive
 *values* reduce set potency, negative
 *values* increase set potency.
 
+### AphrodisiacPotencyBoost
+``` json
+"PerkType": ["AphrodisiacPotencyBoost"],
+"EffectPower": ["30"],
+```
+
+Increases the potency of the user's aphrodisiacs. Positive
+*values* improve effectiveness, negative
+*values* reduce.
+
 ### DisableRun
 ``` json
 "PerkType": ["DisableRun"],
@@ -721,6 +743,7 @@ Alters restraint escape chance by a percent. Positive
 Increases the effectiveness of your own restraints. Positive
 *values* improve effectiveness, negative
 *values* reduce.
+
 
 ### StanceBoost
 ``` json
@@ -806,8 +829,19 @@ negative *values* reduce.
 ```
 
 Flatly alters the minimum dice your d20 can roll in a stat check, take
-caution. Positive *values* increases base
+caution in balance. Positive *values* increases base stat check
 number, negative *values* reduce.
+
+### TemptationCheckBonus
+``` json
+"PerkType": ["TemptationCheckBonus"],
+"EffectPower": ["2"],
+```
+
+Flatly alters the player's temptation stack check, take
+caution in balance. Positive *values* increases stat check
+number, negative *values* reduce.
+
 
 ### RestSpiritRestored
 ``` json
@@ -838,6 +872,27 @@ negative *values* reduce.
 Recovers percent amount of max arousal when resting at rest points, take
 caution. Positive *values* increase,
 negative *values* reduce.
+
+### RestStrainRestored
+``` json
+"PerkType": ["RestStrainRestored"],
+"EffectPower": ["1"],
+```
+
+Recovers percent amount of strain when resting at rest points, take
+caution. Positive *values* increase,
+negative *values* reduce.
+
+### RestFavorRestored
+``` json
+"PerkType": ["RestFavorRestored"],
+"EffectPower": ["1"],
+```
+
+Recovers percent amount of favor when resting at rest points, take
+caution. Positive *values* increase,
+negative *values* reduce.
+
 
 ## Stat Perk Types
 Alters the given stat of the wielder by the given amount. Positive

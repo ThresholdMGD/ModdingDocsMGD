@@ -192,13 +192,13 @@ see [Stance Reference](../../Reference/StanceRef.md).
 
 You can optionally apply or remove a stance via the following keys.
 
-  ------------------------------------------ -----------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------
   `"startsStance": ["Sex", "Making Out"],`   Applies any of the given stances.
 
-  `"removesStance": ["Penetration"],`        Removes the listed stances for both the caster and target.
-                                             `"All"` removes all current stances. `"Target"` removes all
-                                             stances from the target.
-  ------------------------------------------ -----------------------------------------------------------
+  `"removesStance": ["Penetration"],` Removes the listed stances for both the caster and target.
+  `"All"` removes all current stances. `"Target"` removes all
+  stances from the target.
+  -----------------------------------------------------------------------------------------------------
 
 Critically, the skill can be made unavailable to the player or monster
 AI depending on the conditions of the following technically optional
@@ -206,61 +206,47 @@ keys. If you aren't using it and it doesn't mention using `""`, `"0"`,
 or `"None"`, you should remove it to avoid confusing the AI.
 
   ----------------------------------------------------------------------------------------------- -----------------------------------------------------------
-  `"requiresStance": ["Sex"],`                                                                    Requires the **caster** to be in the specified stances. You
-                                                                                                  can also use `"Any"` or `"None"`.
+  `"requiresStance": ["Sex"],` Requires the **caster** to be in the specified stances. You can also use `"Any"` or `"None"`.
 
-  `"unusableIfStance": ["Anal"],`                                                                 **Caster** cannot be in any of the specified stances. You
-                                                                                                  can also use `"Any"` or `"None"`.
+  `"unusableIfStance": ["Anal"],` **Caster** cannot be in any of the specified stances. You can also use `"Any"` or `"None"`.
 
-  `"requiresTargetStance": ["Sex"],`                                                              **Target** must be in all of the specified stances. You can
-                                                                                                  also use `"Any"` or `"None"`.
+  `"requiresTargetStance": ["Sex"],` **Target** must be in all of the specified stances. You can also use `"Any"` or `"None"`.
 
-  `"unusableIfTarget": ["Cuddle"],`                                                               **Target** cannot be in any of the specified stances. You
-                                                                                                  can also use `"Any"` or `"None"`.
+  `"unusableIfTarget": ["Cuddle"],` **Target** cannot be in any of the specified stances. You can also use `"Any"` or `"None"`.
 
-  `"unusableIfTargetHasTheseSets": [[ "Blowjob", "Blowjob", "Blowjob", "Blowjob", "Blowjob"]],`   **Target** cannot have any of these sets of
-                                                                                                  *arrays* for active stances,
-                                                                                                  meaning all of the listed stances at once. As per the
-                                                                                                  example, if the target is in the blowjob stance 5 times
-                                                                                                  (see imps), the skill cant be used.
+  `"unusableIfTargetHasTheseSets": [[ "Blowjob", "Blowjob", "Blowjob", "Blowjob", "Blowjob"]],` **Target** cannot have any of these sets of
+  *arrays* for active stances, meaning all of the listed stances at once. As per the
+  example, if the target is in the blowjob stance 5 times (see imps), the skill cant be used.
 
-  `"requiresStatusEffect": "Charm",`                                                              Requires **target** to have this status effect. You can
-                                                                                                  also use `"None"`/`""`.
+  `"requiresStatusEffect": "Charm",` Requires **target** to have this status effect. You can also use `"None"`/`""`.
 
-  `"requiresStatusPotency": "1",`                                                                 Required **target** status effect must have a minimum of
-                                                                                                  the given potency value. A reminder that it's optional,
-                                                                                                  such as if only checking for Charm.
+  `"requiresStatusPotency": "1",` Required **target** status effect must have a minimum of the given potency value. A reminder that it's optional, such as if only checking for Charm. Buffs and Debuffs check for the combination of all current stacks of potency to the given type.
 
-  `"unusableIfStatusEffect": ["Paralyze"],`                                                       **Target** cannot have any of the specified status effects.
+  `"unusableIfStatusEffect": ["Paralyze"],` **Target** cannot have any of the specified status effects.
 
-  `"unusableIfStatusPotency": ["5"],`                                                             **Target** cannot have potency equal to or higher for
-                                                                                                  specified status effects in the previous key. You can also
-                                                                                                  use `"0"` to simply check if it exists.
+  `"unusableIfStatusPotency": ["5"],` **Target** cannot have potency equal to or higher for specified status effects in the previous key. You can also
+  use `"0"` to simply check if it exists.
 
-  `"requiresStatusEffectSelf": "Trance",`                                                         Requires **caster** to have this status effect. You can
-                                                                                                  also use `"None"`/`""`.
+  `"requiresStatusEffectSelf": "Trance",` Requires **caster** to have this status effect. You can also use `"None"`/`""`.
 
-  `"requiresStatusPotencySelf": "3",`                                                             Required **caster** status effect must have a minimum of
-                                                                                                  the given potency value. A reminder that it's optional,
-                                                                                                  such as if only checking for Charm.
+  `"requiresStatusPotencySelf": "3",` Required **caster** status effect must have a minimum of the given potency value. A reminder that it's optional, such as if only checking for Charm.
 
-  `"unusableIfStatusEffectSelf": [""],`                                                           **Caster** cannot have any of the specified status effects.
-                                                                                                  You can also use `"None"`/`""`.
+  `"unusableIfStatusEffectSelf": [""],` **Caster** cannot have any of the specified status effects.
+  You can also use `"None"`/`""`.
 
-  `"requiresPerk": ["Action Rune!"],`                                                             **Target** must have all the specified perks. Can repeat a
-                                                                                                  perk to require multiple stacks of the same perk.
+  `"requiresPerk": ["Action Rune!"],` **Target** must have all the specified perks. Can repeat a
+  perk to require multiple stacks of the same perk.
 
-  `"requiresOnePerk": "Swift",`                                                                   **Target** must have the specified perk.
+  `"requiresOnePerk": "Swift",` **Target** must have the specified perk.
 
-  `"unusableIfPerk": ["Rut"],`                                                                    **Target** cannot have any of the specified perks.
+  `"unusableIfPerk": ["Rut"],` **Target** cannot have any of the specified perks.
 
-  `"requiresPerkSelf": ["Pacing"],`                                                               **Caster** must have all the specified perks. Can repeat a
-                                                                                                  perk to require multiple stacks of the same perk.
+  `"requiresPerkSelf": ["Pacing"],` **Caster** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk.
 
-  `"requiresOnePerkSelf": ["Overlimit"],`                                                         **Caster** must have the specified perk. Can repeat a perk
-                                                                                                  to require multiple stacks of the same perk.
+  `"requiresOnePerkSelf": ["Overlimit"],` **Caster** must have the specified perk. Can repeat a perk
+  to require multiple stacks of the same perk.
 
-  `"unusableIfPerkSelf": ["Well Fed"],`                                                           **Caster** cannot have any of the specified perks.
+  `"unusableIfPerkSelf": ["Well Fed"],` **Caster** cannot have any of the specified perks.
   ----------------------------------------------------------------------------------------------- -----------------------------------------------------------
 
 Also see stanceconditions for adding
@@ -278,7 +264,7 @@ skill additions.
 The following *keys* are required for
 `"attack"` or any healing based `"skillType":` skills.
 
-  ---------------------- -----------------------------------------------------------
+  ---------------------------------------------------------------------------------
   `"power": "25",`       Base damage or healing *value* of the skill.
 
   `"minRange": "70",`    The randomized percent minimum damage or healing range of
@@ -289,7 +275,7 @@ The following *keys* are required for
 
   `"recoil": "35",`      Percentage of the damage dealt to the target recoiled back
                          at the caster. Cannot be a negative value.
-  ---------------------- -----------------------------------------------------------
+  ---------------------------------------------------------------------------------
 
 ``` json
 "scalesWithStatusEffect": "Aphrodisiac",
@@ -304,7 +290,7 @@ The following *keys* are required for
 The following *keys* are optional for
 `"attack"` or any healing based `"skillType":` skills.
 
-  ---------------------------------------- -----------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------
   `"critDamage": "20",`                    Percent damage modifier for the critical damage dealt.
                                            Flatly additive/subtractive to any existing modifiers.
 
@@ -334,7 +320,7 @@ The following *keys* are optional for
                                            scaling *key*
                                            *values* to `"0"`, or remove
                                            entirely.
-  ---------------------------------------- -----------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------
 
 Lastly, see `"statusOutcome":` in [Dialogue Keys](#dialogue-keys) below
 for a note on combat event based skills.
@@ -355,7 +341,7 @@ The following *keys* are required for
 others depending on if they use the `"statusEffect"` key. See
 Status Effect.
 
-  -------------------------------- -----------------------------------------------------------
+  -------------------------------------------------------------------------------------------
   `"statusEffect": "Power",`       What status effect it uses. Use `"EventRestrain"` for
                                    combat event based restrain application, ensuring combat
                                    event based restrain skills don't chain.
@@ -376,19 +362,22 @@ Status Effect.
   `"statusText": "Oni's Gains",`   Will change status effect name in game. Making it unique
                                    for Buff/Debuff skills ensures they don't overlap with
                                    others in tracking.
-  -------------------------------- -----------------------------------------------------------
+  -------------------------------------------------------------------------------------------
 
 The following *keys* are optional for all
 possible `"skillType":` values.
 
-  ------------------------------- -----------------------------------------------------------
+  ------------------------------------------------------------------------------------------
   `"statusEffectScaling": "25"`   For stat buff/debuff skills, deciding their scaling based
                                   on the set `"statType":` *value* of the caster's stats. 100% of a given stat
                                   is equal to `stat * 1`, 50% `stat * 0.5`, etc. Can also be
                                   used for scaling healing `"skillType:"` skills with the
                                   skill's given `"statType":`.
 
-  ------------------------------- -----------------------------------------------------------
+  `"statusStacks": "1",`          Set to 1 to enable a buff/debuff effect to stack instead of only resetting 
+                                  the duration when reapplied. 
+
+  ------------------------------------------------------------------------------------------
 
 ## descrip
 ``` json
