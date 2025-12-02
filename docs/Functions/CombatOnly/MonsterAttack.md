@@ -3,7 +3,7 @@
 ## SemenHeal
 
 Heals the focused monster based on the given number and the same
-calculation as the semen eater perk type. `"[FinalDamage]"` can be used
+calculation as the semen eater perk type. `"[RecoverAmount]"` can be used
 in the following *string* to display how
 much arousal is recovered.
 
@@ -16,7 +16,7 @@ much arousal is recovered.
 ## EnergyDrain
 
 Drains energy from the player using the same calculation as the energy
-drain perk. `"[FinalDamage]"` can be used in the following
+drain perk. `"[RecoverAmount]"` can be used in the following
 *string* to display how much energy is
 lost.
 
