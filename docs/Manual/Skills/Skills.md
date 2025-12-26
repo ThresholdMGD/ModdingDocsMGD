@@ -237,14 +237,13 @@ or `"None"`, you should remove it to avoid confusing the AI.
   `"requiresPerk": ["Action Rune!"],` **Target** must have all the specified perks. Can repeat a
   perk to require multiple stacks of the same perk.
 
-  `"requiresOnePerk": "Swift",` **Target** must have the specified perk.
+  `"requiresOnePerk": ["Swift", "Escape Artist"],` **Target** must have one of the listed perks.
 
   `"unusableIfPerk": ["Rut"],` **Target** cannot have any of the specified perks.
 
   `"requiresPerkSelf": ["Pacing"],` **Caster** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk.
 
-  `"requiresOnePerkSelf": ["Overlimit"],` **Caster** must have the specified perk. Can repeat a perk
-  to require multiple stacks of the same perk.
+  `"requiresOnePerkSelf": ["Swift", "Escape Artist"],` **Caster** must have one of the listed perks.
 
   `"unusableIfPerkSelf": ["Well Fed"],` **Caster** cannot have any of the specified perks.
   ----------------------------------------------------------------------------------------------- -----------------------------------------------------------
