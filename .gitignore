@@ -6,4 +6,5 @@ _build/
 site
 mkenv
 site.zip
-__pycache__/
+__pycache__
+__pycache__/main.cpython-314.pyc

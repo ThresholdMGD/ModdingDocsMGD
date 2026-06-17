@@ -191,3 +191,21 @@ another tile based on the tiles ID in the TileSet.
 ``` json
 "ChangeMapTile", "6", "9", "TileID",
 ```
+
+## SetMapYOffset & SetMapXOffset <a id="setmapyoffset-setmapxoffset"></a>
+
+`"SetMapYOffset"` and `"SetMapXOffset"` will offset the gridmap view by the given value by pixel.
+
+Optionally, `"BaseAdjust"` specified prior to the value
+will change the `"YAdjust"` and `"XAdjust"` from the active
+gridmap's creation. Otherwise, it is an adjustment independent of `"YAdjust"` and `"XAdjust"`.
+
+``` json
+"SetMapYOffset", "0",
+"SetMapXOffset", "50",
+"SetMapYOffset", "BaseAdjust", "100",
+"SetMapXOffset", "BaseAdjust", "200"
+```
+!!! info "See also"
+
+    See [YAdjust & XAdjust](../../Reference/Gridmap.md#yadjust-xadjust) for the base offset set during gridmap creation.

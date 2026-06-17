@@ -15,7 +15,7 @@ check each floor file in their respective folder.
 !!! info "See also"
 
     For Gridmap behavior meant to be defined outside the Gridmap creation in an
-    event, see [Gridmap Functions](Functions/EventOnly/GridmapFunctions.md).
+    event, see [Gridmap Functions](../Functions/EventOnly/GridmapFunctions.md).
 
 
 ## Creating a Gridmap
@@ -44,6 +44,7 @@ This page will break down the following example:
     "A", "GridMap/floorPoisoned.png", "Auto", "Labyrinth", "Poison", "The ground is laden in aphrodisiac.",
   "EndLoop",
   "YAdjust", "75",
+  "XAdjust", "0",
   "PlayerCoord", "2", "4",
   "PlayerIcon", "GridMap/kunoichiIcon.png",
   "Sight", "4",
@@ -172,12 +173,12 @@ tile, defining how it behaves.
 
 ::spantable::
 
-| Type        | Description                                                                                     |
-|-----------------|---------------------------------------------------------------------------------------------|
-| Floor       | A simple tile the player and an NPC could traverse.                                         |
-| Wall        | Blocks players and NPCs from moving into it, such as for walls, pits, etc.                  |
-| Interactable| Calls an Event when the player is standing on it and hits the interact button. Players and NPCs traverse them like a Floor. |
-| Auto        | Calls an Event after the player steps on it no matter what. NPCs traverse them like a Floor.     |
+| Type         | Description                                                                                                                 |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Floor        | A simple tile the player and an NPC could traverse.                                                                         |
+| Wall         | Blocks players and NPCs from moving into it, such as for walls, pits, etc.                                                  |
+| Interactable | Calls an Event when the player is standing on it and hits the interact button. Players and NPCs traverse them like a Floor. |
+| Auto         | Calls an Event after the player steps on it no matter what. NPCs traverse them like a Floor.                                |
 
 ::end-spantable::
 
@@ -195,20 +196,23 @@ can't make use of it, given players cannot step in Walls.
 In this case, `"The ground is laden in aphrodisiac.",` will play after
 the Auto tile event is done being called.
 
-## YAdjust
+## YAdjust & XAdjust <a id="yadjust-xadjust"></a>
 
-`"YAdjust"` alters the position of the Gridmap on the screen via the
-following *string* value. The
-*value* necessary will vary depending on
-the amount of Rows your Gridmap has.
+`"YAdjust"` and `"XAdjust"` alters the position of the Gridmap on the screen via the
+following *string* value. The values are per pixel.
 
-You'll likely need to adjust this manually from reviewing the Gridmap
-in-game till the positioning is considered correct.
+This helps prevent the user interface elements from covering the gridmap depending on its size. Typically only needed for the Y axis, which will vary depending on the amount of Rows your Gridmap has. 
+
 
 !!! tip
 
     Ensuring your event can be readily accessed in-game by temporarily
     defining it as a town CardType is useful during early iterations.
+
+!!! info "See also"
+
+    See [SetMapYOffset & SetMapXOffset](../Functions/EventOnly/GridmapFunctions.md#setmapyoffset-setmapxoffset) for changing offsets after creation.
+
 
 ## PlayerCoord
 
@@ -296,17 +300,17 @@ provide it before closing the loop:
 
 ::spantable::
 
-| Attribute       | Description                                                                                       |
-|-----------------|---------------------------------------------------------------------------------------------------|
-| Name            | Name of your NPC, for what other Gridmap functions will call the NPC by.                          |
-| Img             | Image to display on map in the following *string* value, which is either the file path, or "Invisible" to not use any image. |
-| Event           | Upon player collision with the NPC, calls an event, featuring the same possible parameters as Tileset. |
-| Movement        | Movement type the NPC will use to navigate the Gridmap. See ChangeGridNPCMovement for possible parameters. |
-| TurnEvent       | Calls the given event then given scene every Gridmap turn, aka every step. See base game examples and Gridmap Functions. |
-| Obstacle        | Skips the NPC in movement calls, and sets it to be displayed under all other NPCs.                |
-| Timer           | Sets an internal timer for the NPC to count down then call an event and reset at 0.               |
-| TimerMax        | Changes the max timer count that the timer is reset to. Must be called after "Timer".             |
-| CanShareTile    | By default on. If off, NPCs won't move onto the same target tile of NPCs who also have it turned off.  |
+| Attribute    | Description                                                                                                                  |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Name         | Name of your NPC, for what other Gridmap functions will call the NPC by.                                                     |
+| Img          | Image to display on map in the following *string* value, which is either the file path, or "Invisible" to not use any image. |
+| Event        | Upon player collision with the NPC, calls an event, featuring the same possible parameters as Tileset.                       |
+| Movement     | Movement type the NPC will use to navigate the Gridmap. See ChangeGridNPCMovement for possible parameters.                   |
+| TurnEvent    | Calls the given event then given scene every Gridmap turn, aka every step. See base game examples and Gridmap Functions.     |
+| Obstacle     | Skips the NPC in movement calls, and sets it to be displayed under all other NPCs.                                           |
+| Timer        | Sets an internal timer for the NPC to count down then call an event and reset at 0.                                          |
+| TimerMax     | Changes the max timer count that the timer is reset to. Must be called after "Timer".                                        |
+| CanShareTile | By default on. If off, NPCs won't move onto the same target tile of NPCs who also have it turned off.                        |
 
 ::end-spantable::
 
