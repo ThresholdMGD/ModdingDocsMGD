@@ -96,6 +96,22 @@ overridden.
 
 Does not require the original file to have the *key* marked as an array.
 
+## perk reqired/unsuable set
+``` json
+"requiresPerk": [ ""],
+"requiresOnePerk": [ ""],
+"unusableIfPerk": [ ""],
+"requiresPerkSelf": [ ""],
+"requiresOnePerkSelf": [ ""],
+"unusableIfPerkSelf": [ ""]
+```
+
+Optional, adds to the existing array. The *strings* provided in the original:
+`"requiresPerk":`, `"requiresOnePerk":` , `"unusableIfPerk":`, `"requiresPerkSelf":`, `"requiresOnePerkSelf":` or `"unusableIfPerkSelf":` 
+will still be present and not overridden.
+Can utilize any perk for the check.
+Does not require the original file to have the *key* marked as an array or used.
+
 ## stanceConditions
 ``` json
 "stanceConditions": [
