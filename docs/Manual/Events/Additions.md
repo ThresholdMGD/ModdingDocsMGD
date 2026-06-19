@@ -120,9 +120,9 @@ this purpose:
     with a [ShoppingMenu](../../Functions/General/Shop.md).
 -   `"SkillShopAddition"` for appending to scenes (e.g. Elena's skill
     shop) with a [SkillShoppingMenu](../../Functions/General/Shop.md#skill-shopping)
--   `"PrependScenes"` for prepending to scenes. (e.g. NPC scene jump
+-   `"PrependScene"` for prepending to scenes. (e.g. NPC scene jump
     congratulations for beating a new location dungeon)
--   `"AppendScenes"` for appending to scenes. (e.g. extra fluff dialogue
+-   `"AppendScene"` for appending to scenes. (e.g. extra fluff dialogue
     to a scene without a jump at the end.)
 
 You can make use of them through a duplicate scene in the event addition
