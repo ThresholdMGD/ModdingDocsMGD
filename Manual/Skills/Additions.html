@@ -2580,6 +2580,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#perk-reqiredunsuable-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      perk reqired/unsuable set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stanceconditions" class="md-nav__link">
     <span class="md-ellipsis">
       stanceConditions
@@ -5267,6 +5276,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#perk-reqiredunsuable-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      perk reqired/unsuable set
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#stanceconditions" class="md-nav__link">
     <span class="md-ellipsis">
       stanceConditions
@@ -5361,6 +5379,19 @@ overridden.</p>
 <em>key</em> will still be present, and not
 overridden.</p>
 <p>Does not require the original file to have the <em>key</em> marked as an array.</p>
+<h2 id="perk-reqiredunsuable-set">perk reqired/unsuable set<a class="headerlink" href="#perk-reqiredunsuable-set" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;requiresPerk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="nt">&quot;requiresOnePerk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="nt">&quot;unusableIfPerk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="nt">&quot;requiresPerkSelf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="nt">&quot;requiresOnePerkSelf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+<span class="nt">&quot;unusableIfPerkSelf&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>Optional, adds to the existing array. The <em>strings</em> provided in the original:
+<code>"requiresPerk":</code>, <code>"requiresOnePerk":</code> , <code>"unusableIfPerk":</code>, <code>"requiresPerkSelf":</code>, <code>"requiresOnePerkSelf":</code> or <code>"unusableIfPerkSelf":</code> 
+will still be present and not overridden.
+Can utilize any perk for the check.
+Does not require the original file to have the <em>key</em> marked as an array or used.</p>
 <h2 id="stanceconditions">stanceConditions<a class="headerlink" href="#stanceconditions" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nt">&quot;stanceConditions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>

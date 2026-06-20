@@ -2993,9 +2993,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yadjust" class="md-nav__link">
+  <a href="#yadjust-xadjust" class="md-nav__link">
     <span class="md-ellipsis">
-      YAdjust
+      YAdjust &amp; XAdjust
     </span>
   </a>
   
@@ -5358,9 +5358,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#yadjust" class="md-nav__link">
+  <a href="#yadjust-xadjust" class="md-nav__link">
     <span class="md-ellipsis">
-      YAdjust
+      YAdjust &amp; XAdjust
     </span>
   </a>
   
@@ -5468,7 +5468,7 @@ future.</p>
 <div class="admonition info">
 <p class="admonition-title">See also</p>
 <p>For Gridmap behavior meant to be defined outside the Gridmap creation in an
-event, see <a href="Functions/EventOnly/GridmapFunctions.md">Gridmap Functions</a>.</p>
+event, see <a href="../Functions/EventOnly/GridmapFunctions.html">Gridmap Functions</a>.</p>
 </div>
 <h2 id="creating-a-gridmap">Creating a Gridmap<a class="headerlink" href="#creating-a-gridmap" title="Permanent link">&para;</a></h2>
 <p>A Gridmap doesn't require a specific CardType from an event, it only
@@ -5489,6 +5489,7 @@ an entire new Gridmap.</p>
 <span class="w">    </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GridMap/floorPoisoned.png&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Auto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Labyrinth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Poison&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;The ground is laden in aphrodisiac.&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;EndLoop&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;YAdjust&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;75&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;XAdjust&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;PlayerCoord&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;PlayerIcon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;GridMap/kunoichiIcon.png&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="s2">&quot;Sight&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
@@ -5626,17 +5627,18 @@ displaying flavor text when the tile is stepped by the player. Walls
 can't make use of it, given players cannot step in Walls.</p>
 <p>In this case, <code>"The ground is laden in aphrodisiac.",</code> will play after
 the Auto tile event is done being called.</p>
-<h2 id="yadjust">YAdjust<a class="headerlink" href="#yadjust" title="Permanent link">&para;</a></h2>
-<p><code>"YAdjust"</code> alters the position of the Gridmap on the screen via the
-following <em>string</em> value. The
-<em>value</em> necessary will vary depending on
-the amount of Rows your Gridmap has.</p>
-<p>You'll likely need to adjust this manually from reviewing the Gridmap
-in-game till the positioning is considered correct.</p>
+<h2 id="yadjust-xadjust">YAdjust &amp; XAdjust <a id="yadjust-xadjust"></a><a class="headerlink" href="#yadjust-xadjust" title="Permanent link">&para;</a></h2>
+<p><code>"YAdjust"</code> and <code>"XAdjust"</code> alters the position of the Gridmap on the screen via the
+following <em>string</em> value. The values are per pixel.</p>
+<p>This helps prevent the user interface elements from covering the gridmap depending on its size. Typically only needed for the Y axis, which will vary depending on the amount of Rows your Gridmap has. </p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Ensuring your event can be readily accessed in-game by temporarily
 defining it as a town CardType is useful during early iterations.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">See also</p>
+<p>See <a href="../Functions/EventOnly/GridmapFunctions.html#setmapyoffset-setmapxoffset">SetMapYOffset &amp; SetMapXOffset</a> for changing offsets after creation.</p>
 </div>
 <h2 id="playercoord">PlayerCoord<a class="headerlink" href="#playercoord" title="Permanent link">&para;</a></h2>
 <p><code>"PlayerCoord"</code> sets the players starting coordinates on the Gridmap in

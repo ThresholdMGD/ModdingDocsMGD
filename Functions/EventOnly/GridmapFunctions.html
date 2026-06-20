@@ -4221,6 +4221,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setmapyoffset-setmapxoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMapYOffset &amp; SetMapXOffset
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5347,6 +5356,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#setmapyoffset-setmapxoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      SetMapYOffset &amp; SetMapXOffset
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5526,6 +5544,20 @@ Tileset at a given X and Y coordinate to
 another tile based on the tiles ID in the TileSet.</p>
 <div class="highlight"><pre><span></span><code><span class="s2">&quot;ChangeMapTile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;TileID&quot;</span><span class="p">,</span>
 </code></pre></div>
+<h2 id="setmapyoffset-setmapxoffset">SetMapYOffset &amp; SetMapXOffset <a id="setmapyoffset-setmapxoffset"></a><a class="headerlink" href="#setmapyoffset-setmapxoffset" title="Permanent link">&para;</a></h2>
+<p><code>"SetMapYOffset"</code> and <code>"SetMapXOffset"</code> will offset the gridmap view by the given value by pixel.</p>
+<p>Optionally, <code>"BaseAdjust"</code> specified prior to the value
+will change the <code>"YAdjust"</code> and <code>"XAdjust"</code> from the active
+gridmap's creation. Otherwise, it is an adjustment independent of <code>"YAdjust"</code> and <code>"XAdjust"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;SetMapYOffset&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="s2">&quot;SetMapXOffset&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
+<span class="s2">&quot;SetMapYOffset&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;BaseAdjust&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
+<span class="s2">&quot;SetMapXOffset&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;BaseAdjust&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;200&quot;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">See also</p>
+<p>See <a href="../../Reference/Gridmap.html#yadjust-xadjust">YAdjust &amp; XAdjust</a> for the base offset set during gridmap creation.</p>
+</div>
 
 
 
