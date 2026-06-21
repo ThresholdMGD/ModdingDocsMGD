@@ -6,7 +6,7 @@ repo_url: https://github.com/ThresholdMGD/ModdingDocsMGD
 copyright: Copyright &copy; 2017 - 2025 Threshold
 extra:
   logo: img/banner.png
-  versionMGD: v27
+  versionMGD: v28
 theme:
   name: material
   custom_dir: overrides
