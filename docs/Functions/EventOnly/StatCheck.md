@@ -133,7 +133,7 @@ The following sub-sub-functions can be checked for:
 #### IfVirilityEqualsOrGreater
 
 ``` json
-"ChangeStatCheckDifficulty", "IfVirilityEqualOrGreater", "65", "9"
+"ChangeStatCheckDifficulty", "IfVirilityEqualsOrGreater", "65", "9"
 ```
 
 #### IfMonsterLevelGreaterThan
