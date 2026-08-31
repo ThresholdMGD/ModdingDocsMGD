@@ -69,10 +69,7 @@ def check_dependencies():
         return False
     
     required = [
-        "mkdocs",
-        "mkdocs-material",
-        "mkdocs-macros-plugin",
-        "mkdocs-redirects",
+        "zensical",
         "neoteroi-mkdocs",
         "pyyaml"
     ]
@@ -127,9 +124,9 @@ def generate_navigation():
 
 def build_documentation():
     try:
-        # Run mkdocs using the venv Python
+        # Run zensical using the venv Python
         result = subprocess.run([
-            sys.executable, "-m", "mkdocs", "build"
+            sys.executable, "-m", "zensical", "build"
         ], check=True, capture_output=True, text=True)
         print_success("Documentation built successfully")
         return True
@@ -138,8 +135,8 @@ def build_documentation():
         print(f"Error: {e.stderr}")
         return False
     except FileNotFoundError:
-        print_error("mkdocs module not found in venv")
-        print("Please ensure mkdocs-material is properly installed in mkenv")
+        print_error("zensical module not found in venv")
+        print("Please ensure zensical is properly installed in mkenv")
         return False
 
 def open_documentation():

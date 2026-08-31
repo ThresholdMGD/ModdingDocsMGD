@@ -102,6 +102,21 @@ def generate_directory_nav(docs_dir: Path, dir_name: str, include_index: bool = 
 
     return nav_items
 
+
+def pluralize_type_title(title: str) -> str:
+    """Strip 'Creation' suffixes and pluralize the type name for nav display."""
+    # Remove 'Creation' suffixes
+    base = title.replace(" & Addiction Creation", "").replace(" Creation", "").strip()
+    # Pluralize
+    if base.endswith('h') and base[-2] not in 'aeiou':
+        return base + 'es'
+    elif base.endswith('y'):
+        return base[:-1] + 'ies'
+    elif base.endswith('s') or base.endswith('x'):
+        return base
+    else:
+        return base + 's'
+
 def generate_manual_nav(docs_dir: Path) -> List[Dict[str, Any]]:
     manual_dir = docs_dir / "Manual"
     if not manual_dir.exists():
@@ -109,11 +124,10 @@ def generate_manual_nav(docs_dir: Path) -> List[Dict[str, Any]]:
 
     nav_items = []
 
-    # Get all subdirectories
+    # Collect all subdirectories with their .md files
     subdirs = []
     for item in manual_dir.iterdir():
         if item.is_dir() and item.name not in ['.', '..', '__pycache__']:
-            # Check if directory has .md files
             md_files = list(item.glob("*.md"))
             if md_files:
                 subdirs.append((item.name, md_files))
@@ -121,31 +135,43 @@ def generate_manual_nav(docs_dir: Path) -> List[Dict[str, Any]]:
     # Sort subdirectories alphabetically
     subdirs.sort(key=lambda x: x[0])
 
-    # Generate navigation for each subdirectory
     for subdir_name, md_files in subdirs:
-        subdir_title = convert_filename_to_title(subdir_name)
-
-        # Create subdirectory navigation - put index first
-        subdir_nav = []
-        index_files = []
-        other_files = []
-
-        for file_path in md_files:
-            if file_path.name.lower() == 'index.md':
-                index_files.append(file_path)
+        # Identify the main page (filename matches directory name)
+        main_file = None
+        secondary_files = []
+        for fp in md_files:
+            if fp.stem.lower() == subdir_name.lower():
+                main_file = fp
             else:
-                other_files.append(file_path)
+                secondary_files.append(fp)
 
-        # Sort non-index files alphabetically
-        other_files.sort(key=lambda x: x.name.lower())
+        # Sort secondary files alphabetically
+        secondary_files.sort(key=lambda x: x.name.lower())
 
-        # Add index files first, then others
-        for file_path in index_files + other_files:
-            title = extract_title_from_file(file_path)
-            relative_path = str(file_path.relative_to(docs_dir)).replace('\\', '/')
-            subdir_nav.append({title: relative_path})
+        if main_file:
+            # Add main page
+            title = pluralize_type_title(extract_title_from_file(main_file))
+            relative_path = str(main_file.relative_to(docs_dir)).replace('\\', '/')
+            nav_items.append({title: relative_path})
 
-        nav_items.append({subdir_title: subdir_nav})
+            # Add secondary pages, flat, prefixed with parent type
+            parent_title = title  # already pluralized
+            for fp in secondary_files:
+                sub_title = extract_title_from_file(fp)
+                # Check if sub_title already starts with plural or singular parent name
+                singular_parent = parent_title.rstrip('s') if parent_title.endswith('s') else parent_title
+                if sub_title.lower().startswith(parent_title.lower()) or sub_title.lower().startswith(singular_parent.lower()):
+                    prefixed_title = sub_title
+                else:
+                    prefixed_title = f"{singular_parent} {sub_title}"
+                nav_items.append({prefixed_title: str(fp.relative_to(docs_dir)).replace('\\', '/')})
+        else:
+            # No main page, list all files flat
+            md_files.sort(key=lambda x: x.name.lower())
+            for fp in md_files:
+                title = pluralize_type_title(extract_title_from_file(fp))
+                relative_path = str(fp.relative_to(docs_dir)).replace('\\', '/')
+                nav_items.append({title: relative_path})
 
     return nav_items
 
@@ -224,6 +250,7 @@ def update_mkdocs_nav():
     reference_nav = []
     reference_files = [
         ("Markup", "Reference/Markup.md"),
+        ("Additions", "Reference/Additions.md"),
         ("Stance Reference", "Reference/StanceRef.md"),
         ("Status Effect Reference", "Reference/StatusEffectRef.md"),
         ("Stat Reference", "Reference/StatRef.md"),

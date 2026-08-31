@@ -1,6 +1,3 @@
-mkdocs==1.6.1
-mkdocs-material==9.6.16
-mkdocs-macros-plugin==1.3.7
-mkdocs-redirects==1.2.2
+zensical==0.0.57
 neoteroi-mkdocs==1.1.2
 pyyaml==6.0.2

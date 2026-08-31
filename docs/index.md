@@ -118,14 +118,15 @@ Head to the `#modding-help` forum channel towards the bottom of the channel list
     Comprehensive information on each type of JSON modders can use to add
     and modify game content.
 
-    - [Adventures](Manual/Adventures/index.md)
-    - [Events](Manual/Events/index.md)
+    - [Adventures](Manual/Adventures/Adventures.md)
+    - [Events](Manual/Events/Events.md)
     - [Fetishes](Manual/Fetishes/Fetishes.md)
     - [Items](Manual/Items/Items.md)
-    - [Locations](Manual/Locations/index.md)
-    - [Monsters](Manual/Monsters/index.md)
-    - [Perks](Manual/Perks/index.md)
-    - [Skills](Manual/Skills/index.md)
+    - [Locations](Manual/Locations/Locations.md)
+    - [Monsters](Manual/Monsters/Monsters.md)
+    - [Perks](Manual/Perks/Perks.md)
+    - [Skills](Manual/Skills/Skills.md)
+
 
 -   :material-notebook:{ .lg .middle } __Reference__
 
@@ -140,7 +141,7 @@ Head to the `#modding-help` forum channel towards the bottom of the channel list
     - [Status Effect Reference](Reference/StatusEffectRef.md)
     - [Stat Reference](Reference/StatRef.md)
     - [FAQ](Reference/FAQ.md)
-    - [Breaking](Reference/Breaking.md)
+    - [Breaking](Reference/BreakingChanges.md)
     - [Gridmap](Reference/Gridmap.md)
 
 -   :material-dice-d20:{ .lg .middle } __Function Reference__
@@ -152,8 +153,8 @@ Head to the `#modding-help` forum channel towards the bottom of the channel list
     Modders refer to this section while writing content the most!
 
     - [Index](Functions/index.md)
-    - [General](Functions/index.md#General)
-    - [Asset](Functions/index.md#Asset)
-    - [Event Only](Functions/index.md#Event-Only)
-    - [Combat Only](Functions/index.md#Combat-Only)
+    - [General](Functions/index.md)
+    - [Asset](Functions/index.md)
+    - [Event Only](Functions/index.md)
+    - [Combat Only](Functions/index.md)
 </div>

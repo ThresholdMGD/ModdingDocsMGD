@@ -1,11 +1,38 @@
 # Adventure Creation
 
-Breaks down the keys and strings used by Adventures. See [The JSON Format](../../Tutorials/TheJsonFormat.md) for more information.
+Adventures are the menu choices you make on the game map, including the first-time runs you do before you fully unlock a location's menu choices. Examples would be "Shortcut To Nara" or "Visit Amy". These menu choices will point to an Event if the player meets its given requirements.
 
-Go to *Json/Adventures/*, and then see the *.json* files present for
-examples, and **_BlankAdventure.json** for a template.
+Here you will find information on how each key in the Adventure JSON type works.
 
-**Assume all keys are required, unless stated otherwise.**
+## Reference
+
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game Adventure .jsons can be found in the game folder *Json/Adventures/*, see any .json file present as examples.
+
+A blank template can be found at *_BlankAdventure.json*
+
+When not making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+For additions, only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+For an overview of behaviors for keys, see [Additions](../../Reference/Additions.md).
+
+| Key | Default Behavior | Override restriction |
+|---|---|---|
+| `name` | identifier | cannot override |
+| `Deck` [↓](#deck) | overwrite | overwrite only |
+| `RandomEvents` [↓](#randomevents) | unique_append | none |
+| `RandomMonsters` [↓](#randommonsters-monstergroups) | unique_append | none |
+| `MonsterGroups` [↓](#randommonsters-monstergroups) | append | none |
+| `Treasure` [↓](#treasure-eros) | append | none |
+| All other keys | overwrite | none |
+
+Check **\_AdventureAdditionExample.json** in *Json/Adventures/* for an example.
 
 ## name
 
@@ -105,22 +132,22 @@ various interactions.
 
 ::spantable::
 
-| Value                   | Description                                                      |
-|-------------------------|------------------------------------------------------------------|
-| "Event,"                | Jumps to an event given in the following string.                 |
-| "Monster,"              | Starts a monster encounter. Provide a *string* of the ID name of each included monster, close the list with "EndLoop."                                                                                            |
-| "RandomEvent,"          | Random event from the **RandomEvents** *key* below.              |
-| "RandomMonsters,"       | Random encounter from the [RandomMonsters & MonsterGroups](#randommonsters-monstergroups) *keys* below.                                                                                       |
-| "RandomTreasure,"       | Random treasure of random rarity from the [Treasure & Eros](#treasure-eros) *keys* below.                                                                                       |
-| "CommonTreasure,"       | Random common treasure from the [Treasure & Eros](#treasure-eros) `"Common":` *keys* below.                                                                                       |
-| "UncommonTreasure,"     | Random uncommon treasure from the [Treasure & Eros](#treasure-eros) `"Uncommon":` *keys* below.                                                                                       |
-| "RareTreasure,"         | Random rare treasure from the [Treasure & Eros](#treasure-eros) `"Rare":` *keys* below.                                                                                       |
-| "BreakSpot,"            | Break spot. The player can choose to move on, rest, or return to town.                                                                                        |
-| "Unrepeatable"          | Upon reaching this *string* in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**. |
+| Value               | Description                                                                                                                                                                                                                   |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Event,"            | Jumps to an event given in the following string.                                                                                                                                                                              |
+| "Monster,"          | Starts a monster encounter. Provide a *string* of the ID name of each included monster, close the list with "EndLoop."                                                                                                        |
+| "RandomEvent,"      | Random event from the **RandomEvents** *key* below.                                                                                                                                                                           |
+| "RandomMonsters,"   | Random encounter from the [RandomMonsters & MonsterGroups](#randommonsters-monstergroups) *keys* below.                                                                                                                       |
+| "RandomTreasure,"   | Random treasure of random rarity from the [Treasure & Eros](#treasure-eros) *keys* below.                                                                                                                                     |
+| "CommonTreasure,"   | Random common treasure from the [Treasure & Eros](#treasure-eros) `"Common":` *keys* below.                                                                                                                                   |
+| "UncommonTreasure," | Random uncommon treasure from the [Treasure & Eros](#treasure-eros) `"Uncommon":` *keys* below.                                                                                                                               |
+| "RareTreasure,"     | Random rare treasure from the [Treasure & Eros](#treasure-eros) `"Rare":` *keys* below.                                                                                                                                       |
+| "BreakSpot,"        | Break spot. The player can choose to move on, rest, or return to town.                                                                                                                                                        |
+| "Unrepeatable"      | Upon reaching this *string* in a deck, the adventure becomes unavailable for repeating, preventing the player from accessing the adventure again. **Do not use this if you want players to be able to replay the adventure**. |
 
 ::end-spantable::
 
-Remember to make sure the last *string*
+Remember to make sure the last string
 you provide doesn't have a trailing comma.
 
 ## RandomEvents

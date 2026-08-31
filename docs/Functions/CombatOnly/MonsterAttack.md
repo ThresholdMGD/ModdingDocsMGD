@@ -28,16 +28,16 @@ It can be used out of combat.
 
 ------------------------------------------------------------------------
 
-## SetSkipMonsterAttack
+## SkipMonsterAttack
 
-`"SetSkipMonsterAttack"` sets the focused monster to skip their attack
+`"SkipMonsterAttack"` sets the focused monster to skip their attack
 call for the round.
 
 ------------------------------------------------------------------------
 
-## SetResumeMonsterAttack
+## ResumeMonsterAttack
 
-`"SetResumeMonsterAttack"` sets the focused monster to attack for the
+`"ResumeMonsterAttack"` sets the focused monster to attack for the
 round again.
 
 ------------------------------------------------------------------------

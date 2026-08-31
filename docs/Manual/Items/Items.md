@@ -1,10 +1,27 @@
 # Item Creation
-Breaks down the keys and strings used by Items. See [The JSON Format](../../Tutorials/TheJsonFormat.md) for more information.
 
-Go to *Json/Items/*, and then see the .json files present for examples,
-and **_BlankItem.json** for a template.
+Items cover any player equipment, consumable, or key item in the game. More complex items may call a [Skill](../Skills/Skills.md) or [Event](../Events/Events.md) for more complex behaviors.
 
-**Assume all keys are required, unless stated otherwise.**
+## Reference
+
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game Item .jsons can be found in the game folder *Json/Items/*, see any .json file present as examples, and *_BlankItem.json* for a template.
+
+When not making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+For additions, only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+For an overview of behaviors for keys, see [Additions](../../Reference/Additions.md).
+
+| Key | Strategy |
+|---|---|
+| `name` | identifier |
+| All other keys | overwrite |
 
 ## name
 
@@ -26,16 +43,16 @@ the following *keys* will behave.
 
 ::spantable::
 
-| values              | Description                                 | Perks key Behavior      | Skills key Behavior     | Stats key Behavior      |
-|---------------------|---------------------------------------------|-------------------------|-------------------------|-------------------------|
-| `"Accessory"`         | A type of equipment. Only applied while worn.| Gives perk while worn.  | Gives skill while worn. | Alters stats while worn.|
-| `"Rune"`              | A type of equipment. Only applied while worn.| Gives perk while worn.  | Gives skill while worn. | Alters stats while worn.|
-| `"Consumable"`        | Can be used in and out of combat encounters. | None, see [useOutcome](#useoutcome) instead @span=2:4   |          | Alters stats when used. @span=1:4 |
-| `"CombatConsumable"`  | Can only be used in combat encounters.       |                    |                    |                    |
-| `"NotCombatConsumable"`| Can only be used outside of combat encounters.  |                    |                    |                    |
-| `"DissonantConsumable"`| Uses skill's outcome in combat, useOutcome out of combat.|  |  |  |
-| `"Key"`               | Called a Key Item in-game.                   | None @span                    |                    |                    |
-| `"Loot"`              | Cannot be used by the player.                |                  |                    |                    |
+| values                  | Description                                               | Perks key Behavior                                    | Skills key Behavior     | Stats key Behavior                |
+| ----------------------- | --------------------------------------------------------- | ----------------------------------------------------- | ----------------------- | --------------------------------- |
+| `"Accessory"`           | A type of equipment. Only applied while worn.             | Gives perk while worn.                                | Gives skill while worn. | Alters stats while worn.          |
+| `"Rune"`                | A type of equipment. Only applied while worn.             | Gives perk while worn.                                | Gives skill while worn. | Alters stats while worn.          |
+| `"Consumable"`          | Can be used in and out of combat encounters.              | None, see [useOutcome](#useoutcome) instead @span=2:4 |                         | Alters stats when used. @span=1:4 |
+| `"CombatConsumable"`    | Can only be used in combat encounters.                    |                                                       |                         |                                   |
+| `"NotCombatConsumable"` | Can only be used outside of combat encounters.            |                                                       |                         |                                   |
+| `"DissonantConsumable"` | Uses skill's outcome in combat, useOutcome out of combat. |                                                       |                         |                                   |
+| `"Key"`                 | Called a Key Item in-game.                                | None @span                                            |                         |                                   |
+| `"Loot"`                | Cannot be used by the player.                             |                                                       |                         |                                   |
 
 ::end-spantable::
 
@@ -202,11 +219,11 @@ Only applicable to consumable item types.
 
 ::spantable::
 
-| Key | Description | Special values |
-|-----|-------------|----------------|
-| "statusEffect" | Cleanses the given status effect. | "all" will cleanse all status effects. Use "None" if you don't intend to use it. |
-| "statusChance" | The percent chance for it to successfully cleanse on use. | "0" or "100" will ensure it always cleanses. |
-| "statusPotency" | Subtracts by the given amount from status effect's potency if applicable. | "0" cleanses it entirely. |
+| Key             | Description                                                               | Special values                                                                   |
+| --------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| "statusEffect"  | Cleanses the given status effect.                                         | "all" will cleanse all status effects. Use "None" if you don't intend to use it. |
+| "statusChance"  | The percent chance for it to successfully cleanse on use.                 | "0" or "100" will ensure it always cleanses.                                     |
+| "statusPotency" | Subtracts by the given amount from status effect's potency if applicable. | "0" cleanses it entirely.                                                        |
 
 ::end-spantable::
 

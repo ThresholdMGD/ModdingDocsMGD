@@ -1,11 +1,35 @@
 # Location Creation
 
-Breaks down the keys and strings used by Locations. See [The JSON Format](../../Tutorials/TheJsonFormat.md) for more information.
+Locations are spots on the game map when you select "Go Adventuring!" from the town, defining their icon, adventure, and Grimoire details. Note the town itself is hard-coded, and thus isn't modded like you would other existing locations. Instead, mods can access the town by creating [Event JSONs](../Events/Events.md#town-cardtype).
 
-Go to *Json/Locations/*, and then see the .json files present for
-examples, and **_TestLocation.json** for a template.
+## Reference
 
-**Assume all keys are required, unless stated otherwise.**
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are confusing you.
+
+Base game Location .jsons can be found in the game folder *Json/Locations/*, see any .json file present as examples, and *_TestLocation.json* for a template.
+
+When not making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+For additions, only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+For an explanation of each default behavior, see [Additions](../../Reference/Additions.md).
+
+| Key | Default Behavior | Override restriction |
+|---|---|---|
+| `name` | identifier | cannot override |
+| `Monsters` [↓](#monster-monstergroups-keys) | unique_append | none |
+| `Events` [↓](#events-quests-keys) | unique_append | none |
+| `Quests` [↓](#events-quests-keys) | unique_append | none |
+| `Adventures` [↓](#events-quests-keys) | unique_append | none |
+| `MonsterGroups` [↓](#monster-monstergroups-keys) | append | overwrite / append only |
+| `Treasure` [↓](#treasure-eros-keys) | append | overwrite only |
+| All other keys | overwrite | none |
+
+Check **\_BlankLocationAddition.json** in *Json/Locations/* for an example.
 
 ## name
 

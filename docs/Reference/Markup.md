@@ -29,7 +29,9 @@ expected.
 
 `[TPN]` gets the initials of the player's name.
 
-`[PlayerMoney]` displays the amount of money the player has.
+`[PlayerMoney]` displays the amount of money the player has with comma breaks.
+
+`[PlayerMoneyNoC]` displays the amount of money the player has with no comma breaks.
 
 `[PlayerLevel]` displays the player's current level.
 
@@ -178,8 +180,9 @@ ChoiceToDisplayFromOtherEventFunc.
 ChoiceToDisplayFunc and
 ChoiceToDisplayFromOtherEventFunc.
 
-`[ProgressDisplay]` via Progress
-functions.
+`[ProgressDisplay]` displays the current events progress via Progress functions with comma breaks.
+
+`ProgressDisplayNoC` displays the current events progress via Progress functions with no comma breaks.
 
 `[PlayerOrgasmLine]` or `[MonsterOrgasmLine]` displays the orgasm line
 for the player or monster respectively. To be used with

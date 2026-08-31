@@ -1,14 +1,20 @@
 # Breaking Changes
-This page outlines any breaking changes between breaking game releases
-to help with updating mods.
+
+This page outlines any changes during breaking game releases that need addressed when updating mods. These are made as infrequent as possible to ensure minimal disruptions to players and modders alike.
+
+## V28.1
+
+The addition system now accepts changes to all keys, for so long as a mod declares `testedFor` as v28.1 or later in their meta JSON. As such, updating your mod recklessly when not properly pruned of unused keys could result in issues.
+
+Start at the new Addition documentation's [Legacy Safety Feature](Additions.md#legacy-safety-feature) section for more on the modern addition system and how to update.
 
 ## V25.6
 Due to forward compatibility and technical reasons, custom
-*Markup* from MGD (not Ren'Py) are now
+*Markup* specific to MGD (not Ren'Py) are now
 enclosed with `[]` square brackets instead of `{}` curly braces.
 
 ### Fix Instructions
-There is a regex you can use in VS Code and Atom to find and replace all
+There is a regex you can use in VS Code and Atom/Pulsar to find and replace all
 instances of `{markup}` with `[markup]`:
 
 === "VS Code"

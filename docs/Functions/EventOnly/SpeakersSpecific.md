@@ -39,7 +39,7 @@ character in `"Speakers:"`.
 
 Adding a numerical *value* directly at
 the end within the function will use the other speakers in the order
-their *objects* are included. Up to 12.
+their *objects* are included. Up to 12. Note these variants of `"Speaks"` aren't meant to be used during combat encounters.
 
 ``` json
 "Speaks2",

@@ -35,11 +35,63 @@ or less than respectively, of the given number of enemies.
 
 ## IfMonsterLevelGreaterThan
 
-Checks if the focused monster level is greater than the specified
+Checks if the focused monster level is **equal** to greater than the specified
 amount.
 
+!!! warning
+
+    To repeat, this checks equal to or greater than due to a mistake, and cannot be changed without breaking mod compatibility.
+
 ``` json
-"IfMonsterLevelGreaterThan", "39", "SceneNameHere"
+"IfMonsterLevelGreaterThan", "42", "SceneNameHere"
+```
+
+## IfMonsterStat
+
+Checks one of the focused monster's stats against a given value. If
+true, it jumps to the given scene, else it continues. 
+
+See [Stat Reference](../../Reference/StatRef.md#ifstat-stat-names) for the
+accepted stat names. Will actively reflect changes made to every participants stats
+within combat encounters.
+
+By default, the comparison made checks if it is equal. 
+You can optionally change this from:
+
+- `"Equals"` for exactly the given value.
+- `"LesserThan"` for less than the given value.
+- `"LesserOrEquals"` for less than or equal to the given value.
+- `"GreaterThan"` for greater than the given value.
+- `"GreaterOrEquals"`.  for greater or equal to the given value
+
+The given value for comparison is to be a whole number, the `"Player"`, or a monster ID name present in the encounter.
+
+Percents are also accepted for `"Arousal"`, `"Energy"`, `"Spirit"`, and `"Exp"`. Percentages always rounds down.
+
+Note `"Virility"`, `"GoddessFavor"`, and `"Strain"` are **player only** and cannot be used.
+
+``` json
+"IfMonsterStat", "Power", "GreaterOrEquals", "5", "SceneNameHere",
+"IfMonsterStat", "Spirit", "34", "SceneNameHere",
+"IfMonsterStat", "Energy", "LesserOrEquals", "Player", "SceneNameHere",
+"IfMonsterStat", "Arousal", "GreaterThan", "50%", "SceneNameHere"
+```
+
+------------------------------------------------------------------------
+
+## IfMonsterResistances, IfMonsterSensitivities, & IfMonsterFetish
+
+Equivalent to `"IfMonsterStat"` above for comparing resistance, sensitivity, or
+fetish levels respectively instead of a stat. The optional operator value
+defaults to `"Equals"`. See
+[Resistances](../../Reference/StatusEffectRef.md#resistances),
+[Sensitivities](../../Reference/StatRef.md#sensitivity-reference), and
+[Fetishes](../../Manual/Fetishes/Fetishes.md) (including Addicitons) for information on accepted comparisons.
+
+``` json
+"IfMonsterResistances", "Sleep", "LesserThan", "20", "SceneNameHere",
+"IfMonsterSensitivities", "Sex", "GreaterOrEquals", "120", "SceneNameHere",
+"IfMonsterFetish", "Oral", "Equals", "50", "SceneNameHere"
 ```
 
 ------------------------------------------------------------------------
@@ -94,10 +146,13 @@ Status Effect.
 
 ## IfMonsterArousalGreaterThan
 
-Checks if the monster's arousal is greater than the given number.
+Checks if the monster's arousal is greater than the given number. 
+
+The given value can be a percent of the maximum. Percentages always round down.
 
 ``` json
-"IfMonsterArousalGreaterThan", "120", "SceneNameHere"
+"IfMonsterArousalGreaterThan", "2319", "SceneNameHere"
+"IfMonsterArousalGreaterThan", "80%", "SceneNameHere"
 ```
 
 ------------------------------------------------------------------------

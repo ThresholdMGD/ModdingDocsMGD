@@ -9,6 +9,7 @@ extra:
   versionMGD: v27
 theme:
   name: material
+  variant: classic
   custom_dir: overrides
   palette:
   - scheme: mgd
@@ -30,7 +31,7 @@ theme:
   - content.code.select
   - search.highlight
   - search.suggest
-  - navigation.instant: !ENV [OFFLINE, false]
+  - navigation.instant
   - navigation.top
   - navigation.footer
 extra_css:
@@ -43,13 +44,11 @@ plugins:
 - tags
 - search:
     lang: en
+    separator: '[\s\-]+|(?<=[a-z0-9])(?=[A-Z])'
     pipeline:
     - stemmer
     - stopWordFilter
     - trimmer
-- redirects:
-    redirect_maps:
-      homepage.md: index.md
 - privacy
 - macros
 markdown_extensions:
@@ -83,37 +82,19 @@ nav:
   - Getting Image Position Coordinates: Tutorials/GetImagePos.md
   - The JSON Format: Tutorials/TheJsonFormat.md
 - JSON Manual:
-  - Adventures:
-    - Adventures Index: Manual/Adventures/index.md
-    - Adventure Additions: Manual/Adventures/Additions.md
-    - Adventure Creation: Manual/Adventures/Adventures.md
-  - Events:
-    - Events Index: Manual/Events/index.md
-    - Event Additions: Manual/Events/Additions.md
-    - Event Creation: Manual/Events/Events.md
-  - Fetishes:
-    - Fetish & Addiction Creation: Manual/Fetishes/Fetishes.md
-  - Items:
-    - Item Creation: Manual/Items/Items.md
-  - Locations:
-    - Locations Index: Manual/Locations/index.md
-    - Location Additions: Manual/Locations/Additions.md
-    - Location Creation: Manual/Locations/Locations.md
-  - Monsters:
-    - Monsters Index: Manual/Monsters/index.md
-    - Monster Additions: Manual/Monsters/Additions.md
-    - Monster Creation: Manual/Monsters/Monsters.md
-    - lineTriggers: Manual/Monsters/Triggers.md
-  - Perks:
-    - Perks Index: Manual/Perks/index.md
-    - Perk Creation: Manual/Perks/Perks.md
-    - Perk Types: Manual/Perks/Types.md
-  - Skills:
-    - Skills Index: Manual/Skills/index.md
-    - Skill Additions: Manual/Skills/Additions.md
-    - Skill Creation: Manual/Skills/Skills.md
+  - Adventures: Manual/Adventures/Adventures.md
+  - Events: Manual/Events/Events.md
+  - Fetishes: Manual/Fetishes/Fetishes.md
+  - Items: Manual/Items/Items.md
+  - Locations: Manual/Locations/Locations.md
+  - Monsters: Manual/Monsters/Monsters.md
+  - Monster lineTriggers: Manual/Monsters/Triggers.md
+  - Perks: Manual/Perks/Perks.md
+  - Perk Types: Manual/Perks/Types.md
+  - Skills: Manual/Skills/Skills.md
 - Reference:
   - Markup: Reference/Markup.md
+  - Additions: Reference/Additions.md
   - Stance Reference: Reference/StanceRef.md
   - Status Effect Reference: Reference/StatusEffectRef.md
   - Stat Reference: Reference/StatRef.md
@@ -139,6 +120,7 @@ nav:
     - Monster Focus: Functions/CombatOnly/MonsterFocus.md
     - Player Combat Afflictions: Functions/CombatOnly/PlayerCombatAfflictions.md
     - Player Combat Checks: Functions/CombatOnly/PlayerCombatChecks.md
+    - Player Combat Skills: Functions/CombatOnly/PlayerCombatSkills.md
     - Stances: Functions/CombatOnly/Stances.md
   - Event Only:
     - Choice: Functions/EventOnly/Choice.md

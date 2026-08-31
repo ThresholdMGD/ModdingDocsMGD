@@ -1,6 +1,6 @@
 # Monster Girl Dreams Modding Documentation
 
-Built using MkDocs Material.
+Built using Zensical.
 
 ## Building
 
@@ -17,24 +17,20 @@ python build.py # The actual build script
 ```bash
 pip install -r requirements.txt
 python generate_nav.py
-mkdocs build
+python -m zensical build
 ```
 
 ## Iterating
 
-- `mkdocs serve` gives you live reloading in the browser, the best choice for editing existing files or even css. 
-- `mkdocs build` can be used for manual rebuilds but is slower for iterating.
-- Use `python ./genereate_nav.py` directly to regenerate navigation when not using the build scripts.
+- `python -m zensical serve` gives you live reloading in the browser, the best choice for editing existing files or even css.
+- `python -m zensical build` can be used for manual rebuilds but is slower for iterating.
+- Use `python ./generate_nav.py` directly to regenerate navigation when not using the build scripts.
 
 ## Resources
 
-MkDocs is formatted in a variant of markdown, so if you've used Discord at all
-you are already off to a good start.
+Zensical reads `mkdocs.yml` configuration and generates html from Python Markdown formatted content.
 
-- [MkDocs User Guide](https://www.mkdocs.org/user-guide/)
-- [MkDocs Material Reference](https://squidfunk.github.io/mkdocs-material/reference/)
-- [MkDocs Macros Plugin](https://mkdocs-macros-plugin.readthedocs.io/en/latest/)
-- [MkDocs Redirects](https://github.com/mkdocs/mkdocs-redirects#using)
+- [Zensical](https://zensical.org/)
 - [neoteroi spantables](https://www.neoteroi.dev/mkdocs-plugins/spantable/)
 
 Minor design rules:

@@ -1,14 +1,46 @@
 # Skill Creation
-Breaks down the *keys* and
-*strings* used by Skills.
+Skills used by the player and enemies in the game, define their values, effects, and the skill's combat line. Skills sometimes point to Events for more complex behaviors.
 
-Go to *Json/Skill/*, and then see the .json files present for examples,
-and **\_BlankSkill.json** for a template.
+## Reference
 
-**Assume all keys are required, unless stated otherwise.**. If it requires a non-blank (e.g. `""`)
-*value* depends on the given
-`"skillType":` *value* and any noted
-technicalities.
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game Skill .jsons can be found in the game folder *Json/Skills/*, see any .json file present as examples, and **_BlankSkill.json** for a template.
+
+Unless making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+Only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+For an explanation of each default behavior, see [Additions](../../Reference/Additions.md).
+
+| Key | Default Behavior |
+|---|---|
+| `fetishTags` [↓](#fetishtags) | append |
+| `startsStance` [↓](#stance-control-keys) | append |
+| `unusableIfStance` ↑ | append |
+| `requiresTargetStance` ↑ | append |
+| `unusableIfTarget` ↑ | append |
+| `removesStance` ↑ | append |
+| `requiresPerk` ↑ | append |
+| `requiresOnePerk` ↑ | append |
+| `unusableIfPerk` ↑ | append |
+| `requiresPerkSelf` ↑ | append |
+| `requiresOnePerkSelf` ↑ | append |
+| `unusableIfPerkSelf` ↑ | append |
+| `restraintStruggle` [↓](#dialogue-keys) | overwrite |
+| `restraintStruggleCharmed` ↑ | overwrite |
+| `restraintEscaped` ↑ | overwrite |
+| `restraintEscapedFail` ↑ | overwrite |
+| `restraintOnLoss` ↑ | overwrite |
+| `stanceConditions` [↓](#stance-control-keys) | post-process |
+| All other keys | overwrite |
+
+Check **\_CaressAdditionExample.json** for an example.
+
 
 ## name
 ``` json
@@ -105,7 +137,11 @@ possible *values* it can be given.
 ```
 
 The type of stat the skill scales off of, used by various keys. See
-Stats.
+Stats. 
+
+Healing skills can use `"PercentMaxEnergy"` or
+`"PercentMaxArousal"` as their statType to heal a percent of the casters
+maximum, with the final amount rounded down.
 
 ``` json
 "requiredStat": "10",
@@ -248,9 +284,36 @@ or `"None"`, you should remove it to avoid confusing the AI.
   `"unusableIfPerkSelf": ["Well Fed"],` **Caster** cannot have any of the specified perks.
   ----------------------------------------------------------------------------------------------- -----------------------------------------------------------
 
-Also see stanceconditions for adding
+Also see [stanceConditions](#stanceconditions) for adding
 stance logic in a single spot, which works in any skill json, not just
 skill additions.
+
+### stanceConditions
+
+``` json
+"stanceConditions": [
+    {
+        "theStance": "Leg Lock",
+        "addingToSkills": {
+            "unusableIfStance": ["Arousara"],
+            "requiresStance": ["Arousero"],
+            "unusableIfTarget": ["Arousara"],
+            "requiresTargetStance": ["Calm Mind"]
+        }
+    },
+    {
+        "theStanceSet": ["Leg Lock", "Leg Lock"],
+        "unusableIfTargetHasTheseSets": ["Caress"]
+    }
+]
+```
+
+Optional key structure that allows you to append to the
+stance control keys of other skills in a
+single location. While meant for modders, this can be done in any skill
+json, not just additions. `theStanceSet` appends to `unusableIfTargetHasTheseSets` on referenced skills.
+
+`stanceConditions` only apply effect after **all** JSON types from all mods have finished loading, making it independent of load order.
 
 ## attack & healing Keys
 ``` json

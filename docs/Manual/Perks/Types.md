@@ -54,9 +54,9 @@ needed.
 "EffectPower": ["PerkName's effects have faded away!"],
 ```
 
-Displays the given text via its correlating `"EffectPower":`
-*string* when the perk ends via
-[TurnDuration](#turnduration) or [TimeDuration](#timeduration). This can
+Meant to display the given text via its correlating `"EffectPower":`
+*string* when combat status effect with the given perk expire in combat encounters via
+[TurnDuration](#turnduration). This can
 use [text markup](../../Reference/Markup.md),
 and thus in extension,
 [functions](../../Functions/index.md).

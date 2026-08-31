@@ -1,12 +1,52 @@
 # Monster Creation
 
-Breaks down the keys and strings used by Monsters. See [The JSON Format](../../Tutorials/TheJsonFormat.md) for more information. Despite
-its name, this does encompass all characters, including town NPCs.
+Monsters encompass both enemies and NPCs in the town, or generally any character. They define their visuals, CGs, description, stats and behavior in combat, win and loss scenes, and item drops.
 
-Go to */Json/Monsters/*, and then see the .json files present for
-examples, and **_BlankMonster.json** for a template.
+## Reference
 
-**Assume all keys are required, unless stated otherwise.**
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game Monster .jsons can be found in the game folder *Json/Monsters/*, see any .json file present as examples, and **_BlankMonster.json** for a template.
+
+When not making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"IDname"`) and applies the addition data based on the default behavior for each key.
+
+Only `"IDname"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+For an explanation of each default behavior, see [Additions](../../Reference/Additions.md).
+
+| Key | Default Behavior | Override restriction |
+|---|---|---|
+| `skillList` [↓](#skilllist) | custom¹ | cannot override |
+| `perks` [↓](#perks) | custom² | cannot override |
+| `ItemDropList` [↓](#moneydropped-itemdroplist) | append | none |
+| `lossScenes` [↓](#combat-scenes) | replace-or-append⁶ | none |
+| `victoryScenes` [↓](#combat-scenes) | replace-or-append⁶ | none |
+| `combatDialogue` [↓](#combatdialogue) | replace-or-append³ | none |
+| `pictures` [↓](#pictures) | custom⁴ | cannot override |
+| `Fetishes` [↓](#fetishes) | custom⁵ | cannot override |
+| `BodySensitivity` [↓](#bodysensitivity) | merge | merge / overwrite only |
+| `resistancesStatusEffects` [↓](#resistancesstatuseffects) | merge | merge / overwrite only |
+| `stats` [↓](#stats) | merge | merge / overwrite only |
+| All other keys | overwrite | none |
+
+> ¹ Appends skill objects looked up by name, see the [skillList](#skilllist) section.
+> ² See the [perks](#perks) section.
+> ³ Replaces the entry if `lineTrigger` + `move` match, otherwise appends the object.
+> ⁴ Merges image sets/layers, see details in the [pictures](#pictures) section.
+> ⁵ Bumps `FetishList` levels from `name|/|level` entries; see the [Fetishes](#fetishes) section.
+> ⁶ Replaces the scene if `"NameOfScene":` matches an existing scene, otherwise appends.
+>
+> *cannot override* means the field cannot be overridden via `additionOverrides`
+
+Check **\_MonsterAdditionExample.json**, **\_MonsterStatsMergeExample.json**, and **\_MonsterSceneReplaceExample.json** in */Json/Monsters/* for examples.
+
+
+
+
 
 ## name & IDname
 
@@ -42,9 +82,8 @@ what their species is as reference towards what you decide on for yours.
 "gender": "female",
 ```
 
-The gender of the monster. It primarily exists at the moment to
-distinguish normal monster jsons, and
-[Monster Additions](../../Manual/Monsters/Additions.md).
+Note at the time of writing that the game presumes the monster gender as female in various hard coded system combat lines, 
+attempting to treat the monster as male would lead to unavoidable inconsistencies.
 
 ## description & encyclopedia
 
@@ -364,6 +403,11 @@ you can point the loss scene to immediately jump to an event.
 Functions exactly the same as `"lossScenes":`, but for when the player
 wins.
 
+By default, additions to `"lossScenes":` and `"victoryScenes":` replace an existing scene whose `"NameOfScene":` 
+matches one already on the monster, and append the scene otherwise. 
+If you'd rather append, override the behavior for the key with `"append"` via `"additionOverrides":`. 
+See the inline example in [Additions](../../Reference/Additions.md#unique_append-vs-replace_or_append).
+
 ## combatDialogue
 
 ``` json
@@ -525,16 +569,16 @@ The following *keys* are required:
 
 ::spantable::
 
-| Key | Description |
-|-----|-------------|
-| `"Name"` | Name of the layer for functions to call upon. |
-| `"StartOn"` | Whether the layer is on by default when the character is first displayed |
-| `"AlwaysOn"` | Whether the layer can never be turned off and instead always get the first image. |
-| `"IsScene"` | Whether it's a scene, also ensuring it's centered on the screen, ignoring x and y align |
-| `"TheBody"` | If the layer is the character's base. The x and y alignment of this layer dictates the x and y of every other layer. |
-| `"Overlay"` | Put the name of another layer here to overlay this one on it. Any images with matching name fields will sync up. Check Shizu and Elly for an example. |
-| `"setXalign"` | Changes the alignment of the layer on the x-axis. Generally done in increments of 0.01 or 0.1 depending. |
-| `"setYalign"` | Changes the alignment of the layer on the y-axis. Generally done in increments of 0.01 or 0.1 depending. |
+| Key           | Description                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"Name"`      | Name of the layer for functions to call upon.                                                                                                         |
+| `"StartOn"`   | Whether the layer is on by default when the character is first displayed                                                                              |
+| `"AlwaysOn"`  | Whether the layer can never be turned off and instead always get the first image.                                                                     |
+| `"IsScene"`   | Whether it's a scene, also ensuring it's centered on the screen, ignoring x and y align                                                               |
+| `"TheBody"`   | If the layer is the character's base. The x and y alignment of this layer dictates the x and y of every other layer.                                  |
+| `"Overlay"`   | Put the name of another layer here to overlay this one on it. Any images with matching name fields will sync up. Check Shizu and Elly for an example. |
+| `"setXalign"` | Changes the alignment of the layer on the x-axis. Generally done in increments of 0.01 or 0.1 depending.                                              |
+| `"setYalign"` | Changes the alignment of the layer on the y-axis. Generally done in increments of 0.01 or 0.1 depending.                                              |
 
 ::end-spantable::
 
@@ -542,23 +586,23 @@ The following predetermined key-value combinations are optional, there should on
 
 ::spantable::
 
-| Key | Description |
-|-----|-------------|
-| `"Player": "Yes"` | If the image layer is for representing the player, use this key-value combination. This will recolor the layer based on the player's appearance settings. Excluding the key causes it to be considered off. |
+| Key                      | Description                                                                                                                                                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `"Player": "Yes"`        | If the image layer is for representing the player, use this key-value combination. This will recolor the layer based on the player's appearance settings. Excluding the key causes it to be considered off.                                |
 | `"Player": "Silhouette"` | When representing the player in an image layer, you need to make another variant of it for use with this key-value combination. If the player set their appearance to silhouette, this image layer will be automatically used by the game. |
 
 ::end-spantable::
 
-The `"Images":` *key* in these layer *objects* feature an *array* where the image and all its variants are declared, each image variant being contained in its object. They are handled using functions found in the [Image Layers documentation](#image-layers-documentation). The *object* works as follows:
+The `"Images":` *key* in these layer *objects* feature an *array* where the image and all its variants are declared, each image variant being contained in its object. They are handled using functions found in the [Image Layers documentation](../../Functions/Asset/ImageLayers.md#image-layers). The *object* works as follows:
 
 ::spantable::
 
-| Key | Description |
-|-----|-------------|
-| `"Name"` | Name of the image in the layer to be called in functions. |
-| `"File"` | The file path to the image. |
-| `"setXalign"` | Changes the alignment of the image on the x-axis. |
-| `"setYalign"` | Changes the alignment of the image on the y-axis. |
+| Key           | Description                                               |
+| ------------- | --------------------------------------------------------- |
+| `"Name"`      | Name of the image in the layer to be called in functions. |
+| `"File"`      | The file path to the image.                               |
+| `"setXalign"` | Changes the alignment of the image on the x-axis.         |
+| `"setYalign"` | Changes the alignment of the image on the y-axis.         |
 
 ::end-spantable::
 
@@ -705,25 +749,25 @@ All *keys* are required unless stated otherwise, but all *values* can be blank `
 
 ::spantable::
 
-| Key           | Description |
-|---------------|-------------|
-| `"Role"`              | The name of the role's 'slot'. This must not be blank. |
-| `"StanceRequired"`    | The required stance in order to allocate the role. |
-| `"MonsterRequired"`   | Looks for the given `"nameID"` of the monster that is required to consider the role active and fulfilled. |
-| `"TextBoxXAdjust"`    | Optional, adjust position of the dialogue box for CG visibility. |
+| Key                 | Description                                                                                               |
+| ------------------- | --------------------------------------------------------------------------------------------------------- |
+| `"Role"`            | The name of the role's 'slot'. This must not be blank.                                                    |
+| `"StanceRequired"`  | The required stance in order to allocate the role.                                                        |
+| `"MonsterRequired"` | Looks for the given `"nameID"` of the monster that is required to consider the role active and fulfilled. |
+| `"TextBoxXAdjust"`  | Optional, adjust position of the dialogue box for CG visibility.                                          |
 
 ::end-spantable::
 
 `"CGTranslator"` takes *objects* in its *array* for translating any number of image layers (e.g. Expressions) to their equivalent image layer elsewhere while the role is allotted to the instance of the monster.
 
-This allows for different layers to automatically utilize the same [ChangeImageLayer](#changeimagelayer) functions across the overall CG.
+This allows for different layers to automatically utilize the same [ChangeImageLayer](../../Functions/Asset/ImageLayers.md#changeimagelayer) functions across the overall CG.
 
 ::spantable::
 
-| Key      | Description |
-|----------|-------------|
+| Key     | Description                                     |
+| ------- | ----------------------------------------------- |
 | `"In"`  | The layer it is checking for as its equivalent. |
-| `"Out"` | The layer that is changed instead. |
+| `"Out"` | The layer that is changed instead.              |
 
 ::end-spantable::
 
@@ -749,4 +793,4 @@ This allows for different layers to automatically utilize the same [ChangeImageL
 
 !!! tip
 
-    See [ImageSetRoleStart](#imagesetrolestart) and [RoledCGEnd](#roledcgend) functions for turning it on and off respectively.
+    See [ImageSetRoleStart](../../Functions/Asset/ImageLayers.md#imagesetrolestart) and [RoledCGEnd](../../Functions/Asset/ImageLayers.md#roledcgend) functions for turning it on and off respectively.
