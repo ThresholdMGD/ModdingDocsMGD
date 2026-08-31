@@ -270,18 +270,6 @@ or `"None"`, you should remove it to avoid confusing the AI.
   `"unusableIfStatusEffectSelf": [""],` **Caster** cannot have any of the specified status effects.
   You can also use `"None"`/`""`.
 
-  `"requiresPerk": ["Action Rune!"],` **Target** must have all the specified perks. Can repeat a
-  perk to require multiple stacks of the same perk.
-
-  `"requiresOnePerk": ["Swift", "Escape Artist"],` **Target** must have one of the listed perks.
-
-  `"unusableIfPerk": ["Rut"],` **Target** cannot have any of the specified perks.
-
-  `"requiresPerkSelf": ["Pacing"],` **Caster** must have all the specified perks. Can repeat a perk to require multiple stacks of the same perk.
-
-  `"requiresOnePerkSelf": ["Swift", "Escape Artist"],` **Caster** must have one of the listed perks.
-
-  `"unusableIfPerkSelf": ["Well Fed"],` **Caster** cannot have any of the specified perks.
   ----------------------------------------------------------------------------------------------- -----------------------------------------------------------
 
 Also see [stanceConditions](#stanceconditions) for adding
