@@ -12,17 +12,14 @@ tags:
 # Making A Mod
 
 In this brief step-by-step tutorial, you will make your first
-proof-of-concept mod. By the end of the tutorial, you will have a simple
+proof-of-concept mod. By the end of the tutorial, you will have a basic
 event you can interact with in the Shopping center of the Town.
 
-You will be making mods in
-precisely the same way Threshold makes content for the game:
-creating text files in a minimal file format very close to writing in plain english.
+Making mods is done the same way Threshold makes content for the game:
+creating text files using predefined structures fillled with content as close as possible to plain english.
 
-Threshold intentionally designed it this way so he wouldn't have to think of
-coding while making content, just directly writing dialogue and narration
-with some predefined keywords to trigger various actions and checks.
-You will not be reading or writing a single line of actual code.
+Threshold intentionally designed it way so he wouldn't have to think of
+coding while making content. You will not be reading or writing a single line of actual game code.
 
 ## The Mods Folder
 
@@ -536,12 +533,17 @@ specified item.
 You have made a functional mod, which adds an Event that you can now play
 in-game.
 
-!!! note
+!!! tip
 
     When testing your mod, you may notice that successfully running away
     from the Blue Slime will cause the entire Event to end early!
 
-    Researching seemingly unexpected behavior like this is a standard
-    practice you'll often have to do while modding. If you're curious, see
+    Researching the docs for behavior you don't understand is something
+    you'll have to do while modding. If you're curious, see
     if you can identify the reason why this happens on the
     Pre-Combat function reference page.
+
+
+!!! next
+
+    In order to access the full modding feature set, the next page, "Meta Creation", will show you how to setup a meta json file. The game uses this to identify which version of the game your mod was developed for. This process should only take a few minutes to read and complete, then you will rarely have to touch the file again.

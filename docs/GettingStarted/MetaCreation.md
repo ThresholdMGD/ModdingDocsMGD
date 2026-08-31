@@ -8,18 +8,16 @@ tags:
 # Meta Creation
 
 Breaks down the [keys and strings](../Tutorials/TheJsonFormat.md) 
-used by the Meta file, and gives extensive tips on what
+used by the Meta file, and comprehensive tips on what
 values to provide.
 
 ![image](../img/meta.png)
 
+**Your mod won't be fully functional without a meta.json**, as it is used to
+gate what modern features a mod is tested to be compatible with.
 
 Go to *Mods/_ExampleMod/*, and then see the *meta.json* file for an
 example, or *_BlankMeta.json* for a template.
-
-While your mod still works without a meta.json, it provides useful information in
-the in-game Mod screen for people installing your mod, 
-including if their mod copy is out of date and needs updated.
 
 ## File Location & Icon
 
@@ -65,7 +63,7 @@ such as how the user can begin its content in-game.
 
 ## testedFor
 
-The last version of the game the mod has been tested against.
+The last version of the game the mod has been tested against. **This determines what modding features your mod has access to.**
 
 MGD internally uses [semantic versioning](https://semver.org/) to keep
 track of breaking game versions, following the *Major.Minor.Patch*

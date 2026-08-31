@@ -211,6 +211,32 @@ pre:hover .md-clipboard .md-icon {
     background-color: var(--md-interactive-primary);
 }
 
+/* Code copy button, zensical stuff. */
+.md-code__button {
+    background-color: transparent;
+    color: var(--md-default-fg-color);
+    border: 0;
+    border-radius: 0.2rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.md-code:hover .md-code__button,
+.highlight:hover .md-code__button,
+pre:hover .md-code__button {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-accent-fg-color);
+}
+
+.md-code__button:hover {
+    background-color: var(--md-interactive-primary);
+    color: var(--md-default-fg-color);
+}
+
+.md-code__nav,
+:hover > .md-code__nav {
+    background-color: transparent;
+}
+
 /* Table of Contents rounded background */
 .md-nav--secondary {
     background-color: var(--md-nav-secondary-bg-color);
@@ -326,7 +352,7 @@ pre:hover .md-clipboard .md-icon {
     background: var(--md-interactive-primary);
 }
 
-a[href^="http://"]:not(.md-search-result__link),
+a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"]),
 a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"])
 {
     background-position: top right;
@@ -471,6 +497,12 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-accent-fg-color: #e470b2;
     --md-primary-fg-color: #370322;
 
+    /* Zensical search dialog (is icky shadow DOM), uses RGB triplets. */
+    --color-backdrop: 17 17 17;
+    --color-background: 15 10 12;
+    --color-background-subtle: 55 3 34;
+    --color-foreground: 255 255 255;
+
     /* Custom Interactive Colors */
     --md-interactive-primary: #df407d;
     --md-interactive-secondary: #6d0249;
@@ -539,8 +571,8 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-typeset-kbd-accent-color: #ffffff;
     --md-typeset-kbd-border-color: #444444;
     --md-typeset-mark-color: #ff40a958;
-    --md-typeset-table-color: #f0f0f0;
-    --md-typeset-table-color--light: #e0e0e0;
+    --md-typeset-table-color: #24141f;
+    --md-typeset-table-color--light: #2a1a20;
 
     /* Admonition Colors */
     --md-admonition-fg-color: #ffffff;
@@ -555,16 +587,12 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-shadow-z2: 0 4px 10px rgba(0, 0, 0, 0.25);
     --md-shadow-z3: 0 4px 10px rgba(0, 0, 0, 0.4);
 
-    button {
+    button:not(.md-code__button) {
         background-color: var(--md-default-bg-color);
         color: var(--md-default-fg-color);
         border: 1px solid var(--md-default-fg-color--light);
     }
 
-    table {
-        background-color: var(--md-default-bg-color--light);
-        color: var(--md-default-fg-color);
-    }
 }
 
 [data-md-color-scheme="mgd-light"] {
@@ -583,6 +611,12 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-interactive-secondary: #cd98b6;
     --md-card-bg-color: #ebe0e6;
     --md-interactive-secondary-shadow: #cccccc;
+
+    /* Zensical search dialog (more icky shadow DOM), uses RGB triplets. */
+    --color-backdrop: 250 248 249;
+    --color-background: 250 248 249;
+    --color-background-subtle: 248 215 218;
+    --color-foreground: 36 23 30;
 
     --md-default-fg-color--table: #f5e6eb;
 
@@ -645,7 +679,7 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-typeset-kbd-border-color: #cccccc;
     --md-typeset-mark-color: #f5aae469;
     --md-typeset-table-color: #4a4a4a;
-    --md-typeset-table-color--light: #777777;
+    --md-typeset-table-color--light: #f8d7da;
 
     /* Admonition Colors - Light Theme */
     --md-admonition-fg-color: rgba(36, 23, 30, 0.9);
@@ -663,17 +697,35 @@ a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/T
     --md-shadow-z2: 0 4px 10px rgba(196, 155, 184, 0.2);
     --md-shadow-z3: 0 4px 10px rgba(196, 155, 186, 0.3);
 
-    button {
+    button:not(.md-code__button) {
         background-color: var(--md-default-bg-color);
         color: var(--md-default-fg-color);
         border: 1px solid rgb(255, 0, 68);
     }
 
-    table {
-        background-color: var(--md-default-bg-color--light);
-        color: var(--md-default-fg-color);
-    }
     .md-footer__title {
 	color: var(--md-nav-link-color);
 }
+}
+
+table {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+}
+
+/* Alternating rows */
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: var(--md-default-fg-color--table);
+}
+
+/* td needed to override alternating row bg */
+.md-typeset table:not([class]) tbody tr:hover,
+.md-typeset table:not([class]) tbody tr:hover td {
+    background-color: var(--md-typeset-table-color--light);
+}
+
+/* Zensical search dialog workaround for more icky shadow DOM.*/
+body > div:not(.md-dialog) {
+    scrollbar-color: var(--md-default-fg-color--lighter) transparent;
+    background-color: var(--md-default-bg-color);
 }

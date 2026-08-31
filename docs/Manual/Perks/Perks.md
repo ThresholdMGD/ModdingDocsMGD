@@ -1,10 +1,38 @@
 # Perk Creation
-Breaks down the keys and strings used by Perks. See [The JSON Format](../../Tutorials/TheJsonFormat.md) for more information.
 
-Go to *Json/Perks/*, and then see the *.json* files present for
-examples, and **\_BlankPerk.json** for a template.
+Perks cover the modifiers acquired by the player from level up Perks, special [Event](../Events/Events.md), or perks silently used by [Monsters](../Monsters/Monsters.md).
 
-**Assume all keys are required, unless stated otherwise.**
+## Reference
+
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if words like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game perk .jsons can be found in the game folder *Json/Perks/*, see any .json file present as examples, and **_BlankPerk.json** for a template.
+
+Unless making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+For additions, only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+| Key | Strategy | Override restriction |
+|---|---|---|
+| `name` | identifier | cannot override |
+| `description` [↓](#description) | overwrite | none |
+| `LevelReq` [↓](#levelreq) | overwrite | none |
+| `PerkReq` [↓](#perkreq) | overwrite | none |
+| `StatReq` [↓](#statreq-statreqamount) | custom¹ | cannot override |
+| `StatReqAmount` ↑ | custom¹ | cannot override |
+| `PerkType` [↓](#perktype) | custom¹ | cannot override |
+| `EffectPower` [↓](#effectpower) | custom¹ | cannot override |
+| `PlayerCanPurchase` [↓](#playercanpurchase) | overwrite | none |
+| All other keys | overwrite | none |
+
+> ¹ `StatReq`/`StatReqAmount` and `PerkType`/`EffectPower` are parallel arrays that must
+> stay index-aligned; the game merges each pair together, so they cannot be overridden individually.
+
+For an overview of behaviors for keys, see [Additions](../../Reference/Additions.md).
 
 ## name
 ``` json

@@ -9,10 +9,24 @@
 
 Change the related stat to the focused monster. They can take negative
 values, and it does reset upon leaving the event and/or encounter. These
-do not produce dialogue.
+do not produce dialogue. The given value can be a percent of the maximum. Percentages always round down.
 
 ``` json
 "ChangeMonsterArousal", "50"
+```
+
+## SetMonsterArousal, SetMonsterEnergy, & SetMonsterSpirit
+
+Sets the given current Arousal, Energy, or Spirit of the focused monster to the given value. 
+Spirit and Energy will cap at their maximum value, while Arousal will overflow. 
+Does not produce dialogue.
+
+The value can be a percent of the maximum. Percentages always round down.
+
+``` json
+"SetMonsterArousal", "24",
+"SetMonsterEnergy", "-25%",
+"SetMonsterSpirit", "9",
 ```
 
 ## MonsterOrgasm

@@ -194,7 +194,7 @@ another tile based on the tiles ID in the TileSet.
 
 ## SetMapYOffset & SetMapXOffset <a id="setmapyoffset-setmapxoffset"></a>
 
-`"SetMapYOffset"` and `"SetMapXOffset"` will offset the gridmap view by the given value by pixel.
+`"SetMapYOffset"` and `"SetMapXOffset"` will offset the gridmap view by the given value by pixel. The offset applies to an active gridmap immediately. If there is no active gridmap, it is ignored.
 
 Optionally, `"BaseAdjust"` specified prior to the value
 will change the `"YAdjust"` and `"XAdjust"` from the active

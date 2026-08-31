@@ -48,6 +48,13 @@ condition for said stat in each given line. See
 Stats, though note the below functions
 for more convenient stat checks.
 
+Note the `"Stat"` option uses the plain stat range, where `"Arousal"`,
+`"Energy"`, and `"Spirit"` refer to the maximums, and
+`"CurrentArousal"`, `"CurrentEnergy"`, and `"CurrentSpirit"` to the
+current amounts. `"Exp"`, `"Virility"`, `"GoddessFavor"`, and
+`"Strain"` are also accepted, with the latter three being player only.
+See [Stat Reference](../../Reference/StatRef.md).
+
 ``` json
 "SwapLineIf", "Stat",
   "Technique", "70", "Line 1",
@@ -73,6 +80,12 @@ certain numerical amount as its condition.
 ------------------------------------------------------------------------
 
 ### Arousal & ArousalByPercent & MaxArousal
+
+Note the named `"Arousal"` option uses the current amount, and
+`"MaxArousal"` the maximum, per the
+[IfStat](../EventOnly/PlayerChecks.md#ifstat) range. See
+[Stat Reference](../../Reference/StatRef.md).
+
 Using `"Arousal"` checks the current condition of the players arousal,
 each line featuring a certain numerical amount as its condition.
 
@@ -108,6 +121,12 @@ featuring a certain numerical amount as its condition.
 ------------------------------------------------------------------------
 
 ### Energy & EnergyByPercent & MaxEnergy
+
+Note the named `"Energy"` option uses the current amount, and
+`"MaxEnergy"` the maximum, per the
+[IfStat](../EventOnly/PlayerChecks.md#ifstat) range. See
+[Stat Reference](../../Reference/StatRef.md).
+
 Using `"Energy"` checks the current condition of the players energy,
 each line featuring a certain numerical amount as its condition.
 
@@ -151,6 +170,34 @@ certain numerical amount of virility as its condition.
   "40", "Line 1",
   "33", "Line 2",
   "0", "Line 3",
+"EndLoop"
+```
+
+------------------------------------------------------------------------
+
+### Exp, Strain, & GoddessFavor
+Checks the player for their current exp, strain, or goddess favor
+respectively. Each line featuring a certain numerical amount as its
+condition.
+
+``` json
+"SwapLineIf", "Exp",
+  "500", "Line 1",
+  "0", "Line 2",
+"EndLoop"
+```
+
+``` json
+"SwapLineIf", "Strain",
+  "3", "Line 1",
+  "0", "Line 2",
+"EndLoop"
+```
+
+``` json
+"SwapLineIf", "GoddessFavor",
+  "100", "Line 1",
+  "0", "Line 2",
 "EndLoop"
 ```
 

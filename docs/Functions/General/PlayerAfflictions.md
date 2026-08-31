@@ -7,20 +7,26 @@ For afflictions that can only be applied in combat, see
 ## SetArousalToXUnlessHigherThanX
 Sets the player arousal to the first specified numerical value, unless
 the current arousal is higher than the specified value. This is mostly
-for cinematic purposes.
+for cinematic purposes. The given value can be a percent of the maximum. Percentages always round down.
 
 ``` json
 "SetArousalToXUnlessHigherThanX", "100"
+"SetArousalToXUnlessHigherThanX", "60%"
 ```
 
 ------------------------------------------------------------------------
 
 ## SetArousalToXUnlessHigherThanXThenAddY
 Same as the above, but if the current arousal is higher than the
-specified value, it will add the second given *value* instead. Also mostly for cinematic purposes.
+specified value, it will add the second given *value* instead. 
+
+Both given values can be a percent of the maximum. Percentages always round
+down.
 
 ``` json
 "SetArousalToXUnlessHigherThanXThenAddY", "100", "50",
+"SetArousalToXUnlessHigherThanXThenAddY", "100", "30%",
+"SetArousalToXUnlessHigherThanXThenAddY", "10%", "34",
 ```
 
 ------------------------------------------------------------------------
@@ -33,10 +39,13 @@ notified.
 
 ## ChangeArousal & ChangeArousalQuietly
 Will flatly alter the player's current arousal with the specified
-number. Can be negative.
+number. Can be negative. 
+
+The given value can be a percent of the maximum. Percentages always round down.
 
 ``` json
 "ChangeArousal", "50"
+"ChangeArousal", "200%"
 ```
 
 `"ChangeArousalQuietly"` can be used to change the player's arousal
@@ -46,10 +55,13 @@ without notifying the player.
 
 ## ChangeEnergy & ChangeEnergyQuietly
 Same as the above, but for the players current energy. Note negative
-*values* subtract.
+*values* subtract. 
+
+The given value can be a percent of the maximum. Percentages always round down.
 
 ``` json
-"ChangeEnergy", "-30"
+"ChangeEnergy", "30"
+"ChangeEnergy", "-57%"
 ```
 
 `"ChangeEnergyQuietly"` can be used to change the player's current
@@ -67,7 +79,7 @@ still goes through despite skipping the attack itself.
 ## ChangeArousalByPercent & ChangeEnergyByPercent
 Changes players current amount of their arousal or energy respectively
 by a percent based on their maximum of the chosen stat. Can take
-negative values. It does not notify the player.
+negative values. It does not notify the player. Percentages always round down.
 
 ``` json
 "ChangeArousalByPercent", "-10"
@@ -82,6 +94,32 @@ maximum or 0 if the given number exceeds or is below respectively.
 
 ``` json
 "SetSpirit", "1"
+```
+
+------------------------------------------------------------------------
+
+## SetArousal & SetArousalQuietly
+
+Sets the players current arousal to the given value. It can exceed the
+maximum, and is clamped to a minimum of 0. The value can be a percent of the
+maximum. The quiet variant does not notify the player. Percentages always round down.
+
+``` json
+"SetArousal", "56709",
+"SetArousalQuietly", "43%"
+```
+
+------------------------------------------------------------------------
+
+## SetEnergy & SetEnergyQuietly
+
+Same as the above, but for the players current energy. It is clamped between
+the player maximum and 0. The value can be a percent of the maximum. 
+The quiet variant does not notify the player. Percentages always round down.
+
+``` json
+"SetEnergy", "30",
+"SetEnergyQuietly", "-96%"
 ```
 
 ------------------------------------------------------------------------

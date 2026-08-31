@@ -8,7 +8,8 @@ these also only work in combat.
 ## ChangeMonster Functions
 Changes the given stat of the focused monster by the given amount. They
 can take negative values, and it does reset upon leaving the event
-and/or encounter. These do not produce dialogue.
+and/or encounter. These do not produce dialogue. Values can also be
+given as a percent, such as `"43%"`. Percentages always round down.
 
 -   `"ChangeMonsterLevel"`
 -   `"ChangeMonsterErosDrop"`
@@ -24,7 +25,10 @@ and/or encounter. These do not produce dialogue.
 -   `"ChangeMonsterInt"`
 
 ``` json
-"ChangeMonsterMaxSpirit", "2"
+"ChangeMonsterMaxSpirit", "2",
+"ChangeMonsterMaxEnergy", "-5",
+"ChangeMonsterLuck", "25%",
+"ChangeMonsterLevel", "-34%"
 ```
 
 ------------------------------------------------------------------------
@@ -35,7 +39,7 @@ leanings. This can take a number, 'MatchPlayer', 'GoUpByProgress' or
 'GoUpByProgressFromOtherEvent'.
 
 ``` json
-"LevelUpMonster", "5"
+"LevelUpMonster", "17"
 ```
 
 ------------------------------------------------------------------------
@@ -48,8 +52,10 @@ progression curve of the following formula.
 (0.4*(lvl*lvl))+(2*lvl)+(15*sqrt(lvl)-8)
 ```
 
-You can use its sub-function `"AlterByPercent"` to alter the result. The
-below example is 70% of the recalculation used for boss fights.
+You can use its sub-function `"AlterByPercent"` to alter the result. It
+takes a whole number percentage, and the result is rounded down. 
+
+The below example is 70% of the recalculation used for boss fights.
 
 ``` json
 "RecalculateMonsterExpDrop"
@@ -66,8 +72,10 @@ progression curve of the following formula.
 (lvl)^2+(lvl*10)+48)
 ```
 
-You can use its sub-function `"AlterByPercent"` to alter the result. The
-below example is 70% of the recalculation used for boss fights.
+You can use its sub-function `"AlterByPercent"` to alter the result. It
+takes a whole number percentage, and the result is rounded down. 
+
+The below example is 70% of the recalculation used for boss fights.
 
 ``` json
 "RecalculateMonsterErosDrop"

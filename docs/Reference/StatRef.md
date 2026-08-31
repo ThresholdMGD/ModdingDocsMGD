@@ -8,7 +8,15 @@ prove sufficient for that purpose.
 
 ## Stats
 
-Core stats are internally refereed to as:
+The plain stat range is used in places such as:
+
+- [StatCheck](../Functions/EventOnly/StatCheck.md),
+- [StatEqualsOrMore](../Functions/EventOnly/PlayerChecks.md#statequalsormore),
+- [SwapLineIf's](../Functions/General/SwapLineIf.md) `"Stat"` option
+- Skill [statType](../Manual/Skills/Skills.md#stattype-requiredstat).
+
+`"Arousal"`, `"Energy"`, and `"Spirit"` are treated as the maximums, with
+their current amounts prefixed with `"Current"`.
 
 -   `"Power"`
 -   `"Technique"`
@@ -16,18 +24,31 @@ Core stats are internally refereed to as:
 -   `"Allure"`
 -   `"Willpower"`
 -   `"Luck"`
+-   `"Arousal"`, `"Energy"`, `"Spirit"` (maximums)
+-   `"CurrentArousal"`, `"CurrentEnergy"`, `"CurrentSpirit"` (current amounts)
 
-To get their maximum stat of the following:
+## IfStat Stat Names
 
--   `"Arousal"`
--   `"Energy"`
--   `"Spirit"`
+The IfStat range, used by
+[IfStat](../Functions/EventOnly/PlayerChecks.md#ifstat) and
+[IfMonsterStat](../Functions/CombatOnly/MonsterChecks.md#ifmonsterstat)
+for their stat comparisons, and by SwapLineIf's `"Arousal"`,
+`"Energy"`, `"MaxArousal"`, and `"MaxEnergy"` options.
 
-Alternatively, to get their current amount:
+`"Arousal"`, `"Energy"`, and `"Spirit"` are treated as the current amounts,
+with their maximums prefixed with `"Max"`.
 
--   `"CurrentArousal"`
--   `"CurrentEnergy"`
--   `"CurrentSpirit"`
+-   `"Arousal"`, `"Energy"`, `"Spirit"` (current amounts)
+-   `"MaxArousal"`, `"MaxEnergy"`, `"MaxSpirit"` (maximums)
+-   `"Level"`, `"Exp"`
+-   `"Power"`, `"Technique"`, `"Intelligence"`, `"Allure"`, `"Willpower"`, `"Luck"`
+
+The following are player only:
+
+-   `"Virility"`, `"GoddessFavor"`, `"Strain"`
+
+`"Arousal"`, `"Energy"`, `"Spirit"`, `"Exp"`, and `"GoddessFavor"` support percent
+values.
 
 ## Sensitivity Reference
 

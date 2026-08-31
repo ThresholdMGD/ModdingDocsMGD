@@ -1,10 +1,29 @@
 # Fetish & Addiction Creation
 
-Breaks down the
-[keys and strings](../../Tutorials/TheJsonFormat.md) used by Fetishes and Addictions.
+This json type serves a dual purpose system covering both fetishes and addictions in the game. Addictions are invisible trackers using the same systems in the game as fetishes, but not exposed to the player in the game menus.
 
-See *Json/Fetishes/* for all related fetish **and** addiction .json
-files for reference and the template *_BlankFetish.json*.
+## Reference
+
+See [The JSON Format](../../Tutorials/TheJsonFormat.md) for optional information on JSONs if terminology like "Key", "String", "Array" or "Value" are unfamiliar.
+
+Base game Fetish .jsons can be found in the game folder *Json/Fetishes/* for both fetish **and** addictions alike. 
+
+A blank template can be found at *_BlankFetish.json*
+
+When not making an Addition, **assume all keys are required, unless stated otherwise.**
+
+## Additions
+
+When a JSON file contains `"Addition": "Yes"`, the game does not create a new entry. Instead, it looks up an existing entry by its identifier (in this case `"name"`) and applies the addition data based on the default behavior for each key.
+
+For additions, only `"name"` is required and cannot be changed. **All other keys are optional and can be excluded for tidiness.**
+
+| Key | Strategy |
+|---|---|
+| `name` | identifier |
+| All other keys | overwrite |
+
+For an overview of behaviors for keys, see [Additions](../../Reference/Additions.md).
 
 ## Fetishes
 
@@ -23,10 +42,10 @@ code block:
     "ToolTip": "How much you love to mod with the Atom text editor.\n\nVerdict: ",
     "LevelText": [
       ["0", "You'd rather use Notepad++"],
-      ["25", "You'll try Atom just a little bit..."],
+      ["25", "You'll use Atom just a little bit..."],
       ["50", "You can't help but use Atom as your text editor."],
       ["75", "You're overflowing with installed packages..."],
-      ["100", "You're completely obsessed with Atom. Hopefully, it never shuts down in the future..."]
+      ["100", "You're completely obsessed with Atom! Hopefully it never shuts down in the future..."]
     ]
     }
   ]
