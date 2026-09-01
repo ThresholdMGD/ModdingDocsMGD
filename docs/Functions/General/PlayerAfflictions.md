@@ -162,9 +162,8 @@ monster, the monster chosen is used as a stat reference and doesn't
 need to be in the active combat encounter. The skill chosen will not
 apply status effects. Displaying dialogue has to be done manually, it
 will not take dialogue from the skill. If you want to display the damage
-number from the skill, use [\[DamageToEnemy\]]{.title-ref} in the
-following *string* after completing the
-function.
+number from the skill, use `[DamageToEnemy]` in the following
+*string* after completing the function.
 
 ``` json
 "DamageMonsterFromMonster", "Imp", "Arouse"

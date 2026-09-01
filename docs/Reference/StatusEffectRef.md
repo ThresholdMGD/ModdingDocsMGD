@@ -12,14 +12,14 @@ duration or potency to tick down. Status effects labeled
 'non-persistent' means they will be immediately cleared upon taking a
 step or leaving combat.
 
-## Duration Types <a id="duration-types"></a>
+## Duration Types
 
 Duration values for status effects and perks:
 
 - `"6"` represents a full day
 - Values represent time units in the game's time system
 
-## Effect Types <a id="effect-types"></a>
+## Effect Types
 
 Status effect persistence types:
 

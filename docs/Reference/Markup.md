@@ -17,7 +17,7 @@ Lastly, if you know Ren'Py for featuring a certain markup feature and
 can't find it on this page, it likely means it doesn't work as
 expected.
 
-## Dialogue Text Markup <a id="dialogue-text-markup"></a>
+## Dialogue Text Markup
 
 `[ThePlayerName]` gets and displays the player name.
 
@@ -225,10 +225,10 @@ use their name in a line.
 based depending on stance. Note the space after each word. The empty
 string means it can roll a blank.
 
--   **Sex**: ["", "wet ", "tight ", "wet ", "tight ",
-    "receptive ", "warm "]
--   **Anal**: ["", "tight ", "tight ", "curved ", "rounded ",
-    "receptive "]
+-   **Sex**: `["", "wet ", "tight ", "wet ", "tight ",
+    "receptive ", "warm "]`
+-   **Anal**: `["", "tight ", "tight ", "curved ", "rounded ",
+    "receptive "]`
 
 `[SexWord]` gets a sex word from the bank, Vaginal or Anal based
 depending on stance. It will pick a *string* randomly from an array, depending on either sex or anal
@@ -244,7 +244,7 @@ the end. Thus, you should leave no space between them, like so:
 "[AttackerName] thrusts his mighty steed into [TargetName]'s [SexAdjective][SexWord]!"
 ```
 
-## Item Markup <a id="item-markup"></a>
+## Item Markup
 
 `[ItemEnergy]`, `[ItemArousal]`, and `[ItemSpirit]` displays the values
 from an item's [flat stat keys](../Manual/Items/Items.md#flat-stat-keys) for use
