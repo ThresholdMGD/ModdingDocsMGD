@@ -28,7 +28,7 @@ targetTypeCreation **that isn't** `"single"`.
 
 Displaying dialogue has to be done manually, it will not take dialogue
 from the skill. If you want to display the damage number from the skill,
-use [DamageToPlayer] in the following *string* after completing the function.
+use `[DamageToPlayer]` in the following *string* after completing the function.
 
 Check DamagePlayerFromMonsterFunc for an
 out of combat equivalent. Check

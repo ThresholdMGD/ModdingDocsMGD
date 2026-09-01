@@ -196,7 +196,7 @@ can't make use of it, given players cannot step in Walls.
 In this case, `"The ground is laden in aphrodisiac.",` will play after
 the Auto tile event is done being called.
 
-## YAdjust & XAdjust <a id="yadjust-xadjust"></a>
+## YAdjust & XAdjust
 
 `"YAdjust"` and `"XAdjust"` alters the position of the Gridmap on the screen via the
 following *string* value. The values are per pixel.
@@ -211,7 +211,7 @@ This helps prevent the user interface elements from covering the gridmap dependi
 
 !!! info "See also"
 
-    See [SetMapYOffset & SetMapXOffset](../Functions/EventOnly/GridmapFunctions.md#setmapyoffset-setmapxoffset) for changing offsets after creation.
+    See [SetMapYOffset & SetMapXOffset](../Functions/EventOnly/GridmapFunctions.md#setmapyoffset-and-setmapxoffset) for changing offsets after creation.
 
 
 ## PlayerCoord

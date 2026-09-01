@@ -76,9 +76,9 @@ the Mods folder inside your given text editor:
 
 You may have noticed the mod already present in the Mods folder, titled
 `_ExampleMod`. This is an example mod by Threshold. It's currently
-disabled because of the [underscore] in front of the
+disabled because of the _underscore in front of the
 folder's name, preventing the game from loading the mod. To activate
-the mod, right-click, rename, and remove the [underscore],
+the mod, right-click, rename, and remove the underscore,
 leaving it as `ExampleMod`. This is the equivalent and underlying
 functionality for disabling and enabling a mod via the in-game Mods
 menu.
