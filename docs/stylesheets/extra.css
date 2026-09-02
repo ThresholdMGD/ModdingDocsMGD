@@ -352,8 +352,7 @@ pre:hover .md-code__button {
     background: var(--md-interactive-primary);
 }
 
-a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"]),
-a[href^="https://"]:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"])
+a.md-external:not(.md-search-result__link):not([href="https://github.com/ThresholdMGD/ModdingDocsMGD"])
 {
     background-position: top right;
     background-repeat: no-repeat;
