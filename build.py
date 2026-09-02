@@ -201,9 +201,9 @@ def main():
     print("Documentation built successfully in 'site' directory")
     print()
     print("Commands:")
-    print("  To serve locally:    mkdocs serve")
-    print("  To clean build:      mkdocs build --clean")
-    print("  To serve on network: mkdocs serve --dev-addr=0.0.0.0:8000")
+    print("  To serve locally:    zensical serve")
+    print("  To clean build:      zensical build --clean")
+    print("  To serve on network: zensical serve --dev-addr=0.0.0.0:8000")
     print()
     
     # Optional: open in browser
