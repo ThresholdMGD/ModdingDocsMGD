@@ -319,7 +319,7 @@ if __name__ == '__main__':
 
     if success:
         print("\nNavigation generation complete")
-        print("   Ready to build with: mkdocs build")
+        print("   Ready to build with: zensical build")
         sys.exit(0)
     else:
         print("\nNavigation generation failed")

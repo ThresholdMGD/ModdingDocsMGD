@@ -27,3 +27,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+function markExternalLinks() {
+    document.querySelectorAll("a[href]").forEach(link => {
+        let external = false;
+        try {
+            external = new URL(link.href, location.href).origin !== location.origin;
+        } catch (e) {
+            external = false;
+        }
+        link.classList.toggle("md-external", external);
+    });
+}
+
+markExternalLinks();
+
+new MutationObserver(markExternalLinks).observe(document.body, {
+    childList: true,
+    subtree: true
+});
